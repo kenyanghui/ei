@@ -257,6 +257,7 @@ footer strong{color:var(--gold)}
     <div class="nav-logo">EI<span>pedia</span></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#skills" class="skill-link">📥 Skill 工具箱</a></li>
+      <li><a href="#agent" class="skill-link" style="border-color:rgba(13,115,119,0.4);background:rgba(13,115,119,0.1);color:var(--teal-light)">🤖 Agent Skills</a></li>
       <li><a href="#timeline">进化时间线</a></li>
       <li><a href="#scholars">理论贡献者</a></li>
       <li><a href="#models">模型对比</a></li>
@@ -576,6 +577,204 @@ footer strong{color:var(--gold)}
         <div class="skill-footer">
           <span class="hint">⬇ 含八大智能详解 × 自评雷达 × 发展行动计划模板</span>
           <button class="skill-download" onclick="downloadSkill(6)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> 下载 Skill 卡片 (.md)</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== ★ AGENT SKILLS (cangjie-skill × 达尔文) ===== -->
+<section id="agent" class="section-dark" style="background:linear-gradient(135deg,#0a1628 0%,#0d4a4d 50%,#061a2a 100%);position:relative;overflow:hidden">
+  <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(201,168,76,0.02) 40px,rgba(201,168,76,0.02) 41px);pointer-events:none"></div>
+  <div class="container" style="position:relative;z-index:2">
+    <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:0.5em">
+      <span style="background:linear-gradient(135deg,var(--teal-light),var(--gold));color:var(--navy);padding:3px 14px;border-radius:50px;font-size:0.7rem;font-weight:800;letter-spacing:1px;text-transform:uppercase">cangjie-skill ✕ 达尔文</span>
+    </div>
+    <h2 class="section-title" style="font-size:clamp(2rem,5vw,3rem)">🤖 智能体 Skills</h2>
+    <p class="section-subtitle" style="max-width:800px">
+      <strong style="color:var(--gold-light)">专供 AI Agent 直接调用的原子化技能包</strong><br>
+      由 <strong style="color:var(--teal-light)">cangjie-skill (book2skill)</strong> 从六大 EI 著作中蒸馏提取，遵循 <strong style="color:var(--gold)">RIA++</strong> 方法论构造，<br>
+      兼容 <strong style="color:var(--teal-light)">达尔文 (darwin-skill)</strong> 进化引擎格式——每个 Skill 含 Frontmatter + 工作流 + 边界条件 + test-prompts.json，<br>
+      可被 AI 代理在真实场景下自动识别、调用与进化。
+    </p>
+
+    <div style="max-width:1000px;margin:2rem auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+
+      <!-- Skill 1 -->
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);overflow:hidden;transition:var(--transition)">
+        <div style="background:linear-gradient(135deg,rgba(192,57,43,0.15),rgba(192,57,43,0.05));padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.05)">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+            <span style="font-size:1.2rem">🧠</span>
+            <span style="font-size:0.65rem;background:rgba(13,115,119,0.2);color:var(--teal-light);padding:1px 10px;border-radius:50px;font-weight:600">SKILL v1.0</span>
+          </div>
+          <h4 style="color:var(--white);font-size:0.95rem;margin-bottom:2px">ei-self-awareness-coach</h4>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.4)">戈尔曼《情商》+ Mayer & Salovey</div>
+        </div>
+        <div style="padding:14px 20px">
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-bottom:6px;display:flex;gap:6px;flex-wrap:wrap">
+            <span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">情绪标记</span>
+            <span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">溯源分析</span>
+            <span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">模式识别</span>
+          </div>
+          <p style="font-size:0.8rem;color:rgba(255,255,255,0.55);line-height:1.5;margin-bottom:10px">帮助用户觉察自身情绪状态，精确标记情绪，完成情绪逻辑链，识别重复模式。</p>
+          <div style="font-size:0.7rem;color:var(--gold);margin-bottom:10px;background:rgba(201,168,76,0.06);padding:6px 10px;border-radius:6px;border:1px solid rgba(201,168,76,0.1)">
+            <strong>🔌 触发条件</strong>："我情绪好乱"／"不知道为什么生气"／"帮我分析现在什么感受"
+          </div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:10px;display:flex;gap:12px">
+            <span>📄 RIA++ 六段式 ✓</span>
+            <span>🧪 4 tests ✓</span>
+            <span>⚠️ 边界条件 ✓</span>
+          </div>
+          <a href="agent-skills/ei-self-awareness-coach/SKILL.md" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(13,115,119,0.4);border-radius:50px;color:var(--teal-light);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition);margin-right:6px" onmouseover="this.style.borderColor='var(--teal)'" onmouseout="this.style.borderColor='rgba(13,115,119,0.4)'">📄 SKILL.md</a>
+          <a href="agent-skills/ei-self-awareness-coach/test-prompts.json" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(201,168,76,0.25);border-radius:50px;color:var(--gold);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition)" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.25)'">🧪 test-prompts</a>
+        </div>
+      </div>
+
+      <!-- Skill 2 -->
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);overflow:hidden;transition:var(--transition)">
+        <div style="background:linear-gradient(135deg,rgba(46,204,113,0.15),rgba(46,204,113,0.05));padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.05)">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+            <span style="font-size:1.2rem">👔</span>
+            <span style="font-size:0.65rem;background:rgba(13,115,119,0.2);color:var(--teal-light);padding:1px 10px;border-radius:50px;font-weight:600">SKILL v1.0</span>
+          </div>
+          <h4 style="color:var(--white);font-size:0.95rem;margin-bottom:2px">ei-resonant-leadership</h4>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.4)">戈尔曼《情商4：领导情商》</div>
+        </div>
+        <div style="padding:14px 20px">
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-bottom:6px;display:flex;gap:6px;flex-wrap:wrap">
+            <span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">六种风格</span>
+            <span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">情景诊断</span>
+            <span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">共鸣领导力</span>
+          </div>
+          <p style="font-size:0.8rem;color:rgba(255,255,255,0.55);line-height:1.5;margin-bottom:10px">六种领导风格情景匹配，诊断团队氛围，推荐适配风格，生成具体行动。</p>
+          <div style="font-size:0.7rem;color:var(--gold);margin-bottom:10px;background:rgba(201,168,76,0.06);padding:6px 10px;border-radius:6px;border:1px solid rgba(201,168,76,0.1)">
+            <strong>🔌 触发条件</strong>："团队氛围差"／"怎么带团队"／"新团队怎么建信任"
+          </div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:10px;display:flex;gap:12px">
+            <span>📄 RIA++ 六段式 ✓</span>
+            <span>🧪 4 tests ✓</span>
+            <span>⚠️ 边界条件 ✓</span>
+          </div>
+          <a href="agent-skills/ei-resonant-leadership/SKILL.md" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(13,115,119,0.4);border-radius:50px;color:var(--teal-light);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition);margin-right:6px" onmouseover="this.style.borderColor='var(--teal)'" onmouseout="this.style.borderColor='rgba(13,115,119,0.4)'">📄 SKILL.md</a>
+          <a href="agent-skills/ei-resonant-leadership/test-prompts.json" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(201,168,76,0.25);border-radius:50px;color:var(--gold);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition)" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.25)'">🧪 test-prompts</a>
+        </div>
+      </div>
+
+      <!-- Skill 3 -->
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);overflow:hidden;transition:var(--transition)">
+        <div style="background:linear-gradient(135deg,rgba(13,115,119,0.15),rgba(13,115,119,0.05));padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.05)">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+            <span style="font-size:1.2rem">🔬</span>
+            <span style="font-size:0.65rem;background:rgba(13,115,119,0.2);color:var(--teal-light);padding:1px 10px;border-radius:50px;font-weight:600">SKILL v1.0</span>
+          </div>
+          <h4 style="color:var(--white);font-size:0.95rem;margin-bottom:2px">ei-emotional-reasoning</h4>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.4)">Mayer & Salovey MSCEIT + Genos</div>
+        </div>
+        <div style="padding:14px 20px">
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-bottom:6px;display:flex;gap:6px;flex-wrap:wrap">
+            <span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">四象限决策</span>
+            <span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">情绪数据提取</span>
+          </div>
+          <p style="font-size:0.8rem;color:rgba(255,255,255,0.55);line-height:1.5;margin-bottom:10px">在决策中整合情绪信息，使用四象限情绪推理矩阵辅助明智决定。</p>
+          <div style="font-size:0.7rem;color:var(--gold);margin-bottom:10px;background:rgba(201,168,76,0.06);padding:6px 10px;border-radius:6px;border:1px solid rgba(201,168,76,0.1)">
+            <strong>🔌 触发条件</strong>："怎么决定"／"感觉不对但数据说可以"／"直觉和理性冲突"
+          </div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:10px;display:flex;gap:12px">
+            <span>📄 RIA++ 六段式 ✓</span>
+            <span>🧪 4 tests ✓</span>
+            <span>⚠️ 边界条件 ✓</span>
+          </div>
+          <a href="agent-skills/ei-emotional-reasoning/SKILL.md" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(13,115,119,0.4);border-radius:50px;color:var(--teal-light);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition);margin-right:6px" onmouseover="this.style.borderColor='var(--teal)'" onmouseout="this.style.borderColor='rgba(13,115,119,0.4)'">📄 SKILL.md</a>
+          <a href="agent-skills/ei-emotional-reasoning/test-prompts.json" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(201,168,76,0.25);border-radius:50px;color:var(--gold);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition)" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.25)'">🧪 test-prompts</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="max-width:1000px;margin:16px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+
+      <!-- Skill 4 -->
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);overflow:hidden;transition:var(--transition)">
+        <div style="background:linear-gradient(135deg,rgba(108,51,131,0.15),rgba(108,51,131,0.05));padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.05)">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px"><span style="font-size:1.2rem">📊</span><span style="font-size:0.65rem;background:rgba(13,115,119,0.2);color:var(--teal-light);padding:1px 10px;border-radius:50px;font-weight:600">SKILL v1.0</span></div>
+          <h4 style="color:var(--white);font-size:0.95rem;margin-bottom:2px">ei-stress-resilience</h4>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.4)">Bar-On EQ-i 压力管理维度</div>
+        </div>
+        <div style="padding:14px 20px">
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-bottom:6px;display:flex;gap:6px;flex-wrap:wrap"><span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">压力画像</span><span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">4-7-8呼吸</span><span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">认知重构</span></div>
+          <p style="font-size:0.8rem;color:rgba(255,255,255,0.55);line-height:1.5;margin-bottom:10px">压力评估→即时调节(4-7-8呼吸)→认知重构→韧性计划→社会支持激活。</p>
+          <div style="font-size:0.7rem;color:var(--gold);margin-bottom:10px;background:rgba(201,168,76,0.06);padding:6px 10px;border-radius:6px;border:1px solid rgba(201,168,76,0.1)"><strong>🔌 触发条件</strong>："压力太大"／"焦虑"／"感觉burnout"／"睡不好"</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:10px;display:flex;gap:12px"><span>📄 RIA++ 六段式 ✓</span><span>🧪 4 tests ✓</span><span>⚠️ 边界条件 ✓</span></div>
+          <a href="agent-skills/ei-stress-resilience/SKILL.md" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(13,115,119,0.4);border-radius:50px;color:var(--teal-light);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition);margin-right:6px">📄 SKILL.md</a>
+          <a href="agent-skills/ei-stress-resilience/test-prompts.json" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(201,168,76,0.25);border-radius:50px;color:var(--gold);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition)">🧪 test-prompts</a>
+        </div>
+      </div>
+
+      <!-- Skill 5 -->
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);overflow:hidden;transition:var(--transition)">
+        <div style="background:linear-gradient(135deg,rgba(13,115,119,0.15),rgba(13,115,119,0.05));padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.05)">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px"><span style="font-size:1.2rem">🏢</span><span style="font-size:0.65rem;background:rgba(13,115,119,0.2);color:var(--teal-light);padding:1px 10px;border-radius:50px;font-weight:600">SKILL v1.0</span></div>
+          <h4 style="color:var(--white);font-size:0.95rem;margin-bottom:2px">ei-workplace-positive-influence</h4>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.4)">Genos EI 积极影响力维度</div>
+        </div>
+        <div style="padding:14px 20px">
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-bottom:6px;display:flex;gap:6px;flex-wrap:wrap"><span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">情绪账户</span><span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">积极影响力四步</span></div>
+          <p style="font-size:0.8rem;color:rgba(255,255,255,0.55);line-height:1.5;margin-bottom:10px">情绪账户管理+积极影响力四步法+正面反馈训练+每周影响力复盘。</p>
+          <div style="font-size:0.7rem;color:var(--gold);margin-bottom:10px;background:rgba(201,168,76,0.06);padding:6px 10px;border-radius:6px;border:1px solid rgba(201,168,76,0.1)"><strong>🔌 触发条件</strong>："同事不配合"／"跨部门协作难"／"怎么影响他人"</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:10px;display:flex;gap:12px"><span>📄 RIA++ 六段式 ✓</span><span>🧪 4 tests ✓</span><span>⚠️ 边界条件 ✓</span></div>
+          <a href="agent-skills/ei-workplace-positive-influence/SKILL.md" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(13,115,119,0.4);border-radius:50px;color:var(--teal-light);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition);margin-right:6px">📄 SKILL.md</a>
+          <a href="agent-skills/ei-workplace-positive-influence/test-prompts.json" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(201,168,76,0.25);border-radius:50px;color:var(--gold);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition)">🧪 test-prompts</a>
+        </div>
+      </div>
+
+      <!-- Skill 6 -->
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);overflow:hidden;transition:var(--transition)">
+        <div style="background:linear-gradient(135deg,rgba(26,82,118,0.15),rgba(26,82,118,0.05));padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.05)">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px"><span style="font-size:1.2rem">🎯</span><span style="font-size:0.65rem;background:rgba(13,115,119,0.2);color:var(--teal-light);padding:1px 10px;border-radius:50px;font-weight:600">SKILL v1.0</span></div>
+          <h4 style="color:var(--white);font-size:0.95rem;margin-bottom:2px">ei-multiple-intelligences</h4>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.4)">加德纳《多元智能理论》</div>
+        </div>
+        <div style="padding:14px 20px">
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-bottom:6px;display:flex;gap:6px;flex-wrap:wrap"><span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">八大智能</span><span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">智能组合分析</span></div>
+          <p style="font-size:0.8rem;color:rgba(255,255,255,0.55);line-height:1.5;margin-bottom:10px">八大智能自评雷达+智能组合分析+个性化发展建议。</p>
+          <div style="font-size:0.7rem;color:var(--gold);margin-bottom:10px;background:rgba(201,168,76,0.06);padding:6px 10px;border-radius:6px;border:1px solid rgba(201,168,76,0.1)"><strong>🔌 触发条件</strong>："不知道擅长什么"／"发现天赋"／"转行不知适合什么"</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:10px;display:flex;gap:12px"><span>📄 RIA++ 六段式 ✓</span><span>🧪 4 tests ✓</span><span>⚠️ 边界条件 ✓</span></div>
+          <a href="agent-skills/ei-multiple-intelligences/SKILL.md" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(13,115,119,0.4);border-radius:50px;color:var(--teal-light);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition);margin-right:6px">📄 SKILL.md</a>
+          <a href="agent-skills/ei-multiple-intelligences/test-prompts.json" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(201,168,76,0.25);border-radius:50px;color:var(--gold);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition)">🧪 test-prompts</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 批量下载 -->
+    <div style="text-align:center;margin-top:2.5rem">
+      <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);margin-bottom:12px">🧩 将整个 Skill 包放入 AI 代理的 <code style="background:rgba(255,255,255,0.08);padding:1px 6px;border-radius:4px;font-size:0.75rem">.claude/skills/</code> 目录即可启用</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="agent-skills.tar.gz" download style="display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:linear-gradient(135deg,var(--teal),var(--teal-light));color:var(--white);border:none;border-radius:50px;font-weight:700;font-size:0.9rem;cursor:pointer;text-decoration:none;transition:var(--transition)" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">📦 下载全部 Skills（tar.gz）</a>
+        <a href="agent-skills/INDEX.md" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:transparent;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);border-radius:50px;font-weight:600;font-size:0.9rem;cursor:pointer;text-decoration:none;transition:var(--transition);" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)'">📄 查看 INDEX（所有 Skill 索引）</a>
+      </div>
+    </div>
+
+    <!-- cangjie + darwin 方法学标注 -->
+    <div style="margin-top:2rem;padding:20px 24px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);max-width:800px;margin-left:auto;margin-right:auto">
+      <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;justify-content:center">
+        <div style="text-align:center;min-width:160px">
+          <div style="font-size:0.7rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:2px">方法论引擎</div>
+          <div style="font-size:1.1rem;font-weight:700;color:var(--white)">cangjie-skill</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.4)">RIA++ 蒸馏流水线</div>
+        </div>
+        <div style="width:1px;height:40px;background:rgba(255,255,255,0.1);align-self:center"></div>
+        <div style="text-align:center;min-width:160px">
+          <div style="font-size:0.7rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:2px">进化引擎</div>
+          <div style="font-size:1.1rem;font-weight:700;color:var(--white)">达尔文 (darwin-skill)</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.4)">评估→改进→实测→保留/回滚</div>
+        </div>
+        <div style="width:1px;height:40px;background:rgba(255,255,255,0.1);align-self:center"></div>
+        <div style="text-align:center;min-width:160px">
+          <div style="font-size:0.7rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:2px">格式兼容</div>
+          <div style="font-size:1.1rem;font-weight:700;color:var(--white)">test-prompts.json</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.4)">可接入达尔文自动进化</div>
         </div>
       </div>
     </div>
