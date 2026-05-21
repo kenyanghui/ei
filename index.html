@@ -47,10 +47,13 @@ section{padding:5rem 0}
 .section-dark .section-subtitle{color:rgba(255,255,255,0.7)}
 .section-cream{background:var(--cream)}
 .section-white{background:var(--white)}
+.section-skills{background:linear-gradient(135deg,#0a1628 0%,#0d4a4d 50%,#1a3050 100%);color:var(--cream);position:relative;overflow:hidden}
+.section-skills::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,168,76,0.06) 0%,transparent 50%),radial-gradient(ellipse at 20% 80%,rgba(13,115,119,0.08) 0%,transparent 50%);pointer-events:none}
+.section-skills .section-title{color:var(--gold)}
+.section-skills .section-subtitle{color:rgba(255,255,255,0.6)}
 
 /* ===== Navigation ===== */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,22,40,0.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition)}
-nav.scrolled{background:rgba(10,22,40,0.98)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0 24px;max-width:1200px;margin:0 auto;height:64px}
 .nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.2rem;color:var(--gold);letter-spacing:1px}
 .nav-logo span{color:var(--white);font-weight:300}
@@ -58,6 +61,8 @@ nav.scrolled{background:rgba(10,22,40,0.98)}
 .nav-links a{padding:8px 16px;font-size:0.88rem;color:rgba(255,255,255,0.75);border-radius:8px;transition:var(--transition)}
 .nav-links a:hover{color:var(--white);background:rgba(255,255,255,0.08)}
 .nav-links a.active{color:var(--gold);background:rgba(201,168,76,0.12)}
+.nav-links a.skill-link{color:var(--gold-light);border:1px solid rgba(201,168,76,0.25);background:rgba(201,168,76,0.06)}
+.nav-links a.skill-link:hover{background:rgba(201,168,76,0.15);border-color:var(--gold)}
 .mobile-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
 .mobile-toggle span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:var(--transition)}
 
@@ -84,6 +89,43 @@ nav.scrolled{background:rgba(10,22,40,0.98)}
 /* ===== Timeline SVG Section ===== */
 .timeline-wrapper{background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);overflow:hidden;margin:2rem 0}
 .timeline-wrapper svg{width:100%;height:auto;display:block}
+
+/* ===== SKILL TAB SYSTEM ===== */
+.skill-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2rem;justify-content:center}
+.skill-tab{padding:10px 22px;border-radius:50px;font-size:0.85rem;font-weight:600;cursor:pointer;transition:var(--transition);border:1px solid rgba(255,255,255,0.15);background:transparent;color:rgba(255,255,255,0.6);white-space:nowrap}
+.skill-tab:hover{border-color:var(--gold);color:var(--gold-light)}
+.skill-tab.active{background:rgba(201,168,76,0.15);border-color:var(--gold);color:var(--gold);box-shadow:0 0 20px rgba(201,168,76,0.1)}
+.skill-panel{display:none}
+.skill-panel.active{display:block;animation:fadeIn 0.4s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+/* Skill Card */
+.skill-main{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);padding:32px;margin-bottom:20px}
+.skill-header{display:flex;align-items:flex-start;gap:20px;margin-bottom:24px;flex-wrap:wrap}
+.skill-icon{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0}
+.skill-meta{flex:1}
+.skill-meta h3{font-size:1.3rem;color:var(--white);margin-bottom:2px}
+.skill-meta .sub{color:rgba(255,255,255,0.5);font-size:0.88rem}
+.skill-meta .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.skill-meta .tags span{padding:2px 12px;border-radius:50px;font-size:0.72rem;border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6)}
+
+/* Skill Grid Layout */
+.skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+@media(max-width:768px){.skill-grid{grid-template-columns:1fr}}
+.skill-col{background:rgba(255,255,255,0.03);border-radius:var(--radius);padding:20px;border:1px solid rgba(255,255,255,0.06)}
+.skill-col h4{font-size:0.9rem;color:var(--gold);margin-bottom:12px;display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:0.5px}
+.skill-col ul{list-style:none;padding:0}
+.skill-col ul li{padding:6px 0;font-size:0.88rem;color:rgba(255,255,255,0.75);line-height:1.6;padding-left:16px;position:relative}
+.skill-col ul li::before{content:'›';position:absolute;left:0;color:var(--gold);font-weight:700}
+.skill-col .highlight-box{background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.15);border-radius:8px;padding:14px;margin-top:12px}
+.skill-col .highlight-box p{font-size:0.85rem;color:rgba(255,255,255,0.7);line-height:1.6}
+
+/* Download Button */
+.skill-download{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);border:none;border-radius:50px;font-weight:700;font-size:0.95rem;cursor:pointer;transition:var(--transition);text-decoration:none}
+.skill-download:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,168,76,0.25)}
+.skill-download svg{width:18px;height:18px}
+.skill-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.06)}
+.skill-footer .hint{font-size:0.8rem;color:rgba(255,255,255,0.35)}
 
 /* ===== Scholar Cards ===== */
 .scholars-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px;margin-top:2rem}
@@ -114,7 +156,7 @@ nav.scrolled{background:rgba(10,22,40,0.98)}
 .scholar-book-icon{width:4px;height:28px;border-radius:2px;flex-shrink:0}
 .scholar-book .year{font-size:0.75rem;color:var(--gray-600);margin-left:auto;white-space:nowrap}
 
-/* ===== Book Deconstruction ===== */
+/* ===== Book Showcase ===== */
 .books-showcase{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:2rem}
 .book-card{background:var(--white);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border:1px solid rgba(0,0,0,0.04);transition:var(--transition);position:relative}
 .book-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
@@ -126,7 +168,7 @@ nav.scrolled{background:rgba(10,22,40,0.98)}
 .book-impact{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .book-impact span{font-size:0.74rem;padding:3px 10px;border-radius:50px;background:var(--gray-100);color:var(--gray-600)}
 
-/* ===== Models Comparison ===== */
+/* ===== Model Comparison ===== */
 .model-compare{overflow-x:auto;margin-top:2rem}
 .model-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);font-size:0.9rem}
 .model-table thead th{background:var(--navy);color:var(--white);padding:18px 20px;text-align:center;font-weight:600}
@@ -175,6 +217,11 @@ nav.scrolled{background:rgba(10,22,40,0.98)}
 footer{background:var(--navy);color:rgba(255,255,255,0.5);text-align:center;padding:2rem 24px;font-size:0.85rem;border-top:1px solid rgba(255,255,255,0.05)}
 footer strong{color:var(--gold)}
 
+/* ===== Toast ===== */
+.toast{position:fixed;bottom:32px;right:32px;z-index:9999;background:var(--navy);color:var(--white);padding:16px 24px;border-radius:var(--radius);box-shadow:var(--shadow-lg);border:1px solid rgba(255,255,255,0.1);font-size:0.9rem;transform:translateY(120px);opacity:0;transition:all 0.4s cubic-bezier(0.4,0,0.2,1);pointer-events:none}
+.toast.show{transform:translateY(0);opacity:1}
+.toast strong{color:var(--gold)}
+
 /* ===== Responsive ===== */
 @media(max-width:1024px){
   .tree-node,.tree-node:nth-child(even){flex-direction:column!important;align-items:normal;padding-left:32px;gap:12px}
@@ -193,6 +240,8 @@ footer strong{color:var(--gold)}
   .model-table{font-size:0.8rem}
   .model-table thead th,.model-table tbody td{padding:10px 12px}
   .section{padding:3rem 0}
+  .skill-tabs{overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start;padding-bottom:8px}
+  .skill-main{padding:20px}
 }
 @media(max-width:480px){
   .hero-cta{flex-direction:column;align-items:center}
@@ -207,9 +256,9 @@ footer strong{color:var(--gold)}
   <div class="nav-inner">
     <div class="nav-logo">EI<span>pedia</span></div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#timeline" class="active">进化时间线</a></li>
+      <li><a href="#skills" class="skill-link">📥 Skill 工具箱</a></li>
+      <li><a href="#timeline">进化时间线</a></li>
       <li><a href="#scholars">理论贡献者</a></li>
-      <li><a href="#books">著作拆解</a></li>
       <li><a href="#models">模型对比</a></li>
       <li><a href="#genos">Genos EI</a></li>
       <li><a href="#ai-ei">AI+EI</a></li>
@@ -228,7 +277,7 @@ footer strong{color:var(--gold)}
     <h1>情绪智力（EI）<br><span class="highlight">理论进化全景图</span></h1>
     <p>从桑代克 1920 年提出"社会智力"到 AI 时代的 Genos 情感智能模型，<br>完整梳理情绪智力百年理论演进脉络与核心学者贡献。</p>
     <div class="hero-cta">
-      <a href="#timeline" class="btn btn-primary">浏览时间线 ↓</a>
+      <a href="#skills" class="btn btn-primary">📥 领取 Skill 工具箱 ↓</a>
       <a href="#scholars" class="btn btn-outline">查阅理论贡献者</a>
     </div>
     <div class="hero-stats">
@@ -241,14 +290,296 @@ footer strong{color:var(--gold)}
         <div class="hero-stat-label">大学派</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-number">3</div>
-        <div class="hero-stat-label">核心模型</div>
+        <div class="hero-stat-number">6</div>
+        <div class="hero-stat-label">Skill 卡片</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-number">100+</div>
         <div class="hero-stat-label">研究文献</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== ★ SKILL 工具箱 (首要位置) ===== -->
+<section id="skills" class="section-skills">
+  <div class="container">
+    <h2 class="section-title">📥 Skill 工具箱</h2>
+    <p class="section-subtitle">六大著作深度拆解 → 提炼为即学即用的实操技能卡片，点击下载 Markdown 源文件</p>
+
+    <div class="skill-tabs" id="skillTabs">
+      <button class="skill-tab active" data-tab="s1">🧠 戈尔曼 · 情商四维</button>
+      <button class="skill-tab" data-tab="s2">👔 戈尔曼 · 领导六风格</button>
+      <button class="skill-tab" data-tab="s3">🔬 Mayer-Salovey MSCEIT</button>
+      <button class="skill-tab" data-tab="s4">📊 Bar-On EQ-i 特质</button>
+      <button class="skill-tab" data-tab="s5">🏢 Genos 职场六维</button>
+      <button class="skill-tab" data-tab="s6">🎯 加德纳多元智能</button>
+    </div>
+
+    <!-- ===== SKILL 1: Goleman EQ Four Dimensions ===== -->
+    <div class="skill-panel active" id="s1">
+      <div class="skill-main">
+        <div class="skill-header">
+          <div class="skill-icon" style="background:rgba(192,57,43,0.15);color:#E67E22">🧠</div>
+          <div class="skill-meta">
+            <h3>职场 EI 四维模型 · 实操技能卡</h3>
+            <div class="sub">丹尼尔·戈尔曼《情商》（Emotional Intelligence, 1995）</div>
+            <div class="tags">
+              <span>自我觉察</span><span>自我管理</span><span>社会觉察</span><span>关系管理</span><span>18项能力</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-col">
+            <h4>📖 核心理论</h4>
+            <ul>
+              <li><strong>EI &gt; IQ</strong> — 情商比智商更能预测职场成功与领导力表现</li>
+              <li><strong>四维框架</strong>：自我觉察 → 自我管理 → 社会觉察 → 关系管理</li>
+              <li><strong>神经科学基础</strong>：前额叶皮层（理性）与杏仁核（情绪）的博弈，"情绪劫持"机制</li>
+              <li><strong>可塑性</strong>：EI 可以通过刻意训练提升，不受先天 IQ 限制</li>
+            </ul>
+            <div class="highlight-box">
+              <p><strong>🔑 一句话</strong>：先觉察自己的情绪，才能管理好情绪；先管理好自己，才能理解他人；理解他人，才能建立卓越关系。</p>
+            </div>
+          </div>
+          <div class="skill-col">
+            <h4>🛠 实操框架 &amp; 工具</h4>
+            <ul>
+              <li><strong>自我觉察</strong>：每日情绪日志（触发点 → 身体反应 → 想法 → 行为 → 结果）</li>
+              <li><strong>自我管理</strong>：STOP 法（Stop暂停 → Take breath呼吸 → Observe观察 → Proceed继续）</li>
+              <li><strong>社会觉察</strong>：共情三层次——认知共情（理解视角）→ 情绪共情（感受对方）→ 共情关怀（采取行动）</li>
+              <li><strong>关系管理</strong>：非暴力沟通框架（观察 → 感受 → 需要 → 请求）</li>
+              <li><strong>EI 自检清单</strong>：每周 18 项能力自我评分（1-5 分），追踪进步曲线</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skill-footer">
+          <span class="hint">⬇ 下载后可用 Markdown 编辑器打开，或导入笔记 / AI 工具</span>
+          <button class="skill-download" onclick="downloadSkill(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> 下载 Skill 卡片 (.md)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SKILL 2: Goleman Primal Leadership ===== -->
+    <div class="skill-panel" id="s2">
+      <div class="skill-main">
+        <div class="skill-header">
+          <div class="skill-icon" style="background:rgba(46,204,113,0.15);color:#2ECC71">👔</div>
+          <div class="skill-meta">
+            <h3>六种领导风格 · 实操技能卡</h3>
+            <div class="sub">丹尼尔·戈尔曼《情商4：领导情商》（Primal Leadership, 2002）</div>
+            <div class="tags">
+              <span>共鸣领导力</span><span>六种风格</span><span>情绪感染</span><span>领导力弹性</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-col">
+            <h4>📖 核心理论</h4>
+            <ul>
+              <li><strong>共鸣领导力</strong>：领导者的情绪具有"传染性"，直接影响团队氛围和绩效（影响幅度达 20-30%）</li>
+              <li><strong>六种风格</strong>：愿景型 · 教练型 · 亲和型 · 民主型 · 领跑型 · 命令型</li>
+              <li><strong>领导力弹性</strong>：卓越领导者能根据情境灵活切换六种风格，而非固守一种</li>
+              <li><strong>四种风格提升氛围</strong>（愿景/教练/亲和/民主），<strong>两种需慎用</strong>（领跑/命令）</li>
+            </ul>
+            <div class="highlight-box">
+              <p><strong>🔑 一句话</strong>：领导力的本质不是职位权力，而是"情绪共鸣"——你能让团队感受到什么，决定了你能带领团队走多远。</p>
+            </div>
+          </div>
+          <div class="skill-col">
+            <h4>🛠 实操框架 &amp; 工具</h4>
+            <ul>
+              <li><strong>风格自测</strong>：回顾过去两周的关键决策和沟通场景，判断自己最常用哪三种风格</li>
+              <li><strong>情境匹配矩阵</strong>：危机→命令风、变革→愿景风、培养下属→教练风、团队融合→亲和风、收集意见→民主风</li>
+              <li><strong>情绪感染管理</strong>：团队会议前先"调节自身情绪状态"——你的情绪决定会议的基调</li>
+              <li><strong>反馈四步法</strong>：描述行为 → 指出影响 → 询问看法 → 共同制定改进计划</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skill-footer">
+          <span class="hint">⬇ 含六种风格详解 × 自测表 × 情境匹配矩阵</span>
+          <button class="skill-download" onclick="downloadSkill(2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> 下载 Skill 卡片 (.md)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SKILL 3: Mayer-Salovey MSCEIT ===== -->
+    <div class="skill-panel" id="s3">
+      <div class="skill-main">
+        <div class="skill-header">
+          <div class="skill-icon" style="background:rgba(13,115,119,0.15);color:var(--teal-light)">🔬</div>
+          <div class="skill-meta">
+            <h3>MSCEIT 四维能力 · 实操技能卡</h3>
+            <div class="sub">梅耶 &amp; 萨洛维《情绪智力》(Emotional Intelligence, 1990) — 能力模型学术正统</div>
+            <div class="tags">
+              <span>情绪感知</span><span>情绪促进思维</span><span>情绪理解</span><span>情绪管理</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-col">
+            <h4>📖 核心理论</h4>
+            <ul>
+              <li><strong>EI = 认知能力</strong>：情绪智力是"一种处理情绪信息的认知能力"，不是人格特质</li>
+              <li><strong>四维递进模型</strong>：感知（最基础）→ 促进 → 理解 → 管理（最高级）</li>
+              <li><strong>能力测验</strong>：MSCEIT 141 题，有客观"对错"标准（基于专家共识/目标群体），非自评量表</li>
+              <li><strong>区分度</strong>：MSCEIT 与 IQ 测验的相关性仅 0.2-0.3，证明 EI 是独立的智力维度</li>
+            </ul>
+            <div class="highlight-box">
+              <p><strong>🔑 一句话</strong>：真正的情绪智力不是"感觉良好"，而是准确感知、深刻理解并智慧运用情绪信息的能力。</p>
+            </div>
+          </div>
+          <div class="skill-col">
+            <h4>🛠 实操框架 &amp; 工具</h4>
+            <ul>
+              <li><strong>感知训练</strong>：每日"情绪标签"练习——看到一张人脸/一个场景，用精确词汇命名情绪（而非笼统的"好/不好"）</li>
+              <li><strong>促进思维</strong>：做决策前问自己"我现在感受如何？这个感受告诉了我什么信息？"</li>
+              <li><strong>情绪词汇扩展表</strong>：基础情绪（喜/怒/哀/惧/厌/惊）→ 30+ 种精确情绪词汇</li>
+              <li><strong>理解进阶</strong>：情绪逻辑链练习——"因为A事件→产生了B感受→导致了C想法→触发了D行为"</li>
+              <li><strong>管理策略</strong>：情绪调节策略矩阵（情境选择 → 情境修正 → 注意力部署 → 认知改变 → 反应调节）</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skill-footer">
+          <span class="hint">⬇ 含四维能力详解 × 情绪词汇表 × 每日训练模板</span>
+          <button class="skill-download" onclick="downloadSkill(3)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> 下载 Skill 卡片 (.md)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SKILL 4: Bar-On EQ-i ===== -->
+    <div class="skill-panel" id="s4">
+      <div class="skill-main">
+        <div class="skill-header">
+          <div class="skill-icon" style="background:rgba(108,51,131,0.15);color:#AF7AC5">📊</div>
+          <div class="skill-meta">
+            <h3>EQ-i 五维特质模型 · 实操技能卡</h3>
+            <div class="sub">鲁文·巴昂《情绪智商手册》(Handbook of Emotional Intelligence, 1997)</div>
+            <div class="tags">
+              <span>自我意识</span><span>自我表达</span><span>人际</span><span>决策</span><span>压力管理</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-col">
+            <h4>📖 核心理论</h4>
+            <ul>
+              <li><strong>EI = 人格特质 × 社会功能</strong>：EI 是一组影响个体应对环境需求的情绪与社会能力</li>
+              <li><strong>五维度 15 子量表</strong>：自我意识（3）· 自我表达（3）· 人际（3）· 决策（3）· 压力管理（3）</li>
+              <li><strong>EQ-i 量表</strong>：133 题自陈量表，全球使用最广泛的 EI 测评工具之一</li>
+              <li><strong>应用场景</strong>：心理健康评估、职业咨询、领导力发展、临床诊断辅助</li>
+            </ul>
+            <div class="highlight-box">
+              <p><strong>🔑 一句话</strong>：情绪智力就是"你应对生活压力的能力"——5 个维度 15 种能力构成了你的心理韧性画像。</p>
+            </div>
+          </div>
+          <div class="skill-col">
+            <h4>🛠 实操框架 &amp; 工具</h4>
+            <ul>
+              <li><strong>五维自评</strong>：每维度针对 3 个子量表分别自评（1-7 分），识别最强和最弱维度</li>
+              <li><strong>压力管理工具箱</strong>：正念呼吸（4-7-8 呼吸法）→ 认知重构 → 社会支持激活</li>
+              <li><strong>决策检查表</strong>：做重大决定前，确认五个维度是否都平衡考量了</li>
+              <li><strong>人际提升</strong>：共情练习——每天 10 分钟"站在对方立场"重述一次对话</li>
+              <li><strong>现实检验</strong>：区分"事实"与"感受"——写下事实证据，再写下情绪感受，对比两者差距</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skill-footer">
+          <span class="hint">⬇ 含五维度详解 × 15子量表自评表 × 压力管理模板</span>
+          <button class="skill-download" onclick="downloadSkill(4)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> 下载 Skill 卡片 (.md)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SKILL 5: Genos Workplace EI ===== -->
+    <div class="skill-panel" id="s5">
+      <div class="skill-main">
+        <div class="skill-header">
+          <div class="skill-icon" style="background:rgba(13,115,119,0.15);color:var(--teal-light)">🏢</div>
+          <div class="skill-meta">
+            <h3>Genos 职场六维 EI · 实操技能卡</h3>
+            <div class="sub">Palmer &amp; Stough 斯威本科技大学 · Genos EI 技术手册 (2002/2008)</div>
+            <div class="tags">
+              <span>六维能力</span><span>360°反馈</span><span>行为频率</span><span>ROI实证</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-col">
+            <h4>📖 核心理论</h4>
+            <ul>
+              <li><strong>专为职场设计</strong>：区别于其他模型，Genos 聚焦"工作中的行为表现"，而非一般情绪能力</li>
+              <li><strong>行为频率测量</strong>：测量"你多常展现某种 EI 行为"而非"你的 EI 能力有多高"</li>
+              <li><strong>六维递进</strong>：自我觉察 → 他人觉察 → 真诚表达 → 情绪推理 → 自我管理 → 积极影响力</li>
+              <li><strong>360° 评估</strong>：自评 + 上级/同事/下属他评，全面揭示 EI 行为盲区</li>
+              <li><strong>ROI</strong>：EI 培训可提升 17-20% 工作绩效，对销售业绩影响尤其显著</li>
+            </ul>
+            <div class="highlight-box">
+              <p><strong>🔑 一句话</strong>：职场 EI 不是"你懂不懂情绪"，而是"你每天在工作中实际展现了多少 EI 行为"——行为频率决定影响力。</p>
+            </div>
+          </div>
+          <div class="skill-col">
+            <h4>🛠 实操框架 &amp; 工具</h4>
+            <ul>
+              <li><strong>六维成长计划</strong>：每个维度设定一个"下周重点提升的具体行为"（如：每天会议结束时问一句"大家还有什么感受？"）</li>
+              <li><strong>360° 准备清单</strong>：选择 3-5 位评价者，明确告知评价目的和保密性</li>
+              <li><strong>行为频率自评表</strong>：六个维度各对应 3-5 个关键行为，按"从不/偶尔/有时/经常/总是"评级</li>
+              <li><strong>情绪推理决策模板</strong>：决策时写下——①事实数据 ②各方情绪 ③情绪对决策的影响 ④综合考虑后的决定</li>
+              <li><strong>积极影响力练习</strong>：每天主动给一位同事提供"具体 + 真诚"的正面反馈</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skill-footer">
+          <span class="hint">⬇ 含六维能力详解 × 行为频率自评表 × 360°准备清单 × 成长计划模板</span>
+          <button class="skill-download" onclick="downloadSkill(5)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> 下载 Skill 卡片 (.md)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SKILL 6: Gardner Multiple Intelligences ===== -->
+    <div class="skill-panel" id="s6">
+      <div class="skill-main">
+        <div class="skill-header">
+          <div class="skill-icon" style="background:rgba(26,82,118,0.15);color:#5DADE2">🎯</div>
+          <div class="skill-meta">
+            <h3>多元智能识别与发展 · 实操技能卡</h3>
+            <div class="sub">霍华德·加德纳《多元智能理论》(Frames of Mind, 1983) — EI 理论源头</div>
+            <div class="tags">
+              <span>八大智能</span><span>内省智能</span><span>人际智能</span><span>个性化教育</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-col">
+            <h4>📖 核心理论</h4>
+            <ul>
+              <li><strong>打破一元智力观</strong>：IQ 测验只能测量语言 + 逻辑能力，严重低估人类智能的全貌</li>
+              <li><strong>八大智能</strong>：语言 · 逻辑-数学 · 音乐 · 空间 · 身体-动觉 · 人际 · 内省 · 自然探索</li>
+              <li><strong>EI 理论源头</strong>："内省智能"（了解自我情绪）和"人际智能"（理解他人）直接为 EI 理论奠定基础</li>
+              <li><strong>个性化发展</strong>：每个人都有独特的智能组合，教育应"因材施教"，而非一刀切</li>
+            </ul>
+            <div class="highlight-box">
+              <p><strong>🔑 一句话</strong>：重要的不是你"聪不聪明"，而是你"在哪些方面聪明"——发现自己独特的智能组合，就是发现自己的天赋所在。</p>
+            </div>
+          </div>
+          <div class="skill-col">
+            <h4>🛠 实操框架 &amp; 工具</h4>
+            <ul>
+              <li><strong>八大智能自评雷达</strong>：每个智能维度自评（1-10 分），绘制个人智能轮廓</li>
+              <li><strong>内省智能提升</strong>：每日反思三问——①今天什么情绪最强烈？②这个情绪的来源是什么？③这个情绪告诉了我什么？</li>
+              <li><strong>人际智能提升</strong>：换位思考练习——每天选一次对话，分析对方的"感受 × 需求 × 视角"</li>
+              <li><strong>团队智能搭配</strong>：在团队中识别不同成员的强项智能，合理分配任务</li>
+              <li><strong>教育/育儿应用</strong>：观察孩子在哪种活动中最投入、学得最快，重点培养该方向的智能</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skill-footer">
+          <span class="hint">⬇ 含八大智能详解 × 自评雷达 × 发展行动计划模板</span>
+          <button class="skill-download" onclick="downloadSkill(6)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> 下载 Skill 卡片 (.md)</button>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -262,38 +593,25 @@ footer strong{color:var(--gold)}
         <defs>
           <linearGradient id="gGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c9a84c"/><stop offset="100%" stop-color="#e8cc7a"/></linearGradient>
           <linearGradient id="gTeal" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0d7377"/><stop offset="100%" stop-color="#14a3a8"/></linearGradient>
-          <linearGradient id="gNavy" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#1a3050"/></linearGradient>
           <filter id="shadow"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/></filter>
         </defs>
-
-        <!-- Background -->
         <rect width="1100" height="480" fill="#faf8f5" rx="16"/>
-
-        <!-- Title -->
         <text x="550" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#0a1628">EI 情感智能理论百年演进</text>
         <text x="550" y="56" text-anchor="middle" font-size="11" fill="#6b6560">The Evolution of Emotional Intelligence Theory (1920–2024)</text>
-
-        <!-- Timeline horizontal line -->
         <line x1="80" y1="120" x2="1020" y2="120" stroke="url(#gGold)" stroke-width="3" stroke-linecap="round"/>
         <line x1="80" y1="340" x2="1020" y2="340" stroke="url(#gTeal)" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,4"/>
-
-        <!-- ===== ERA LABELS ===== -->
         <text x="90" y="102" font-size="10" fill="#6b6560" font-weight="600">萌芽期</text>
         <text x="380" y="102" font-size="10" fill="#6b6560" font-weight="600">理论确立期</text>
         <text x="700" y="102" font-size="10" fill="#6b6560" font-weight="600">成熟发展期</text>
         <text x="920" y="102" font-size="10" fill="#6b6560" font-weight="600">AI融合期</text>
-
-        <!-- ===== NODE 1: Thorndike 1920 ===== -->
         <circle cx="120" cy="120" r="14" fill="#8B4513" filter="url(#shadow)"/>
         <text x="120" y="125" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">1920</text>
         <text x="120" y="100" text-anchor="middle" font-size="11" fill="#8B4513" font-weight="700">桑代克</text>
         <text x="120" y="86" text-anchor="middle" font-size="9" fill="#6b6560">Edward Thorndike</text>
         <rect x="45" y="140" width="150" height="36" rx="6" fill="#f5f0e8" stroke="#8B4513" stroke-width="0.5"/>
-        <text x="120" y="158" text-anchor="middle" font-size="9" fill="#444">《社会智力》(Social Intelligence)</text>
-        <text x="120" y="172" text-anchor="middle" font-size="8" fill="#8B4513">首次提出人际交往属于智力范畴</text>
+        <text x="120" y="158" text-anchor="middle" font-size="9" fill="#444">《社会智力》</text>
+        <text x="120" y="172" text-anchor="middle" font-size="8" fill="#8B4513">人际交往属于智力范畴</text>
         <line x1="120" y1="134" x2="120" y2="140" stroke="#8B4513" stroke-width="1"/>
-
-        <!-- ===== NODE 2: Gardner 1983 ===== -->
         <circle cx="250" cy="120" r="14" fill="#1A5276" filter="url(#shadow)"/>
         <text x="250" y="125" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">1983</text>
         <text x="250" y="100" text-anchor="middle" font-size="11" fill="#1A5276" font-weight="700">加德纳</text>
@@ -302,8 +620,6 @@ footer strong{color:var(--gold)}
         <text x="250" y="158" text-anchor="middle" font-size="9" fill="#444">《多元智能理论》</text>
         <text x="250" y="172" text-anchor="middle" font-size="8" fill="#1A5276">内省智能 × 人际智能 → 为EI铺路</text>
         <line x1="250" y1="134" x2="250" y2="140" stroke="#1A5276" stroke-width="1"/>
-
-        <!-- ===== NODE 3: Payne 1985 ===== -->
         <circle cx="340" cy="120" r="14" fill="#2E4057" filter="url(#shadow)"/>
         <text x="340" y="125" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">1985</text>
         <text x="340" y="100" text-anchor="middle" font-size="11" fill="#2E4057" font-weight="700">佩恩</text>
@@ -312,8 +628,6 @@ footer strong{color:var(--gold)}
         <text x="340" y="158" text-anchor="middle" font-size="8" fill="#444">博士论文首提</text>
         <text x="340" y="172" text-anchor="middle" font-size="9" fill="#2E4057" font-weight="600">"Emotional Intelligence"</text>
         <line x1="340" y1="134" x2="340" y2="140" stroke="#2E4057" stroke-width="1"/>
-
-        <!-- ===== NODE 4: Mayer & Salovey 1990 ===== -->
         <circle cx="480" cy="120" r="16" fill="#0E6251" filter="url(#shadow)"/>
         <text x="480" y="125" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">1990</text>
         <text x="480" y="96" text-anchor="middle" font-size="11" fill="#0E6251" font-weight="700">梅耶 &amp; 萨洛维</text>
@@ -322,8 +636,6 @@ footer strong{color:var(--gold)}
         <text x="480" y="162" text-anchor="middle" font-size="9" fill="#0E6251" font-weight="600">★ 开山论文 Emotional Intelligence</text>
         <text x="480" y="178" text-anchor="middle" font-size="8" fill="#444">MSCEIT 能力测验 — 学术正统</text>
         <line x1="480" y1="136" x2="480" y2="144" stroke="#0E6251" stroke-width="1"/>
-
-        <!-- ===== NODE 5: Goleman 1995 ===== -->
         <circle cx="610" cy="120" r="16" fill="#C0392B" filter="url(#shadow)"/>
         <text x="610" y="125" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">1995</text>
         <text x="610" y="96" text-anchor="middle" font-size="11" fill="#C0392B" font-weight="700">戈尔曼</text>
@@ -333,8 +645,6 @@ footer strong{color:var(--gold)}
         <text x="610" y="176" text-anchor="middle" font-size="8" fill="#444">职场四维模型 → 大众普及第一人</text>
         <text x="610" y="188" text-anchor="middle" font-size="8" fill="#C0392B">情商：为什么比智商更重要</text>
         <line x1="610" y1="136" x2="610" y2="144" stroke="#C0392B" stroke-width="1"/>
-
-        <!-- ===== NODE 6: Bar-On 1997 ===== -->
         <circle cx="740" cy="120" r="16" fill="#6C3483" filter="url(#shadow)"/>
         <text x="740" y="125" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">1997</text>
         <text x="740" y="96" text-anchor="middle" font-size="11" fill="#6C3483" font-weight="700">巴昂</text>
@@ -343,8 +653,6 @@ footer strong{color:var(--gold)}
         <text x="740" y="162" text-anchor="middle" font-size="9" fill="#6C3483" font-weight="600">《情绪智商手册》</text>
         <text x="740" y="178" text-anchor="middle" font-size="8" fill="#444">EQ-i 量表 — 特质模型奠基</text>
         <line x1="740" y1="136" x2="740" y2="144" stroke="#6C3483" stroke-width="1"/>
-
-        <!-- ===== NODE 7: Genos 2002 ===== -->
         <circle cx="870" cy="340" r="16" fill="url(#gTeal)" filter="url(#shadow)"/>
         <text x="870" y="345" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">2002</text>
         <text x="870" y="318" text-anchor="middle" font-size="11" fill="#0d7377" font-weight="700">Genos EI 模型</text>
@@ -354,8 +662,6 @@ footer strong{color:var(--gold)}
         <text x="870" y="394" text-anchor="middle" font-size="8" fill="#444">职场六维能力模型</text>
         <text x="870" y="406" text-anchor="middle" font-size="8" fill="#0d7377">360° 多评价者测评</text>
         <line x1="870" y1="356" x2="870" y2="360" stroke="#0d7377" stroke-width="1"/>
-
-        <!-- ===== NODE 8: AI+EI ===== -->
         <circle cx="1020" cy="340" r="16" fill="url(#gGold)" filter="url(#shadow)"/>
         <text x="1020" y="345" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">2024</text>
         <text x="1020" y="318" text-anchor="middle" font-size="11" fill="#c9a84c" font-weight="700">AI+EI 新时代</text>
@@ -364,8 +670,6 @@ footer strong{color:var(--gold)}
         <text x="1020" y="378" text-anchor="middle" font-size="9" fill="#c9a84c" font-weight="600">Genos "EI in the age of AI"</text>
         <text x="1020" y="394" text-anchor="middle" font-size="8" fill="#444">EIDC × 悦洋 · AI+EI三阶段模型</text>
         <line x1="1020" y1="356" x2="1020" y2="360" stroke="#c9a84c" stroke-width="1"/>
-
-        <!-- ===== Bottom section: Three models comparison ===== -->
         <rect x="80" y="240" width="300" height="76" rx="10" fill="#0a1628" filter="url(#shadow)"/>
         <text x="230" y="264" text-anchor="middle" font-size="12" fill="#e8cc7a" font-weight="700">三大 EI 模型对比</text>
         <text x="120" y="286" font-size="9" fill="#fff">🧠 能力模型</text>
@@ -375,23 +679,16 @@ footer strong{color:var(--gold)}
         <text x="340" y="286" font-size="9" fill="#fff">🏢 混合模型</text>
         <text x="340" y="302" font-size="9" fill="#fff">Goleman · ECI/ESCI</text>
         <line x1="80" y1="240" x2="80" y2="340" stroke="#0a1628" stroke-width="1" stroke-dasharray="3,3"/>
-
-        <!-- ===== Key contributors box ===== -->
         <rect x="440" y="240" width="310" height="76" rx="10" fill="#fff" stroke="#e0dcd4" stroke-width="1" filter="url(#shadow)"/>
         <text x="595" y="264" text-anchor="middle" font-size="12" fill="#0a1628" font-weight="700">📚 核心参考文献</text>
         <text x="460" y="288" font-size="8.5" fill="#444">• Palmer, Stough, Gignac (2009) — Genos EI Inventory</text>
         <text x="460" y="302" font-size="8.5" fill="#444">• Gignac (2008) — Genos EI Technical Manual</text>
         <text x="460" y="316" font-size="8.5" fill="#444">• Mayer & Salovey (1990) — Emotional Intelligence</text>
         <line x1="440" y1="240" x2="440" y2="340" stroke="#0a1628" stroke-width="1" stroke-dasharray="3,3"/>
-
-        <!-- ===== Timeline connecting lines ===== -->
         <line x1="80" y1="155" x2="80" y2="340" stroke="#d5d0c8" stroke-width="1" stroke-dasharray="4,4"/>
         <line x1="180" y1="200" x2="180" y2="340" stroke="#d5d0c8" stroke-width="1" stroke-dasharray="4,4"/>
-
-        <!-- ===== Genos EI 6 dimensions on bottom ===== -->
         <text x="550" y="430" text-anchor="middle" font-size="13" fill="#0a1628" font-weight="700">🧩 Genos EI 职场六维能力模型</text>
         <text x="550" y="448" text-anchor="middle" font-size="9" fill="#6b6560">自我觉察 → 他人觉察 → 真诚表达 → 情绪推理 → 自我管理 → 积极影响力</text>
-        <!-- Dimension dots -->
         <circle cx="330" cy="468" r="4" fill="#0d7377"/><text x="340" y="472" font-size="8" fill="#444">自我觉察</text>
         <circle cx="440" cy="468" r="4" fill="#14a3a8"/><text x="450" y="472" font-size="8" fill="#444">他人觉察</text>
         <circle cx="550" cy="468" r="4" fill="#c9a84c"/><text x="560" y="472" font-size="8" fill="#444">真诚表达</text>
@@ -409,8 +706,6 @@ footer strong{color:var(--gold)}
     <h2 class="section-title">六大理论贡献者</h2>
     <p class="section-subtitle">横跨百年，六位/组核心学者奠定了情绪智力的理论根基</p>
     <div class="scholars-grid">
-
-      <!-- Card 1: Thorndike -->
       <div class="scholar-card">
         <div class="scholar-card-header">
           <div class="scholar-era">1920 · 理论萌芽</div>
@@ -423,17 +718,8 @@ footer strong{color:var(--gold)}
             <strong>核心贡献</strong>
             <p>1920 年发表《社会智力》(Social Intelligence)，首次提出人际交往和情绪洞察属于智力范畴，成为 EI 理论的最早雏形。</p>
           </div>
-          <div class="scholar-books">
-            <div class="scholar-book">
-              <span class="scholar-book-icon" style="background:#8B4513"></span>
-              <span>《社会智力》(1920)</span>
-              <span class="year">开山论文</span>
-            </div>
-          </div>
         </div>
       </div>
-
-      <!-- Card 2: Payne -->
       <div class="scholar-card">
         <div class="scholar-card-header">
           <div class="scholar-era">1985 · 概念诞生</div>
@@ -444,19 +730,10 @@ footer strong{color:var(--gold)}
         <div class="scholar-card-body">
           <div class="scholar-contribution">
             <strong>核心贡献</strong>
-            <p>1985 年博士论文《情绪智力研究》(A Study of Emotion: Developing Emotional Intelligence) 中首次使用 "Emotional Intelligence" 术语，是学术界最早记录。</p>
-          </div>
-          <div class="scholar-books">
-            <div class="scholar-book">
-              <span class="scholar-book-icon" style="background:#2E4057"></span>
-              <span>《情绪智力研究》(1985)</span>
-              <span class="year">博士论文</span>
-            </div>
+            <p>1985 年博士论文《情绪智力研究》中首次使用 "Emotional Intelligence" 术语，是学术界最早记录。</p>
           </div>
         </div>
       </div>
-
-      <!-- Card 3: Gardner -->
       <div class="scholar-card">
         <div class="scholar-card-header">
           <div class="scholar-era">1983 · 理论源头</div>
@@ -467,19 +744,10 @@ footer strong{color:var(--gold)}
         <div class="scholar-card-body">
           <div class="scholar-contribution">
             <strong>核心贡献</strong>
-            <p>提出多元智能理论（内省智能 + 人际智能），打破传统智力一元论，"内省"与"人际"两个维度直接为日后 EI 理论提供了概念框架。</p>
-          </div>
-          <div class="scholar-books">
-            <div class="scholar-book">
-              <span class="scholar-book-icon" style="background:#1A5276"></span>
-              <span>《多元智能理论》(Frames of Mind, 1983)</span>
-              <span class="year">经典</span>
-            </div>
+            <p>提出多元智能理论（内省智能 + 人际智能），打破传统智力一元论，为 EI 理论提供了概念框架。</p>
           </div>
         </div>
       </div>
-
-      <!-- Card 4: Mayer & Salovey -->
       <div class="scholar-card">
         <div class="scholar-card-header">
           <div class="scholar-era">1990 · 学术正统</div>
@@ -490,24 +758,10 @@ footer strong{color:var(--gold)}
         <div class="scholar-card-body">
           <div class="scholar-contribution">
             <strong>核心贡献</strong>
-            <p>1990 年发表开山论文《情绪智力》(Emotional Intelligence)，首次正式定义 EI 概念并建立能力模型。开发 MSCEIT 测验，为 EI 学术研究奠定正统地位。</p>
-          </div>
-          <div class="scholar-books">
-            <div class="scholar-book">
-              <span class="scholar-book-icon" style="background:#0E6251"></span>
-              <span>《情绪智力》(1990) — 开山论文</span>
-              <span class="year">奠基</span>
-            </div>
-            <div class="scholar-book">
-              <span class="scholar-book-icon" style="background:#52BE80"></span>
-              <span>《情绪智力：是什么与如何发展》</span>
-              <span class="year">专著</span>
-            </div>
+            <p>1990 年发表开山论文《情绪智力》，首次正式定义 EI 概念并建立能力模型。开发 MSCEIT 测验，为 EI 学术研究奠定正统地位。</p>
           </div>
         </div>
       </div>
-
-      <!-- Card 5: Bar-On -->
       <div class="scholar-card">
         <div class="scholar-card-header">
           <div class="scholar-era">1997 · 测评体系</div>
@@ -518,24 +772,10 @@ footer strong{color:var(--gold)}
         <div class="scholar-card-body">
           <div class="scholar-contribution">
             <strong>核心贡献</strong>
-            <p>开发 EQ-i（情绪商数量表），建立特质模型（Trait Model）。将 EI 视为一组人格特质和社会功能的集合，广泛应用于心理健康、压力管理和临床测评。</p>
-          </div>
-          <div class="scholar-books">
-            <div class="scholar-book">
-              <span class="scholar-book-icon" style="background:#6C3483"></span>
-              <span>《情绪智商手册》</span>
-              <span class="year">经典</span>
-            </div>
-            <div class="scholar-book">
-              <span class="scholar-book-icon" style="background:#AF7AC5"></span>
-              <span>《情绪与社会智力》</span>
-              <span class="year">专著</span>
-            </div>
+            <p>开发 EQ-i（情绪商数量表），建立特质模型。将 EI 视为一组人格特质和社会功能的集合，广泛应用于心理健康、压力管理和临床测评。</p>
           </div>
         </div>
       </div>
-
-      <!-- Card 6: Goleman -->
       <div class="scholar-card">
         <div class="scholar-card-header">
           <div class="scholar-era">1995 · 大众普及</div>
@@ -548,107 +788,60 @@ footer strong{color:var(--gold)}
             <strong>核心贡献</strong>
             <p>《情商》全球畅销 500 万+，将 EI 推向大众。提出职场 EI 四维模型（自我觉察→自我管理→社会觉察→关系管理），开发 ECI/ESCI 测评工具。</p>
           </div>
-          <div class="scholar-books">
-            <div class="scholar-book">
-              <span class="scholar-book-icon" style="background:#C0392B"></span>
-              <span>《情商》(EQ, 1995)</span>
-              <span class="year">全球爆火</span>
-            </div>
-            <div class="scholar-book">
-              <span class="scholar-book-icon" style="background:#E67E22"></span>
-              <span>《情商2：社交商》</span>
-              <span class="year">系列</span>
-            </div>
-            <div class="scholar-book">
-              <span class="scholar-book-icon" style="background:#F1C40F"></span>
-              <span>《情商3：工作情商》</span>
-              <span class="year">系列</span>
-            </div>
-            <div class="scholar-book">
-              <span class="scholar-book-icon" style="background:#2ECC71"></span>
-              <span>《情商4：领导情商》</span>
-              <span class="year">系列</span>
-            </div>
-            <div class="scholar-book">
-              <span class="scholar-book-icon" style="background:#3498DB"></span>
-              <span>《专注》(Focus)</span>
-              <span class="year">专著</span>
-            </div>
-          </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ===== Books Deconstruction ===== -->
+<!-- ===== Books Showcase ===== -->
 <section id="books" class="section-cream">
   <div class="container">
     <h2 class="section-title">著作拆解</h2>
     <p class="section-subtitle">核心学者代表作的核心理念、实践框架与关键影响</p>
     <div class="books-showcase">
-
       <div class="book-card">
         <span class="card-badge">开山奠基</span>
         <h4>Emotional Intelligence</h4>
         <div class="book-author">Mayer &amp; Salovey · 1990</div>
-        <p>首次正式定义"情绪智力"为"感知、理解、调节情绪的能力"，建立四维能力模型：情绪感知 → 情绪促进思维 → 情绪理解 → 情绪管理。开发 MSCEIT 测验，以能力表现（而非自评）测量 EI。</p>
-        <div class="book-impact">
-          <span>能力模型</span><span>MSCEIT</span><span>学术正统</span>
-        </div>
+        <p>首次正式定义"情绪智力"为"感知、理解、调节情绪的能力"，建立四维能力模型。开发 MSCEIT 能力测验。</p>
+        <div class="book-impact"><span>能力模型</span><span>MSCEIT</span><span>学术正统</span></div>
       </div>
-
       <div class="book-card">
         <span class="card-badge">⭐ 全球畅销</span>
         <h4>情商：为什么情商比智商更重要</h4>
         <div class="book-author">丹尼尔·戈尔曼 · 1995</div>
-        <p>提出 EI 比 IQ 更能预测成功的核心理念。构建职场四维模型：自我觉察→自我管理→社会觉察→关系管理。全球销量超 500 万册，被誉为"情商之父"。</p>
-        <div class="book-impact">
-          <span>职场EI</span><span>四维模型</span><span>ECI测评</span>
-        </div>
+        <p>提出 EI 比 IQ 更能预测成功的核心理念。构建职场四维模型。全球销量超 500 万册，被誉为"情商之父"。</p>
+        <div class="book-impact"><span>职场EI</span><span>四维模型</span><span>ECI测评</span></div>
       </div>
-
       <div class="book-card">
         <span class="card-badge">领导力</span>
         <h4>情商4：领导情商 (Primal Leadership)</h4>
         <div class="book-author">戈尔曼 · 2002</div>
-        <p>提出"共鸣领导力"理论，发现领导者情绪风格对组织绩效的影响达 20-30%。介绍六种领导风格（愿景型、教练型、亲和型、民主型、领跑型、命令型）及其 EI 基础。</p>
-        <div class="book-impact">
-          <span>共鸣领导力</span><span>六种风格</span><span>神经科学</span>
-        </div>
+        <p>提出"共鸣领导力"理论，发现领导者情绪风格对组织绩效的影响达 20-30%。介绍六种领导风格的 EI 基础。</p>
+        <div class="book-impact"><span>共鸣领导力</span><span>六种风格</span><span>神经科学</span></div>
       </div>
-
       <div class="book-card">
         <span class="card-badge">测评工具</span>
         <h4>情绪智商手册</h4>
         <div class="book-author">鲁文·巴昂 · 1997</div>
-        <p>建立 EI 的特质模型，开发 EQ-i 量表（133 题、5 个维度、15 个子量表）。将 EI 定义为"影响个体应对环境需求的一系列情绪与社会能力的集合"，广泛应用于临床与 HR。</p>
-        <div class="book-impact">
-          <span>特质模型</span><span>EQ-i</span><span>心理测评</span>
-        </div>
+        <p>建立 EI 的特质模型，开发 EQ-i 量表（133 题、5 维度、15 子量表）。广泛应用于临床与 HR 领域。</p>
+        <div class="book-impact"><span>特质模型</span><span>EQ-i</span><span>心理测评</span></div>
       </div>
-
       <div class="book-card">
         <span class="card-badge">教育创新</span>
         <h4>多元智能理论 (Frames of Mind)</h4>
         <div class="book-author">霍华德·加德纳 · 1983</div>
-        <p>颠覆传统 IQ 一元论，提出七种智能（后扩展至九种）。其中"内省智能"和"人际智能"直接为 EI 理论提供概念框架，是情绪智力理论的重要思想来源。</p>
-        <div class="book-impact">
-          <span>多元智能</span><span>内省智能</span><span>人际智能</span>
-        </div>
+        <p>颠覆传统 IQ 一元论，提出八大智能。其中"内省智能"和"人际智能"直接为 EI 理论提供概念框架。</p>
+        <div class="book-impact"><span>多元智能</span><span>内省智能</span><span>人际智能</span></div>
       </div>
-
       <div class="book-card">
         <span class="card-badge">职场应用</span>
         <h4>Genos EI 技术手册</h4>
         <div class="book-author">Gignac · 2008 / Palmer &amp; Stough · 2002</div>
-        <p>专为职场设计的 EI 六维模型，采用 360° 多评价者反馈，测量 EI 行为频率而非能力。经因子分析验证，研究证明 EI 发展可提升 17-20% 的绩效表现。</p>
-        <div class="book-impact">
-          <span>六维模型</span><span>360°测评</span><span>ROI实证</span>
-        </div>
+        <p>专为职场设计的 EI 六维模型，采用 360° 多评价者反馈。EI 发展可提升 17-20% 的绩效表现。</p>
+        <div class="book-impact"><span>六维模型</span><span>360°测评</span><span>ROI实证</span></div>
       </div>
-
     </div>
   </div>
 </section>
@@ -669,54 +862,13 @@ footer strong{color:var(--gold)}
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>测量工具</td>
-            <td><span class="model-highlight">MSCEIT</span></td>
-            <td><span class="model-highlight">EQ-i</span></td>
-            <td><span class="model-highlight">ECI / ESCI</span></td>
-          </tr>
-          <tr>
-            <td>测量方式</td>
-            <td>能力测验（有对错）</td>
-            <td>自陈量表</td>
-            <td>360° 多评价者</td>
-          </tr>
-          <tr>
-            <td>核心焦点</td>
-            <td>情绪认知能力</td>
-            <td>人格特质 + 社会功能</td>
-            <td>职场绩效 + 领导力</td>
-          </tr>
-          <tr>
-            <td>维度数量</td>
-            <td>4 维度</td>
-            <td>5 维度 / 15 子量表</td>
-            <td>4 维度 / 18 能力</td>
-          </tr>
-          <tr>
-            <td>题项数量</td>
-            <td>141 题</td>
-            <td>133 题</td>
-            <td>72 题</td>
-          </tr>
-          <tr>
-            <td>理论基础</td>
-            <td>情绪 = 认知能力</td>
-            <td>情绪 = 人格特质</td>
-            <td>情绪 = 职场绩效预测</td>
-          </tr>
-          <tr>
-            <td>主要应用</td>
-            <td>学术研究</td>
-            <td>心理健康 / 临床</td>
-            <td>企业管理 / 领导力发展</td>
-          </tr>
-          <tr>
-            <td>信效度验证</td>
-            <td>高分辩效度</td>
-            <td>良好的内部一致性</td>
-            <td>广泛的实证研究</td>
-          </tr>
+          <tr><td>测量工具</td><td><span class="model-highlight">MSCEIT</span></td><td><span class="model-highlight">EQ-i</span></td><td><span class="model-highlight">ECI / ESCI</span></td></tr>
+          <tr><td>测量方式</td><td>能力测验（有对错）</td><td>自陈量表</td><td>360° 多评价者</td></tr>
+          <tr><td>核心焦点</td><td>情绪认知能力</td><td>人格特质 + 社会功能</td><td>职场绩效 + 领导力</td></tr>
+          <tr><td>维度数量</td><td>4 维度</td><td>5 维度 / 15 子量表</td><td>4 维度 / 18 能力</td></tr>
+          <tr><td>题项数量</td><td>141 题</td><td>133 题</td><td>72 题</td></tr>
+          <tr><td>理论基础</td><td>情绪 = 认知能力</td><td>情绪 = 人格特质</td><td>情绪 = 职场绩效预测</td></tr>
+          <tr><td>主要应用</td><td>学术研究</td><td>心理健康 / 临床</td><td>企业管理 / 领导力发展</td></tr>
         </tbody>
       </table>
     </div>
@@ -729,48 +881,12 @@ footer strong{color:var(--gold)}
     <h2 class="section-title">Genos EI 职场情感智能模型</h2>
     <p class="section-subtitle">由 Ben Palmer 与 Con Stough 于斯威本科技大学开发，专为职场情境设计的 360° 行为评估体系</p>
     <div class="genos-grid">
-
-      <div class="genos-item">
-        <div class="num">01</div>
-        <h4>情绪自我觉察</h4>
-        <p>Emotional Self-Awareness — 觉察自身感受及其对决策、行为和绩效的影响</p>
-      </div>
-
-      <div class="genos-item">
-        <div class="num">02</div>
-        <h4>他人情绪觉察</h4>
-        <p>Awareness of Others — 感知、理解并确认他人的感受（职场共情能力）</p>
-      </div>
-
-      <div class="genos-item">
-        <div class="num">03</div>
-        <h4>真诚表达</h4>
-        <p>Authenticity — 开放、诚实、有效地表达自己，保持透明并遵守承诺</p>
-      </div>
-
-      <div class="genos-item">
-        <div class="num">04</div>
-        <h4>情绪推理</h4>
-        <p>Emotional Reasoning — 在决策中考虑并运用自身及他人情绪，整合情感与事实</p>
-      </div>
-
-      <div class="genos-item">
-        <div class="num">05</div>
-        <h4>自我管理</h4>
-        <p>Self-Management — 管理自身情绪、时间与行为，在高压力环境中保持稳定</p>
-      </div>
-
-      <div class="genos-item">
-        <div class="num">06</div>
-        <h4>积极影响力</h4>
-        <p>Positive Influence — 通过问题解决、反馈和支持营造积极健康的工作环境</p>
-      </div>
-
-    </div>
-    <div style="margin-top:2.5rem;text-align:center;color:rgba(255,255,255,0.6);font-size:0.9rem;display:flex;flex-wrap:wrap;gap:20px;justify-content:center">
-      <span>🧪 心理测量学验证：Gilles Gignac</span>
-      <span>📊 EI 培训 ROI 实证：Richard Harmer</span>
-      <span>📈 中国区首席讲师：王玉博士</span>
+      <div class="genos-item"><div class="num">01</div><h4>情绪自我觉察</h4><p>Emotional Self-Awareness — 觉察自身感受及其对决策、行为和绩效的影响</p></div>
+      <div class="genos-item"><div class="num">02</div><h4>他人情绪觉察</h4><p>Awareness of Others — 感知、理解并确认他人的感受（职场共情能力）</p></div>
+      <div class="genos-item"><div class="num">03</div><h4>真诚表达</h4><p>Authenticity — 开放、诚实、有效地表达自己，保持透明并遵守承诺</p></div>
+      <div class="genos-item"><div class="num">04</div><h4>情绪推理</h4><p>Emotional Reasoning — 在决策中考虑并运用自身及他人情绪，整合情感与事实</p></div>
+      <div class="genos-item"><div class="num">05</div><h4>自我管理</h4><p>Self-Management — 管理自身情绪、时间与行为，在高压力环境中保持稳定</p></div>
+      <div class="genos-item"><div class="num">06</div><h4>积极影响力</h4><p>Positive Influence — 通过问题解决、反馈和支持营造积极健康的工作环境</p></div>
     </div>
   </div>
 </section>
@@ -781,87 +897,14 @@ footer strong{color:var(--gold)}
     <h2 class="section-title">理论进化脉络</h2>
     <p class="section-subtitle">从概念萌芽到 AI 融合，看 EI 理论如何层层演进</p>
     <div class="evolution-tree">
-
-      <div class="tree-node">
-        <div class="tree-dot"></div>
-        <div class="tree-content">
-          <div class="year">1920 — 萌芽</div>
-          <h4>桑代克 · 社会智力</h4>
-          <p>首次突破传统智力观，提出"社会智力"概念，认为理解他人、处理人际关系属于独立的智力维度。</p>
-        </div>
-        <div class="tree-spacer"></div>
-      </div>
-
-      <div class="tree-node">
-        <div class="tree-dot"></div>
-        <div class="tree-spacer"></div>
-        <div class="tree-content">
-          <div class="year">1983 — 理论源头</div>
-          <h4>加德纳 · 多元智能</h4>
-          <p>内省智能（了解自己情绪）与人际智能（理解他人）为日后 EI 理论提供了直接的概念框架。</p>
-        </div>
-      </div>
-
-      <div class="tree-node">
-        <div class="tree-dot"></div>
-        <div class="tree-content">
-          <div class="year">1985 — 概念诞生</div>
-          <h4>佩恩 · "情绪智力"术语首现</h4>
-          <p>博士论文首次写下 "Emotional Intelligence" 一词，探讨情绪发展与人类潜能的关系。</p>
-        </div>
-        <div class="tree-spacer"></div>
-      </div>
-
-      <div class="tree-node">
-        <div class="tree-dot" style="background:#0E6251;box-shadow:0 0 0 4px rgba(14,98,81,0.2)"></div>
-        <div class="tree-spacer"></div>
-        <div class="tree-content">
-          <div class="year">1990 — 学术奠基 ⭐</div>
-          <h4>梅耶 &amp; 萨洛维 · 正式定义 EI</h4>
-          <p>发表开山论文，建立能力模型四维框架：感知→促进→理解→管理，开发 MSCEIT 测验。</p>
-        </div>
-      </div>
-
-      <div class="tree-node">
-        <div class="tree-dot" style="background:#C0392B;box-shadow:0 0 0 4px rgba(192,57,43,0.2)"></div>
-        <div class="tree-content">
-          <div class="year">1995 — 大众普及 🔥</div>
-          <h4>戈尔曼 · 《情商》全球爆火</h4>
-          <p>将 EI 从学术圈带入大众视野，提出职场四维模型，开发 ECI 测评，成为情商普及第一人。</p>
-        </div>
-        <div class="tree-spacer"></div>
-      </div>
-
-      <div class="tree-node">
-        <div class="tree-dot" style="background:#6C3483;box-shadow:0 0 0 4px rgba(108,51,131,0.2)"></div>
-        <div class="tree-spacer"></div>
-        <div class="tree-content">
-          <div class="year">1997 — 测评体系</div>
-          <h4>巴昂 · EQ-i 量表</h4>
-          <p>建立特质模型，将 EI 操作化为 5 维度 15 子量表，广泛应用于心理健康与人格评估。</p>
-        </div>
-      </div>
-
-      <div class="tree-node">
-        <div class="tree-dot" style="background:#0d7377;box-shadow:0 0 0 4px rgba(13,115,119,0.2)"></div>
-        <div class="tree-content">
-          <div class="year">2002 — 职场应用</div>
-          <h4>Palmer &amp; Stough · Genos EI 模型</h4>
-          <p>专为职场设计六维行为模型，采用 360° 反馈评估，建立 EI 培训与绩效 ROI 之间的实证关联。</p>
-        </div>
-        <div class="tree-spacer"></div>
-      </div>
-
-      <div class="tree-node">
-        <div class="tree-dot" style="background:#c9a84c;box-shadow:0 0 0 4px rgba(201,168,76,0.2)"></div>
-        <div class="tree-spacer"></div>
-        <div class="tree-content">
-          <div class="year">2024 — AI 融合</div>
-          <h4>Genos "EI in the age of AI" + EIDC</h4>
-          <p>Genos 全球大会（曼谷）聚焦 EI 在 AI 时代的新价值。中国 EIDC（王玉博士）推动"EI点亮生活"，AI+EI 三阶段模型（杨辉）提出 Enable→Native→Awaken 路径。</p>
-        </div>
-      </div>
-
+      <div class="tree-node"><div class="tree-dot"></div><div class="tree-content"><div class="year">1920 — 萌芽</div><h4>桑代克 · 社会智力</h4><p>首次突破传统智力观，提出"社会智力"概念，认为理解他人、处理人际关系属于独立的智力维度。</p></div><div class="tree-spacer"></div></div>
+      <div class="tree-node"><div class="tree-dot"></div><div class="tree-spacer"></div><div class="tree-content"><div class="year">1983 — 理论源头</div><h4>加德纳 · 多元智能</h4><p>内省智能（了解自己情绪）与人际智能（理解他人）为日后 EI 理论提供了直接的概念框架。</p></div></div>
+      <div class="tree-node"><div class="tree-dot"></div><div class="tree-content"><div class="year">1985 — 概念诞生</div><h4>佩恩 · "情绪智力"术语首现</h4><p>博士论文首次写下 "Emotional Intelligence" 一词，探讨情绪发展与人类潜能的关系。</p></div><div class="tree-spacer"></div></div>
+      <div class="tree-node"><div class="tree-dot" style="background:#0E6251;box-shadow:0 0 0 4px rgba(14,98,81,0.2)"></div><div class="tree-spacer"></div><div class="tree-content"><div class="year">1990 — 学术奠基 ⭐</div><h4>梅耶 &amp; 萨洛维 · 正式定义 EI</h4><p>发表开山论文，建立能力模型四维框架，开发 MSCEIT 测验。</p></div></div>
+      <div class="tree-node"><div class="tree-dot" style="background:#C0392B;box-shadow:0 0 0 4px rgba(192,57,43,0.2)"></div><div class="tree-content"><div class="year">1995 — 大众普及 🔥</div><h4>戈尔曼 · 《情商》全球爆火</h4><p>将 EI 从学术圈带入大众视野，提出职场四维模型，成为情商普及第一人。</p></div><div class="tree-spacer"></div></div>
+      <div class="tree-node"><div class="tree-dot" style="background:#6C3483;box-shadow:0 0 0 4px rgba(108,51,131,0.2)"></div><div class="tree-spacer"></div><div class="tree-content"><div class="year">1997 — 测评体系</div><h4>巴昂 · EQ-i 量表</h4><p>建立特质模型，将 EI 操作化为 5 维度 15 子量表。</p></div></div>
+      <div class="tree-node"><div class="tree-dot" style="background:#0d7377;box-shadow:0 0 0 4px rgba(13,115,119,0.2)"></div><div class="tree-content"><div class="year">2002 — 职场应用</div><h4>Palmer &amp; Stough · Genos EI</h4><p>专为职场设计六维行为模型，建立 EI 培训与绩效 ROI 实证关联。</p></div><div class="tree-spacer"></div></div>
+      <div class="tree-node"><div class="tree-dot" style="background:#c9a84c;box-shadow:0 0 0 4px rgba(201,168,76,0.2)"></div><div class="tree-spacer"></div><div class="tree-content"><div class="year">2024 — AI 融合</div><h4>Genos "EI in the age of AI"</h4><p>Genos 全球大会聚焦 EI 在 AI 时代的新价值。AI+EI 三阶段模型（杨辉）：Enable→Native→Awaken。</p></div></div>
     </div>
   </div>
 </section>
@@ -872,24 +915,9 @@ footer strong{color:var(--gold)}
     <h2 class="section-title">AI 时代的情感智能</h2>
     <p class="section-subtitle">AI 时代就是 EI 的时代 — 技术越先进，人类情感智能越珍贵</p>
     <div class="ai-stages">
-      <div class="ai-stage">
-        <div class="stage-icon s1">🔧</div>
-        <h4>AI Enable 赋能</h4>
-        <p>通过技术工具为 EI 实践提供基础支撑：知识库构建、智能获客、情感识别系统、智能预警 + 人工干预协同</p>
-        <span class="en">工具层面</span>
-      </div>
-      <div class="ai-stage">
-        <div class="stage-icon s2">🌱</div>
-        <h4>AI Native 原生</h4>
-        <p>AI 生成能力创造情感交互新体验：情感机器人、情境化共情、AI 邀约助手自动生成话题</p>
-        <span class="en">原生层面</span>
-      </div>
-      <div class="ai-stage">
-        <div class="stage-icon s3">🌅</div>
-        <h4>AI Awaken 觉醒</h4>
-        <p>将 AI 视为伙伴而非工具，探索 EI 的哲学维度：文化与情感深度融合、"人类智慧之镜"</p>
-        <span class="en">生命层面</span>
-      </div>
+      <div class="ai-stage"><div class="stage-icon s1">🔧</div><h4>AI Enable 赋能</h4><p>通过技术工具为 EI 实践提供基础支撑：知识库构建、智能获客、情感识别系统</p><span class="en">工具层面</span></div>
+      <div class="ai-stage"><div class="stage-icon s2">🌱</div><h4>AI Native 原生</h4><p>AI 生成能力创造情感交互新体验：情感机器人、情境化共情、AI 邀约助手</p><span class="en">原生层面</span></div>
+      <div class="ai-stage"><div class="stage-icon s3">🌅</div><h4>AI Awaken 觉醒</h4><p>将 AI 视为伙伴而非工具，探索 EI 的哲学维度：文化与情感深度融合</p><span class="en">生命层面</span></div>
     </div>
     <div style="margin-top:2.5rem;text-align:center;color:rgba(255,255,255,0.5);font-size:0.85rem;max-width:700px;margin-left:auto;margin-right:auto">
       <p>"AI 时代就是 EI 的时代，EI 是人类进化的阶梯。" — 杨辉老师</p>
@@ -907,6 +935,9 @@ footer strong{color:var(--gold)}
   </div>
 </footer>
 
+<!-- ===== Toast ===== -->
+<div class="toast" id="toast"></div>
+
 <!-- ===== JavaScript ===== -->
 <script>
 // Mobile menu toggle
@@ -914,42 +945,344 @@ document.getElementById('mobileToggle').addEventListener('click', function(){
   document.getElementById('navLinks').classList.toggle('open');
 });
 
-// Navbar active state on scroll
+// Navbar active state
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
-
 function updateActiveLink(){
   let current = '';
-  sections.forEach(section => {
-    const top = section.offsetTop - 100;
-    const bottom = top + section.offsetHeight;
-    if(window.scrollY >= top && window.scrollY < bottom){
-      current = section.getAttribute('id');
-    }
+  sections.forEach(s => {
+    const top = s.offsetTop - 100, bottom = top + s.offsetHeight;
+    if(window.scrollY >= top && window.scrollY < bottom) current = s.getAttribute('id');
   });
-  navLinks.forEach(link => {
-    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
-  });
+  navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
 }
-
 window.addEventListener('scroll', updateActiveLink);
 window.addEventListener('load', updateActiveLink);
+navLinks.forEach(l => l.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open')));
 
-// Close mobile menu on link click
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    document.getElementById('navLinks').classList.remove('open');
-  });
-});
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e){
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e){
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    const t = document.querySelector(this.getAttribute('href'));
+    if(t) t.scrollIntoView({behavior:'smooth', block:'start'});
   });
 });
+
+// ===== SKILL TABS =====
+const tabs = document.querySelectorAll('.skill-tab');
+const panels = document.querySelectorAll('.skill-panel');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    panels.forEach(p => p.classList.remove('active'));
+    document.getElementById(tab.dataset.tab).classList.add('active');
+  });
+});
+
+// ===== SKILL DOWNLOAD =====
+function downloadSkill(id) {
+  const skills = [
+    {// 1 Goleman EQ
+      filename: 'Skill-戈尔曼-情商四维模型.md',
+      content: `# 🧠 Skill 卡片：职场 EI 四维模型
+
+**来源**: 丹尼尔·戈尔曼《情商》(Emotional Intelligence, 1995)
+**核心**: EI > IQ，情商比智商更能预测职场成功
+
+---
+
+## 📖 核心理论
+
+1. **EI > IQ**: 情商比智商更能预测职场成功与领导力表现
+2. **四维框架**: 自我觉察 → 自我管理 → 社会觉察 → 关系管理（18 项能力）
+3. **神经科学基础**: 前额叶皮层（理性）与杏仁核（情绪）的博弈——"情绪劫持"机制
+4. **可塑性**: EI 可以通过刻意训练提升，不受先天 IQ 限制
+
+> 一句话：先觉察自己的情绪，才能管理好情绪；先管理好自己，才能理解他人；理解他人，才能建立卓越关系。
+
+---
+
+## 🛠 实操工具
+
+### 1. STOP 法（情绪管理）
+- **S**top — 暂停，不要立即反应
+- **T**ake breath — 深呼吸 3 次
+- **O**bserve — 观察身体反应和情绪
+- **P**roceed — 有意识地选择回应方式
+
+### 2. 每日情绪日志
+| 触发事件 | 身体反应 | 情绪命名 | 想法 | 行为 | 结果 |
+|---------|---------|---------|-----|-----|-----|
+|         |         |         |     |     |     |
+
+### 3. 共情三层次
+1. 认知共情 → 理解对方视角
+2. 情绪共情 → 感受对方的感受
+3. 共情关怀 → 采取行动帮助
+
+### 4. 非暴力沟通框架
+观察（事实）→ 感受（情绪）→ 需要（需求）→ 请求（具体行动）
+
+---
+
+## 📊 每周 EI 自检清单（18 项能力 1-5 分）
+
+**自我觉察**: 情绪觉察 · 准确自评 · 自信
+**自我管理**: 情绪自制 · 透明 · 适应 · 成就 · 主动 · 乐观
+**社会觉察**: 共情 · 组织觉察 · 服务
+**关系管理**: 激励 · 影响 · 培养他人 · 变革 · 冲突管理 · 团队协作
+`
+    },
+    {// 2 Primal Leadership
+      filename: 'Skill-戈尔曼-领导六风格.md',
+      content: `# 👔 Skill 卡片：六种领导风格
+
+**来源**: 丹尼尔·戈尔曼《情商4：领导情商》(Primal Leadership, 2002)
+**核心**: 领导者的情绪具有"传染性"，直接影响团队绩效 20-30%
+
+---
+
+## 📖 核心理论
+
+1. **共鸣领导力**: 领导者的情绪会感染整个团队，情绪氛围决定绩效
+2. **六种风格**: 愿景型 · 教练型 · 亲和型 · 民主型 · 领跑型 · 命令型
+3. **领导力弹性**: 卓越领导者根据情境灵活切换风格
+
+> 一句话：领导力的本质不是职位权力，而是"情绪共鸣"——你能让团队感受到什么，决定了你能带领团队走多远。
+
+---
+
+## 🛠 六种风格详解
+
+| 风格 | 运作方式 | 对氛围影响 | 适用场景 | 慎用场景 |
+|------|---------|-----------|---------|---------|
+| **愿景型** | 描绘共同愿景，激发认同 | 最强正向 | 变革期/需要方向时 | 与资深专家共事时 |
+| **教练型** | 关注个人发展，连接个人目标 | 强正向 | 培养下属/建立长期能力 | 紧急/高压场景 |
+| **亲和型** | 创造情感纽带，"人优先" | 强正向 | 团队融合/修复信任 | 危机/需要明确方向时 |
+| **民主型** | 通过参与达成共识 | 中正向 | 需要共识/收集意见时 | 紧急/团队缺乏信息时 |
+| **领跑型** | 以身作则，高标准要求 | 负向（滥用时） | 高能力团队/短期冲刺 | 长期使用（会耗尽团队） |
+| **命令型** | "照我说的做" | 负向 | 危机/紧急/整顿纪律 | 日常管理 |
+
+---
+
+## 🛠 实操工具
+
+### 情境匹配矩阵
+遇到以下情境，优先使用对应风格：
+- **危机/紧急** → 命令型
+- **需要方向/变革** → 愿景型
+- **培养下属** → 教练型
+- **团队融合/修复信任** → 亲和型
+- **收集意见/达成共识** → 民主型
+- **高能力团队冲刺** → 领跑型（短期）
+
+### 反馈四步法
+1. 描述具体行为
+2. 指出行为的影响
+3. 询问对方看法
+4. 共同制定改进计划
+`
+    },
+    {// 3 MSCEIT
+      filename: 'Skill-MSCEIT-四维能力.md',
+      content: `# 🔬 Skill 卡片：MSCEIT 四维能力模型
+
+**来源**: 梅耶 & 萨洛维《情绪智力》(Emotional Intelligence, 1990)
+**核心**: EI 是一种独立的认知能力，可用能力测验（有对错）测量
+
+---
+
+## 📖 核心理论
+
+1. **EI = 认知能力**: 情绪智力是处理情绪信息的认知能力，不是人格特质
+2. **四维递进模型**: 感知 → 促进 → 理解 → 管理（从基础到高级）
+3. **MSCEIT 测验**: 141 题，有客观"对错"标准
+4. **独立智力维度**: MSCEIT 与 IQ 相关性仅 0.2-0.3
+
+> 一句话：真正的情绪智力不是"感觉良好"，而是准确感知、深刻理解并智慧运用情绪信息的能力。
+
+---
+
+## 🛠 实操工具
+
+### 1. 每日情绪标签训练
+看到人脸/场景时，用精确词汇命名情绪（避免笼统的"好/不好"）：
+
+| 基础情绪 | 精确词汇（30+种） |
+|---------|-----------------|
+| 喜 | 欣慰 · 满足 · 自豪 · 欣喜 · 感动 · 宁静 |
+| 怒 | 不满 · 恼怒 · 愤慨 · 暴怒 · 憎恶 · 烦躁 |
+| 哀 | 失落 · 悲伤 · 沮丧 · 绝望 · 怀念 · 忧郁 |
+| 惧 | 不安 · 焦虑 · 恐惧 · 惊慌 · 担忧 · 警惕 |
+| 厌 | 厌恶 · 反感 · 不屑 · 鄙夷 · 不适 · 排斥 |
+| 惊 | 惊讶 · 震撼 · 惊奇 · 震惊 · 意外 · 错愕 |
+
+### 2. 情绪促进思维
+做决策前问自己三个问题：
+1. 我现在感受如何？
+2. 这个感受告诉了我什么信息？
+3. 这个信息如何帮助我做出更好的决定？
+
+### 3. 情绪理解练习（逻辑链）
+事件 → 感受 → 想法 → 行为 → 结果
+
+### 4. 情绪调节策略矩阵
+情境选择 → 情境修正 → 注意力部署 → 认知改变 → 反应调节
+`
+    },
+    {// 4 Bar-On EQ-i
+      filename: 'Skill-BarOn-EQ-i五维特质.md',
+      content: `# 📊 Skill 卡片：EQ-i 五维特质模型
+
+**来源**: 鲁文·巴昂《情绪智商手册》(Handbook of Emotional Intelligence, 1997)
+**核心**: EI 是一组影响个体应对环境需求的情绪与社会能力
+
+---
+
+## 📖 核心理论
+
+1. **EI = 人格特质 × 社会功能**: 应对生活压力的能力集合
+2. **五维度 15 子量表**: 自我意识(3) · 自我表达(3) · 人际(3) · 决策(3) · 压力管理(3)
+3. **EQ-i 量表**: 133 题自陈量表，全球最广泛使用的 EI 测评之一
+
+> 一句话：情绪智力就是"你应对生活压力的能力"——5 个维度 15 种能力构成了你的心理韧性画像。
+
+---
+
+## 🛠 五维度详解
+
+| 维度 | 3 个子能力 | 提升方法 |
+|------|-----------|---------|
+| **自我意识** | 情绪觉察 · 自信 · 独立性 | 每日情绪日志 |
+| **自我表达** | 情绪表达 · 坚定 · 自尊 | 非暴力沟通练习 |
+| **人际** | 共情 · 社会责任 · 人际关系 | 换位思考训练 |
+| **决策** | 现实检验 · 问题解决 · 冲动控制 | 决策检查表 |
+| **压力管理** | 抗压 · 乐观 · 幸福感 | 正念 + 认知重构 |
+
+---
+
+## 🛠 实操工具
+
+### 压力管理工具箱
+1. **4-7-8 呼吸法**: 吸气4秒 → 屏息7秒 → 呼气8秒
+2. **认知重构**: 写下负面想法 → 找证据反驳 → 替代为理性想法
+3. **社会支持**: 至少维护 3 个可倾诉的深度关系
+
+### 现实检验练习
+区分"事实"与"感受"——列两张清单对比
+`
+    },
+    {// 5 Genos
+      filename: 'Skill-Genos-职场六维EI.md',
+      content: `# 🏢 Skill 卡片：Genos 职场六维 EI
+
+**来源**: Palmer & Stough, 斯威本科技大学 (Genos EI Technical Manual, 2002/2008)
+**核心**: 专为职场设计的行为频率评估体系
+
+---
+
+## 📖 核心理论
+
+1. **职场专用**: 聚焦工作中的 EI 行为表现，而非一般情绪能力
+2. **行为频率**: 测量"你多常展现某种 EI 行为"而非"能力有多高"
+3. **六维递进**: 自我觉察 → 他人觉察 → 真诚表达 → 情绪推理 → 自我管理 → 积极影响力
+4. **360° 评估**: 自评 + 他评（上级/同事/下属），揭示 EI 行为盲区
+5. **ROI**: EI 培训可提升 17-20% 工作绩效
+
+> 一句话：职场 EI 不是"你懂不懂情绪"，而是"你每天在工作中实际展现了多少 EI 行为"。
+
+---
+
+## 🛠 六维能力详解
+
+| # | 维度 | 关键行为 | 提升练习 |
+|---|------|---------|---------|
+| 1 | 情绪自我觉察 | 识别情绪对工作的影响 | 每日情绪-绩效日志 |
+| 2 | 他人情绪觉察 | 共情与倾听 | 每天主动问一个人"你感觉如何" |
+| 3 | 真诚表达 | 开放透明 | 保持承诺记录表 |
+| 4 | 情绪推理 | 决策中整合情绪 | 情绪推理决策模板 |
+| 5 | 自我管理 | 压力下保持稳定 | STOP 法 |
+| 6 | 积极影响力 | 营造正向环境 | 每日一条具体正面反馈 |
+
+---
+
+## 🛠 情绪推理决策模板
+1. 事实数据是什么？
+2. 各方情绪如何？
+3. 情绪对决策的可能影响？
+4. 综合考虑后的决定？
+
+## 🛠 行为频率自评表
+按"从不/偶尔/有时/经常/总是"评估六个维度的关键行为
+`
+    },
+    {// 6 Gardner
+      filename: 'Skill-加德纳-多元智能.md',
+      content: `# 🎯 Skill 卡片：多元智能识别与发展
+
+**来源**: 霍华德·加德纳《多元智能理论》(Frames of Mind, 1983)
+**核心**: 每个人都有独特的智能组合——"你在哪些方面聪明"比"你聪不聪明"更重要
+
+---
+
+## 📖 核心理论
+
+1. **打破一元智力观**: IQ 只能测量语言+逻辑，严重低估人类智能全貌
+2. **八大智能**: 语言 · 逻辑-数学 · 音乐 · 空间 · 身体-动觉 · 人际 · 内省 · 自然探索
+3. **EI 理论源头**: "内省智能"和"人际智能"直接为 EI 理论奠定基础
+4. **个性化发展**: 教育应"因材施教"，发现每个人独特的智能组合
+
+> 一句话：重要的不是你"聪不聪明"，而是你"在哪些方面聪明"。
+
+---
+
+## 🛠 八大智能自评雷达
+
+| 智能维度 | 定义 | 自评(1-10) | 发展建议 |
+|---------|-----|-----------|---------|
+| 语言 | 对文字敏感，善于表达 | | 多阅读/写作/辩论 |
+| 逻辑-数学 | 善于推理和计算 | | 下棋/编程/数据分析 |
+| 空间 | 善于视觉和空间思维 | | 绘图/摄影/设计 |
+| 身体-动觉 | 善于用身体表达 | | 运动/舞蹈/手工 |
+| 音乐 | 对节奏和音高敏感 | | 学乐器/唱歌 |
+| **人际** | **理解他人情绪** | | **共情练习** |
+| **内省** | **了解自我情绪** | | **反思日志** |
+| 自然探索 | 善于观察自然 | | 户外/博物 |
+
+---
+
+## 🛠 实操工具
+
+### 内省智能提升——每日三问
+1. 今天什么情绪最强烈？
+2. 这个情绪的来源是什么？
+3. 这个情绪告诉了我什么？
+
+### 人际智能提升——换位思考
+每天选一次对话，分析对方的：感受 × 需求 × 视角
+`
+    }
+  ];
+
+  const skill = skills[id - 1];
+  const blob = new Blob([skill.content], { type: 'text/markdown;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = skill.filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+
+  // Show toast
+  const toast = document.getElementById('toast');
+  toast.innerHTML = '✅ <strong>' + skill.filename + '</strong> 下载成功！';
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
 </script>
 </body>
 </html>
