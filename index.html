@@ -286,6 +286,41 @@ footer strong{color:var(--gold)}
 .evo-wrapper{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);margin:2rem 0;padding:20px}
 .evo-wrapper svg{width:100%;height:auto;display:block}
 
+/* ===== Cangjie EI Etymology ===== */
+.cj-section{background:linear-gradient(135deg,#1a0a0a,#2d1a0a,#3d2510);color:var(--cream);position:relative;overflow:hidden}
+.cj-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(201,168,76,0.04) 0%,transparent 50%),radial-gradient(ellipse at 80% 70%,rgba(180,60,30,0.04) 0%,transparent 50%);pointer-events:none}
+.cj-section .section-title{color:var(--gold)}
+.cj-section .section-subtitle{color:rgba(255,255,255,0.6)}
+.cj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:2rem 0}
+@media(max-width:900px){.cj-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.cj-grid{grid-template-columns:1fr}}
+.cj-card{background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.15);border-radius:var(--radius-lg);padding:24px 20px 20px;transition:var(--transition);text-align:center}
+.cj-card:hover{background:rgba(255,255,255,0.08);transform:translateY(-4px);border-color:var(--gold)}
+.cj-char{font-size:4.5rem;font-weight:700;color:var(--gold);line-height:1.2;margin-bottom:4px;font-family:'Noto Serif SC','STSong','SimSun','KaiTi',serif;text-shadow:0 0 30px rgba(201,168,76,0.2)}
+.cj-pinyin{font-size:0.85rem;color:rgba(255,255,255,0.4);margin-bottom:12px;letter-spacing:1px}
+.cj-radicals{display:flex;justify-content:center;gap:8px;margin-bottom:12px}
+.cj-radical{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 14px;background:rgba(255,255,255,0.05);border-radius:8px;min-width:60px}
+.cj-radical .rad-char{font-size:1.8rem;font-weight:700;font-family:'Noto Serif SC','STSong','SimSun',serif}
+.cj-radical .rad-label{font-size:0.68rem;color:rgba(255,255,255,0.4)}
+.cj-radical .rad-meaning{font-size:0.72rem;color:var(--gold-light)}
+.cj-arrow{color:var(--gold);font-size:1.2rem;align-self:center;padding-top:16px}
+.cj-meaning{font-size:0.82rem;color:var(--gray-200);line-height:1.5;margin:8px 0;padding:10px;background:rgba(201,168,76,0.06);border-radius:8px}
+.cj-ei{font-size:0.75rem;color:var(--teal-light);line-height:1.5;padding:8px;border:1px dashed rgba(20,163,168,0.3);border-radius:8px;margin-top:6px}
+
+/* ===== Darwin Evolution ===== */
+.agent-section{background:linear-gradient(135deg,var(--navy),#0a2a1a,#0d3d2a);color:var(--cream);position:relative;overflow:hidden}
+.agent-section .section-title{color:var(--gold)}
+.agent-section .section-subtitle{color:rgba(255,255,255,0.6)}
+.agent-wrapper{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);margin:2rem 0;padding:20px}
+.agent-wrapper svg{width:100%;height:auto;display:block}
+
+/* ===== SVG Download Button ===== */
+.download-svg-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);border:none;border-radius:50px;font-weight:700;font-size:0.95rem;cursor:pointer;transition:var(--transition);text-decoration:none}
+.download-svg-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,168,76,0.25)}
+.download-svg-btn svg{width:18px;height:18px}
+.section-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.06)}
+.section-footer .hint{font-size:0.8rem;color:rgba(255,255,255,0.35)}
+
 /* ===== Responsive ===== */
 @media(max-width:1024px){
   .tree-node,.tree-node:nth-child(even){flex-direction:column!important;align-items:normal;padding-left:32px;gap:12px}
@@ -328,8 +363,6 @@ footer strong{color:var(--gold)}
       <li><a href="#genos">Genos EI</a></li>
       <li><a href="#certification" class="skill-link" style="border-color:rgba(201,168,76,0.4);background:rgba(201,168,76,0.06);color:var(--gold-light)">📖 认证蒸馏</a></li>
       <li><a href="#skill-evolution" class="skill-link" style="border-color:rgba(13,115,119,0.4);background:rgba(13,115,119,0.1);color:var(--teal-light)">📈 技能进化</a></li>
-      <li><a href="#cangjie" class="skill-link" style="border-color:rgba(201,168,76,0.4);background:rgba(201,168,76,0.06);color:var(--gold-light)">🈶 仓颉解字</a></li>
-      <li><a href="#darwin" class="skill-link" style="border-color:rgba(13,115,119,0.4);background:rgba(13,115,119,0.1);color:var(--teal-light)">🧬 达尔文进化</a></li>
       <li><a href="#ai-ei">AI+EI</a></li>
     </ul>
     <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
@@ -652,18 +685,17 @@ footer strong{color:var(--gold)}
   </div>
 </section>
 
-<!-- ===== ★ AGENT SKILLS (cangjie-skill × 达尔文) ===== -->
+<!-- ===== AGENT SKILLS ===== -->
 <section id="agent" class="section-dark" style="background:linear-gradient(135deg,#0a1628 0%,#0d4a4d 50%,#061a2a 100%);position:relative;overflow:hidden">
   <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(201,168,76,0.02) 40px,rgba(201,168,76,0.02) 41px);pointer-events:none"></div>
   <div class="container" style="position:relative;z-index:2">
     <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:0.5em">
-      <span style="background:linear-gradient(135deg,var(--teal-light),var(--gold));color:var(--navy);padding:3px 14px;border-radius:50px;font-size:0.7rem;font-weight:800;letter-spacing:1px;text-transform:uppercase">cangjie-skill ✕ 达尔文</span>
-    </div>
+</div>
     <h2 class="section-title" style="font-size:clamp(2rem,5vw,3rem)">🤖 智能体 Skills</h2>
     <p class="section-subtitle" style="max-width:800px">
       <strong style="color:var(--gold-light)">专供 AI Agent 直接调用的原子化技能包</strong><br>
       所有 AI Agent Skills 从六大 EI 著作中蒸馏提取，遵循 <strong style="color:var(--gold)">拆书方法论</strong> 构造，<br>
-      兼容 <strong style="color:var(--teal-light)">达尔文 (darwin-skill)</strong> 进化引擎格式——每个 Skill 含 Frontmatter + 工作流 + 边界条件 + test-prompts.json，<br>
+      每个 Skill 含 Frontmatter + 工作流 + 边界条件 + test-prompts.json，<br>
       可被 AI 代理在真实场景下自动识别、调用与进化。
     </p>
 
@@ -690,7 +722,7 @@ footer strong{color:var(--gold)}
             <strong>🔌 触发条件</strong>："我情绪好乱"／"不知道为什么生气"／"帮我分析现在什么感受"
           </div>
           <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:10px;display:flex;gap:12px">
-            <span>📄 RIA++ 六段式 ✓</span>
+            <span>📄 完整技能结构 ✓</span>
             <span>🧪 4 tests ✓</span>
             <span>⚠️ 边界条件 ✓</span>
           </div>
@@ -720,7 +752,7 @@ footer strong{color:var(--gold)}
             <strong>🔌 触发条件</strong>："团队氛围差"／"怎么带团队"／"新团队怎么建信任"
           </div>
           <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:10px;display:flex;gap:12px">
-            <span>📄 RIA++ 六段式 ✓</span>
+            <span>📄 完整技能结构 ✓</span>
             <span>🧪 4 tests ✓</span>
             <span>⚠️ 边界条件 ✓</span>
           </div>
@@ -749,7 +781,7 @@ footer strong{color:var(--gold)}
             <strong>🔌 触发条件</strong>："怎么决定"／"感觉不对但数据说可以"／"直觉和理性冲突"
           </div>
           <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:10px;display:flex;gap:12px">
-            <span>📄 RIA++ 六段式 ✓</span>
+            <span>📄 完整技能结构 ✓</span>
             <span>🧪 4 tests ✓</span>
             <span>⚠️ 边界条件 ✓</span>
           </div>
@@ -773,7 +805,7 @@ footer strong{color:var(--gold)}
           <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-bottom:6px;display:flex;gap:6px;flex-wrap:wrap"><span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">压力画像</span><span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">4-7-8呼吸</span><span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">认知重构</span></div>
           <p style="font-size:0.8rem;color:rgba(255,255,255,0.55);line-height:1.5;margin-bottom:10px">压力评估→即时调节(4-7-8呼吸)→认知重构→韧性计划→社会支持激活。</p>
           <div style="font-size:0.7rem;color:var(--gold);margin-bottom:10px;background:rgba(201,168,76,0.06);padding:6px 10px;border-radius:6px;border:1px solid rgba(201,168,76,0.1)"><strong>🔌 触发条件</strong>："压力太大"／"焦虑"／"感觉burnout"／"睡不好"</div>
-          <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:10px;display:flex;gap:12px"><span>📄 RIA++ 六段式 ✓</span><span>🧪 4 tests ✓</span><span>⚠️ 边界条件 ✓</span></div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:10px;display:flex;gap:12px"><span>📄 完整技能结构 ✓</span><span>🧪 4 tests ✓</span><span>⚠️ 边界条件 ✓</span></div>
           <a href="agent-skills/ei-stress-resilience/SKILL.md" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(13,115,119,0.4);border-radius:50px;color:var(--teal-light);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition);margin-right:6px">📄 SKILL.md</a>
           <a href="agent-skills/ei-stress-resilience/test-prompts.json" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(201,168,76,0.25);border-radius:50px;color:var(--gold);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition)">🧪 test-prompts</a>
         </div>
@@ -790,7 +822,7 @@ footer strong{color:var(--gold)}
           <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-bottom:6px;display:flex;gap:6px;flex-wrap:wrap"><span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">情绪账户</span><span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">积极影响力四步</span></div>
           <p style="font-size:0.8rem;color:rgba(255,255,255,0.55);line-height:1.5;margin-bottom:10px">情绪账户管理+积极影响力四步法+正面反馈训练+每周影响力复盘。</p>
           <div style="font-size:0.7rem;color:var(--gold);margin-bottom:10px;background:rgba(201,168,76,0.06);padding:6px 10px;border-radius:6px;border:1px solid rgba(201,168,76,0.1)"><strong>🔌 触发条件</strong>："同事不配合"／"跨部门协作难"／"怎么影响他人"</div>
-          <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:10px;display:flex;gap:12px"><span>📄 RIA++ 六段式 ✓</span><span>🧪 4 tests ✓</span><span>⚠️ 边界条件 ✓</span></div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:10px;display:flex;gap:12px"><span>📄 完整技能结构 ✓</span><span>🧪 4 tests ✓</span><span>⚠️ 边界条件 ✓</span></div>
           <a href="agent-skills/ei-workplace-positive-influence/SKILL.md" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(13,115,119,0.4);border-radius:50px;color:var(--teal-light);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition);margin-right:6px">📄 SKILL.md</a>
           <a href="agent-skills/ei-workplace-positive-influence/test-prompts.json" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(201,168,76,0.25);border-radius:50px;color:var(--gold);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition)">🧪 test-prompts</a>
         </div>
@@ -807,7 +839,7 @@ footer strong{color:var(--gold)}
           <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-bottom:6px;display:flex;gap:6px;flex-wrap:wrap"><span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">八大智能</span><span style="border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px">智能组合分析</span></div>
           <p style="font-size:0.8rem;color:rgba(255,255,255,0.55);line-height:1.5;margin-bottom:10px">八大智能自评雷达+智能组合分析+个性化发展建议。</p>
           <div style="font-size:0.7rem;color:var(--gold);margin-bottom:10px;background:rgba(201,168,76,0.06);padding:6px 10px;border-radius:6px;border:1px solid rgba(201,168,76,0.1)"><strong>🔌 触发条件</strong>："不知道擅长什么"／"发现天赋"／"转行不知适合什么"</div>
-          <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:10px;display:flex;gap:12px"><span>📄 RIA++ 六段式 ✓</span><span>🧪 4 tests ✓</span><span>⚠️ 边界条件 ✓</span></div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:10px;display:flex;gap:12px"><span>📄 完整技能结构 ✓</span><span>🧪 4 tests ✓</span><span>⚠️ 边界条件 ✓</span></div>
           <a href="agent-skills/ei-multiple-intelligences/SKILL.md" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(13,115,119,0.4);border-radius:50px;color:var(--teal-light);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition);margin-right:6px">📄 SKILL.md</a>
           <a href="agent-skills/ei-multiple-intelligences/test-prompts.json" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:transparent;border:1px solid rgba(201,168,76,0.25);border-radius:50px;color:var(--gold);font-size:0.78rem;font-weight:600;text-decoration:none;transition:var(--transition)">🧪 test-prompts</a>
         </div>
@@ -824,28 +856,6 @@ footer strong{color:var(--gold)}
       </div>
     </div>
 
-    <!-- cangjie + darwin 方法学标注 -->
-    <div style="margin-top:2rem;padding:20px 24px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);max-width:800px;margin-left:auto;margin-right:auto">
-      <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;justify-content:center">
-        <div style="text-align:center;min-width:160px">
-          <div style="font-size:0.7rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:2px">方法论引擎</div>
-          <div style="font-size:1.1rem;font-weight:700;color:var(--white)">cangjie-skill</div>
-          <div style="font-size:0.7rem;color:rgba(255,255,255,0.4)">RIA++ 蒸馏流水线</div>
-        </div>
-        <div style="width:1px;height:40px;background:rgba(255,255,255,0.1);align-self:center"></div>
-        <div style="text-align:center;min-width:160px">
-          <div style="font-size:0.7rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:2px">进化引擎</div>
-          <div style="font-size:1.1rem;font-weight:700;color:var(--white)">达尔文 (darwin-skill)</div>
-          <div style="font-size:0.7rem;color:rgba(255,255,255,0.4)">评估→改进→实测→保留/回滚</div>
-        </div>
-        <div style="width:1px;height:40px;background:rgba(255,255,255,0.1);align-self:center"></div>
-        <div style="text-align:center;min-width:160px">
-          <div style="font-size:0.7rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:2px">格式兼容</div>
-          <div style="font-size:1.1rem;font-weight:700;color:var(--white)">test-prompts.json</div>
-          <div style="font-size:0.7rem;color:rgba(255,255,255,0.4)">可接入达尔文自动进化</div>
-        </div>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -1955,6 +1965,27 @@ function downloadSkill(id) {
   // Show toast
   const toast = document.getElementById('toast');
   toast.innerHTML = '✅ <strong>' + skill.filename + '</strong> 下载成功！';
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+// ===== SVG Download =====
+function downloadSvg(elementId, filename) {
+  const svg = document.getElementById(elementId);
+  if (!svg) return;
+  const serializer = new XMLSerializer();
+  const svgStr = serializer.serializeToString(svg);
+  const blob = new Blob([svgStr], { type: 'image/svg+xml;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  const toast = document.getElementById('toast');
+  toast.innerHTML = '✅ <strong>' + filename + '</strong> 下载成功！';
   toast.classList.add('show');
   setTimeout(() => toast.classList.remove('show'), 3000);
 }
