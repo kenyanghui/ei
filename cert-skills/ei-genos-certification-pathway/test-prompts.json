@@ -1,0 +1,6 @@
+[
+  {"id": 1, "prompt": "我想了解EI认证是什么，怎么考", "expected": "介绍Genos EI认证框架概览 + 四级认证路径"},
+  {"id": 2, "prompt": "我是HR，想在公司推广EI，该怎么开始？", "expected": "根据角色推荐Practitioner认证起点 + 六维匹配"},
+  {"id": 3, "prompt": "压力和情绪管理有什么skill可以用？", "expected": "匹配ei-genos-self-management + ei-genos-esa两个技能"},
+  {"id": 4, "prompt": "EI和MBTI有什么区别？", "expected": "简要回答区别，如果用户需要的是人格类型分析则转其他工具"}
+]
