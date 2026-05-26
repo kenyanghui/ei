@@ -39,7 +39,7 @@
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--font-body);background:var(--white);color:var(--gray-900);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
-a{color:var(--teal);text-decoration:none;transition:var(--transition)}
+a{color:var(--coral);text-decoration:none;transition:var(--transition)}
 a:hover{color:var(--gold)}
 img{max-width:100%}
 h1,h2,h3,h4{font-family:var(--font-display);line-height:1.25;font-weight:700;letter-spacing:-0.01em}
@@ -53,12 +53,12 @@ section{padding:5rem 0}
 .section-dark .section-title{color:var(--white)}
 .section-dark .section-desc{color:rgba(255,255,255,0.6)}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 28px;border-radius:50px;font-weight:600;font-size:0.92rem;transition:var(--transition);cursor:pointer;border:none;font-family:var(--font-display)}
-.btn-primary{background:var(--gold);color:var(--navy)}
-.btn-primary:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 8px 24px rgba(201,168,76,0.3)}
+.btn-primary{background:var(--coral);color:var(--white)}
+.btn-primary:hover{background:var(--coral-light);transform:translateY(-1px);box-shadow:0 8px 24px rgba(201,123,107,0.35)}
 .btn-outline{border:1.5px solid rgba(255,255,255,0.3);color:var(--white);background:transparent}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-1px)}
 .btn-ghost{border:1.5px solid var(--gray-200);color:var(--gray-700);background:transparent}
-.btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+.btn-ghost:hover{border-color:var(--coral);color:var(--coral)}
 
 /* ===== Navigation ===== */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--gray-100);transition:var(--transition)}
@@ -68,24 +68,24 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .nav-links{display:flex;gap:4px;list-style:none}
 .nav-links a{padding:8px 14px;font-size:0.85rem;color:var(--gray-600);border-radius:8px;transition:var(--transition);font-weight:500;white-space:nowrap}
 .nav-links a:hover{color:var(--navy);background:var(--gray-50)}
-.nav-links a.active{color:var(--teal);background:var(--teal-pale)}
+.nav-links a.active{color:var(--coral);background:var(--coral-pale)}
 .nav-cta{padding:8px 20px!important;background:var(--gold)!important;color:var(--navy)!important;border-radius:50px!important;font-weight:700!important}
 .nav-cta:hover{background:var(--gold-light)!important}
 .mobile-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
 .mobile-toggle span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:var(--transition)}
 
 /* ===== Hero ===== */
-.hero{min-height:90vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--off-white) 0%,var(--white) 40%,var(--teal-pale) 100%);position:relative;overflow:hidden;padding-top:64px}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(13,115,119,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(13,115,119,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.hero{min-height:90vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--coral-pale) 0%,var(--warm-cream) 30%,var(--white) 60%,var(--gold-pale) 100%);position:relative;overflow:hidden;padding-top:64px}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,123,107,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
 .hero-content{text-align:center;z-index:2;padding:0 24px;max-width:900px}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 18px;background:var(--gold-pale);border-radius:50px;color:var(--gold);font-size:0.78rem;font-weight:600;letter-spacing:0.5px;margin-bottom:1.5rem}
 .hero h1{font-size:clamp(2.2rem,5vw,3.8rem);color:var(--navy);margin-bottom:0.3em;font-weight:800}
-.hero h1 .highlight{color:var(--teal)}
+.hero h1 .highlight{color:var(--coral)}
 .hero p{font-size:clamp(1rem,1.8vw,1.2rem);color:var(--gray-500);max-width:680px;margin:0 auto 2.5rem;line-height:1.8}
 .hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 .hero-stats{display:flex;gap:48px;justify-content:center;margin-top:3.5rem;flex-wrap:wrap}
 .hero-stat{text-align:center}
-.hero-stat-number{font-size:1.8rem;font-weight:800;color:var(--teal)}
+.hero-stat-number{font-size:1.8rem;font-weight:800;color:var(--gold)}
 .hero-stat-label{font-size:0.8rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:1px}
 
 /* ===== Brand Bar ===== */
@@ -116,11 +116,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .cs-card .cs-triggers{font-size:0.75rem;color:var(--gray-400)}
 .cs-card .cs-triggers strong{color:var(--gray-600)}
 .cs-card .cs-triggers span{background:var(--gray-100);padding:1px 8px;border-radius:10px;margin:0 2px}
-.cs-download-area{text-align:center;padding:32px;background:linear-gradient(135deg,var(--teal-pale) 0%,var(--white) 100%);border-radius:16px;margin-top:2rem}
+.cs-download-area{text-align:center;padding:32px;background:linear-gradient(135deg,var(--coral-pale) 0%,var(--warm-card) 100%);border-radius:16px;margin-top:2rem}
 .cs-download-area h3{color:var(--navy);font-size:1.1rem;margin-bottom:8px}
 .cs-download-area p{color:var(--gray-500);font-size:0.9rem;margin-bottom:20px}
-.cs-download-btn{display:inline-flex;align-items:center;gap:10px;background:var(--teal);color:var(--white);padding:14px 36px;border-radius:10px;font-size:1rem;font-weight:600;border:none;cursor:pointer;transition:var(--transition);text-decoration:none}
-.cs-download-btn:hover{background:var(--teal-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(13,115,119,0.25)}
+.cs-download-btn{display:inline-flex;align-items:center;gap:10px;background:var(--coral);color:var(--white);padding:14px 36px;border-radius:10px;font-size:1rem;font-weight:600;border:none;cursor:pointer;transition:var(--transition);text-decoration:none}
+.cs-download-btn:hover{background:var(--coral-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,123,107,0.25)}
 @media(max-width:900px){.genos-hero .container{grid-template-columns:1fr;gap:32px}}
 .genos-hero-left h2{font-size:clamp(1.8rem,3vw,2.6rem);margin-bottom:0.5em}
 .genos-hero-left h2 em{font-style:normal;color:var(--gold)}
@@ -151,8 +151,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 /* ===== Skill Tab System ===== */
 .skill-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2rem;justify-content:center}
 .skill-tab{padding:10px 22px;border-radius:50px;font-size:0.85rem;font-weight:600;cursor:pointer;transition:var(--transition);border:1px solid var(--gray-200);background:var(--white);color:var(--gray-600);white-space:nowrap;font-family:var(--font-display)}
-.skill-tab:hover{border-color:var(--teal);color:var(--teal)}
-.skill-tab.active{background:var(--teal);border-color:var(--teal);color:var(--white);box-shadow:0 4px 16px rgba(13,115,119,0.2)}
+.skill-tab:hover{border-color:var(--coral);color:var(--coral)}
+.skill-tab.active{background:var(--coral);border-color:var(--coral);color:var(--white);box-shadow:0 4px 16px rgba(201,123,107,0.2)}
 .skill-panel{display:none}
 .skill-panel.active{display:block;animation:fadeIn 0.4s ease}
 @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
@@ -163,7 +163,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .skill-meta h3{font-size:1.15rem;color:var(--navy);margin-bottom:2px}
 .skill-meta .sub{color:var(--gray-500);font-size:0.88rem}
 .skill-meta .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
-.skill-meta .tags span{padding:2px 12px;border-radius:50px;font-size:0.72rem;background:var(--teal-pale);color:var(--teal)}
+.skill-meta .tags span{padding:2px 12px;border-radius:50px;font-size:0.72rem;background:var(--coral-pale);color:var(--coral)}
 .skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
 @media(max-width:768px){.skill-grid{grid-template-columns:1fr}}
 .skill-col{background:var(--off-white);border-radius:var(--radius);padding:20px}
@@ -175,8 +175,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .skill-col .highlight-box p{font-size:0.85rem;color:var(--gray-700);line-height:1.6}
 .skill-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-top:20px;border-top:1px solid var(--gray-100)}
 .skill-footer .hint{font-size:0.8rem;color:var(--gray-400)}
-.skill-download{display:inline-flex;align-items:center;gap:10px;padding:12px 26px;background:var(--teal);color:var(--white);border:none;border-radius:50px;font-weight:600;font-size:0.9rem;cursor:pointer;transition:var(--transition);text-decoration:none;font-family:var(--font-display)}
-.skill-download:hover{background:var(--teal-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(13,115,119,0.25)}
+.skill-download{display:inline-flex;align-items:center;gap:10px;padding:12px 26px;background:var(--coral);color:var(--white);border:none;border-radius:50px;font-weight:600;font-size:0.9rem;cursor:pointer;transition:var(--transition);text-decoration:none;font-family:var(--font-display)}
+.skill-download:hover{background:var(--coral-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,123,107,0.25)}
 
 /* ===== Agent Skills ===== */
 .agent-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
@@ -232,14 +232,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .model-table tbody td:first-child{background:var(--off-white);text-align:left;font-weight:600;color:var(--gray-700)}
 .model-table tbody tr:last-child td{border-bottom:none}
 .model-table tbody tr:hover td{background:var(--gray-50)}
-.model-highlight{color:var(--teal);font-weight:700}
+.model-highlight{color:var(--coral);font-weight:700}
 
 /* ===== Genos EI Dimensions ===== */
 .dim-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px}
 .dim-card{background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-lg);padding:24px;transition:var(--transition)}
 .dim-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
 .dim-card .dim-top{display:flex;align-items:center;gap:14px;margin-bottom:12px}
-.dim-card .dim-num{width:36px;height:36px;border-radius:50%;background:var(--teal);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:800;flex-shrink:0}
+.dim-card .dim-num{width:36px;height:36px;border-radius:50%;background:var(--coral);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:800;flex-shrink:0}
 .dim-card h4{font-size:1rem;color:var(--navy);margin-bottom:2px}
 .dim-card .dim-en{font-size:0.78rem;color:var(--gray-400);font-weight:400}
 .dim-card .dim-area{font-size:0.72rem;color:var(--gold);font-weight:600}
@@ -276,7 +276,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .tree-node:last-child{margin-bottom:0}
 .tree-dot{position:absolute;left:50%;top:6px;width:14px;height:14px;border-radius:50%;background:var(--gold);border:2px solid var(--white);transform:translateX(-50%);z-index:2;box-shadow:0 0 0 3px rgba(201,168,76,0.2)}
 .tree-content{width:calc(50% - 40px);background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius);padding:18px 22px;box-shadow:var(--shadow-sm)}
-.tree-content .year{font-size:0.78rem;color:var(--teal);font-weight:700;letter-spacing:0.5px}
+.tree-content .year{font-size:0.78rem;color:var(--gold);font-weight:700;letter-spacing:0.5px}
 .tree-content h4{font-size:0.95rem;margin:2px 0 4px;color:var(--navy)}
 .tree-content p{font-size:0.85rem;color:var(--gray-500);line-height:1.5}
 .tree-spacer{width:calc(50% - 40px)}
@@ -316,10 +316,10 @@ body.en .lang-en{display:inline}
 body.en .svg-zh{display:none}
 body.en .svg-en{display:inline}
 .lang-toggle{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:50px;font-size:0.78rem;font-weight:700;cursor:pointer;border:1.5px solid var(--gray-200);background:var(--white);color:var(--gray-600);transition:var(--transition);font-family:var(--font-display);margin-left:8px}
-.lang-toggle:hover{border-color:var(--teal);color:var(--teal)}
-.lang-toggle .active-lang{color:var(--teal)}
+.lang-toggle:hover{border-color:var(--coral);color:var(--coral)}
+.lang-toggle .active-lang{color:var(--coral)}
 .lang-toggle .sep{color:var(--gray-300)}
-body.en .lang-toggle{border-color:var(--teal);background:var(--teal-pale)}
+body.en .lang-toggle{border-color:var(--coral);background:var(--coral-pale)}
 /* AI+EI badge */
 .aiei-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 10px;border-radius:50px;font-size:0.65rem;font-weight:700;letter-spacing:0.3px;background:linear-gradient(135deg,#0d7377,#14a3a8);color:#fff;white-space:nowrap}
 .aiei-badge-sm{font-size:0.6rem;padding:1px 6px}
@@ -366,170 +366,104 @@ footer .brand em{font-style:normal;color:var(--gold)}
 <nav id="navbar">
   <div class="nav-inner">
     <a href="#hero" class="nav-logo">Genos<em>EI</em></a>
-    <ul class="nav-links">
-      <li><a href="#conference"><span class="lang-zh">2026 论坛</span><span class="lang-en">2026 Forum</span></a></li>
-      <li><a href="#dialogue"><span class="lang-zh">太极对话 · 故事线</span><span class="lang-en">Tai Chi Dialogue · Story</span></a></li>
-      <li><a href="#ai-ei"><span class="lang-zh">AI+EI 进化</span><span class="lang-en">AI+EI Evolution</span></a></li>
-      <li><a href="#coaching" class="nav-cta"><span class="lang-zh">预约内测</span><span class="lang-en">Join Beta</span></a></li>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#model"><span class="lang-zh">EI 模型</span><span class="lang-en">EI Model</span></a></li>
+      <li><a href="#skills"><span class="lang-zh">技能工具箱</span><span class="lang-en">Skill Toolbox</span></a></li>
+      <li><a href="#timeline"><span class="lang-zh">百年演进</span><span class="lang-en">Timeline</span></a></li>
+      <li><a href="#scholars"><span class="lang-zh">理论贡献者</span><span class="lang-en">Scholars</span></a></li>
+      <li><a href="#dimensions"><span class="lang-zh">六个维度</span><span class="lang-en">6 Dimensions</span></a></li>
+      <li><a href="#agent"><span class="lang-zh">AI 技能包</span><span class="lang-en">Agent Skills</span></a></li>
+      <li><a href="#conference"><span class="lang-zh">2026 峰会</span><span class="lang-en">2026 Summit</span></a></li>
+      <li><a href="#cert-skills"><span class="lang-zh">认证技能</span><span class="lang-en">Cert Skills</span></a></li>
+      <li><a href="#ai-ei"><span class="lang-zh">AI+EI</span><span class="lang-en">AI+EI</span></a></li>
+      <li><a href="#skills" class="nav-cta"><span class="lang-zh">开始探索</span><span class="lang-en">Get Started</span></a></li>
     </ul>
-
+    
     <button class="lang-toggle" id="langToggle" onclick="toggleLang()"><span class="active-lang">中</span><span class="sep">/</span><span>EN</span></button>
     <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+
+
+<section class="hero" id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="aiei-badge aiei-badge-sm">AI+EI</span> <span class="lang-zh">2026 情感智能国际年会 · Genos EI Global Summit</span><span class="lang-en">2026 Genos EI Global Summit · Emotional Intelligence International Conference</span></div>
+    <h1><span class="lang-zh">情感智能 2030</span><span class="lang-en">EI 2030</span><br><span class="highlight"><span class="lang-zh">人类的下一个进化阶梯</span><span class="lang-en">Humanity's Next Evolutionary Step</span></span></h1>
+    <p><span class="lang-zh">当 AI 能模拟一切，情感智能是人类不可替代的核心竞争力。<strong>2026 Genos EI 全球峰会</strong>汇聚全球 35+ 国家 EI 实践者、研究者与企业领袖，共同探索"EI in the Age of AI"——从百年理论积淀到 AI 时代的情感智能进化路径。</span><span class="lang-en">When AI can simulate everything, emotional intelligence remains uniquely human. The <strong>2026 Genos EI Global Summit</strong> brings together EI practitioners, researchers, and business leaders from 35+ countries to explore "EI in the Age of AI" — from a century of theory to EI evolution in the AI era.</span></p>
+    <div class="hero-cta">
+      <a href="#conference" class="btn btn-primary"><span class="lang-zh">查看年会详情</span><span class="lang-en">Summit Details</span></a>
+      <a href="#cert-skills" class="btn btn-ghost"><span class="lang-zh">下载 EI 教练技能</span><span class="lang-en">Download EI Coach Skills</span></a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-number">7</div><div class="hero-stat-label"><span class="lang-zh">认证技能</span><span class="lang-en">Cert Skills</span></div></div>
+      <div class="hero-stat"><div class="hero-stat-number">35+</div><div class="hero-stat-label"><span class="lang-zh">覆盖国家</span><span class="lang-en">Countries</span></div></div>
+      <div class="hero-stat"><div class="hero-stat-number">24</div><div class="hero-stat-label"><span class="lang-zh">年研究积累</span><span class="lang-en">Research Years</span></div></div>
+      <div class="hero-stat"><div class="hero-stat-number">4</div><div class="hero-stat-label"><span class="lang-zh">级认证路径</span><span class="lang-en">Cert Levels</span></div></div>
+    </div>
+  </div>
+</section>
+
+
 <div class="brand-bar">
   <div class="brand-bar-inner">
     <span class="lang-zh">发起人</span><span class="lang-en">Initiated by</span>
     <strong style="color:var(--gold)"><span class="lang-zh">王玉博士</span><span class="lang-en">Dr. Christina Wang</span></strong>
     <strong style="color:rgba(255,255,255,0.3)"><span class="lang-en">· Genos EI China</span></strong>
     <span style="opacity:0.3">|</span>
-    <strong style="color:var(--gold)"><span class="lang-zh">AI 技术支持</span><span class="lang-en">AI Tech</span></strong>
-    <strong style="color:rgba(255,255,255,0.7)"><span class="lang-zh">杨辉 Ken Yang</span><span class="lang-en">Ken Yang</span></strong>
-    <span class="aiei-badge aiei-badge-sm">AI+EI</span>
+    <strong style="color:rgba(255,255,255,0.7)"><span class="lang-zh">支持全球 EIDC</span><span class="lang-en">Supporting EIDC Worldwide</span></strong>
     <span style="opacity:0.3">|</span>
-    <strong><span class="lang-zh">Genos EI · 2002-2026</span><span class="lang-en">Genos EI · 2002-2026</span></strong>
+    <span class="lang-zh">Genos 模型</span><span class="lang-en">Genos Model by</span>
+    <strong><span class="lang-en">Dr. Ben Palmer</span></strong>
+    <strong style="color:rgba(255,255,255,0.3)">&amp;</strong>
+    <strong><span class="lang-en">Prof. Con Stough</span></strong>
+    <span style="opacity:0.3">|</span>
+    <strong style="color:var(--gold)"><span class="lang-en">Swinburne University</span></strong>
+    <span style="opacity:0.3">|</span>
+    <strong><span class="lang-zh">2002 年至今</span><span class="lang-en">2002 – 2026</span></strong>
+    <span style="opacity:0.3">|</span>
+    <strong style="color:rgba(255,255,255,0.7)"><span class="lang-zh">覆盖 35+ 国家</span><span class="lang-en">35+ Countries</span></strong>
   </div>
 </div>
 
 
-<section id="conference" class="section-dark">
+<section class="section-light">
   <div class="container">
-    <h2 class="section-title"><span class="lang-zh">🎤 2026 情感智能全球峰会</span><span class="lang-en">🎤 2026 Genos EI Global Summit</span></h2>
-    <p class="section-desc"><span class="lang-zh">"EI in the Age of AI" — 当技术能模拟一切，人类不可替代的核心竞争力</span><span class="lang-en">"EI in the Age of AI" — When technology can simulate everything, what remains uniquely human?</span></p>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px" class="conference-grid">
-      <div style="background:linear-gradient(135deg,var(--navy),var(--navy-light));border-radius:var(--radius-lg);padding:32px;color:var(--white)">
-        <div style="font-size:2rem;margin-bottom:12px">🎯</div>
-        <h3 style="color:var(--gold);font-size:1.2rem;margin-bottom:12px"><span class="lang-zh">峰会主题</span><span class="lang-en">Summit Theme</span></h3>
-        <p style="color:rgba(255,255,255,0.6);font-size:0.9rem;line-height:1.7"><span class="lang-zh"><strong>形式革新！</strong>本次论坛采用<strong>"太极对话"</strong>形式——杨辉（AI 视角）与司南（EI 视角）互动对话，互为补充。内容以<strong>图形化、故事化</strong>方式呈现，而非大量文字。杨辉制作的 AI+EI 知识库网站将作为<strong>视觉冲击点</strong>现场展示。</span><span class="lang-en"><strong>Format Innovation!</strong> This forum adopts a <strong>"Tai Chi Dialogue"</strong> format -- Ken Yang (AI perspective) and Si Nan (EI perspective) engage in interactive dialogue. Content is presented <strong>graphically, story-driven</strong>. The AI+EI knowledge base website serves as a <strong>visual centerpiece</strong> for live demo.</span></p>
+    <h2 class="section-title"><span class="lang-zh">为什么情感智能至关重要 <span class="aiei-badge" style="vertical-align:middle">AI+EI</span></span><span class="lang-en">Why Emotional Intelligence Matters <span class="aiei-badge" style="vertical-align:middle">AI+EI</span></span></h2>
+    <p class="section-desc"><span class="lang-zh">对业务是变革性的，对人生是改变性的。</span><span class="lang-en">Game-changing for business. Life-changing for people.</span></p>
+    <div class="props-grid">
+      <div class="prop-card">
+        <div class="prop-icon">📈</div>
+        <h4><span class="lang-zh">绩效提升</span><span class="lang-en">Performance</span></h4>
+        <p><span class="lang-zh">EI 发展可带来 17-20% 可衡量的职场绩效提升，跨行业有效。</span><span class="lang-en">EI development drives 17-20% measurable improvement in workplace performance across industries.</span></p>
       </div>
-      <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-lg);padding:32px">
-        <div style="font-size:2rem;margin-bottom:12px">📅</div>
-        <h3 style="color:var(--navy);font-size:1.2rem;margin-bottom:12px"><span class="lang-zh">论坛内容</span><span class="lang-en">Forum Content</span></h3>
-        <ul style="list-style:none;padding:0">
-          <li style="padding:8px 0;font-size:0.88rem;color:var(--gray-600);border-bottom:1px solid var(--gray-50)">&#x1F3AD; <span class="lang-zh"><strong>太极对话</strong>：杨辉（AI）x 司南（EI）互动碰撞</span><span class="lang-en"><strong>Tai Chi Dialogue</strong>: Ken Yang(AI) x Si Nan(EI) interactive exchange</span></li>
-          <li style="padding:8px 0;font-size:0.88rem;color:var(--gray-600);border-bottom:1px solid var(--gray-50)">&#x1F4D6; <span class="lang-zh"><strong>故事主线</strong>：杨辉个人职业转型与 AI+EI 探索经历</span><span class="lang-en"><strong>Story Thread</strong>: Ken Yang career transformation and AI+EI exploration</span></li>
-          <li style="padding:8px 0;font-size:0.88rem;color:var(--gray-600);border-bottom:1px solid var(--gray-50)">&#x1F916; <span class="lang-zh"><strong>AI+EI 进化</strong>：技能系统 + 教练课（内测版）</span><span class="lang-en"><strong>AI+EI Evolution</strong>: Skill system + coaching (beta)</span></li>
-          <li style="padding:8px 0;font-size:0.88rem;color:var(--gray-600)">&#x1F3A8; <span class="lang-zh"><strong>可视化演示</strong>：AI+EI 知识库网站现场展示</span><span class="lang-en"><strong>Live Demo</strong>: AI+EI knowledge base website showcase</span></li>
-        </ul>
+      <div class="prop-card">
+        <div class="prop-icon">👔</div>
+        <h4><span class="lang-zh">领导力</span><span class="lang-en">Leadership</span></h4>
+        <p><span class="lang-zh">高 EI 领导者带领的团队绩效高出 20-30% —— 情绪共鸣驱动成果。</span><span class="lang-en">Leaders with high EI create teams that outperform by 20-30% — emotional resonance drives results.</span></p>
       </div>
-    </div>
-
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px" class="speaker-grid">
-      <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius);padding:20px;text-align:center">
-        <div style="font-size:2.5rem;margin-bottom:8px">👨‍🔬</div>
-        <h4 style="font-size:0.95rem;color:var(--navy)"><span class="lang-en">Dr. Ben Palmer</span></h4>
-        <p style="font-size:0.75rem;color:var(--teal);font-weight:600"><span class="lang-zh">Genos International 创始人</span></p>
-        <p style="font-size:0.75rem;color:var(--gray-400)"><span class="lang-en">Swinburne University</span></p>
+      <div class="prop-card">
+        <div class="prop-icon">🔄</div>
+        <h4><span class="lang-zh">360° 洞察</span><span class="lang-en">360° Insight</span></h4>
+        <p><span class="lang-zh">多维度反馈揭示自我认知与他人实际体验之间的盲区。</span><span class="lang-en">Multi-rater feedback reveals blind spots between self-perception and how others experience you.</span></p>
       </div>
-      <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius);padding:20px;text-align:center">
-        <div style="font-size:2.5rem;margin-bottom:8px">👩‍🔬</div>
-        <h4 style="font-size:0.95rem;color:var(--navy)"><span class="lang-en">Dr. Christina Wang</span></h4>
-        <p style="font-size:0.75rem;color:var(--teal);font-weight:600"><span class="lang-zh">王玉博士 · Genos EI 中国</span><span class="lang-en">Genos EI China</span></p>
-        <p style="font-size:0.75rem;color:var(--gray-400)"><span class="lang-en">EIDC</span></p>
+      <div class="prop-card">
+        <div class="prop-icon">🧠</div>
+        <h4><span class="lang-zh">循证科学 <span class="aiei-tag">AI+EI</span></span><span class="lang-en">Evidence-Based <span class="aiei-tag">AI+EI</span></span></h4>
+        <p><span class="lang-zh">基于斯威本科技大学同行评审研究，20+ 年验证研究支持。</span><span class="lang-en">Built on peer-reviewed research from Swinburne University with 20+ years of validation studies.</span></p>
       </div>
-      <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius);padding:20px;text-align:center">
-        <div style="font-size:2.5rem;margin-bottom:8px">🌍</div>
-        <h4 style="font-size:0.95rem;color:var(--navy)"><span class="lang-zh">全球 EI 实践者</span><span class="lang-en">Global EI Practitioners</span></h4>
-        <p style="font-size:0.75rem;color:var(--teal);font-weight:600"><span class="lang-zh">35+ 国家代表</span><span class="lang-en">35+ Countries</span></p>
-        <p style="font-size:0.75rem;color:var(--gray-400)"><span class="lang-zh">企业 · 学术 · 教练</span><span class="lang-en">Enterprise · Academic · Coach</span></p>
+      <div class="prop-card">
+        <div class="prop-icon">🌍</div>
+        <h4><span class="lang-zh">全球覆盖</span><span class="lang-en">Global Reach</span></h4>
+        <p><span class="lang-zh">覆盖 35+ 国家，翻译为多种语言，经跨文化验证。</span><span class="lang-en">Used across 35+ countries, translated into multiple languages with cross-cultural validation.</span></p>
       </div>
-    </div>
-  </div>
-</section>
-
-
-<section id="dialogue" class="section-white">
-  <div class="container">
-    <h2 class="section-title"><span class="lang-zh">太极对话 · 一个 AI 工程师的 EI 觉醒</span><span class="lang-en">Tai Chi Dialogue · An AI Engineer's EI Awakening</span></h2>
-    <p class="section-desc"><span class="lang-zh">杨辉（AI 视角）与司南（EI 视角）的互动对话——探索 AI 与 EI 融合之路</span><span class="lang-en">Ken Yang (AI perspective) and Si Nan (EI perspective) — exploring the fusion of AI and EI</span></p>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;max-width:900px;margin:0 auto">
-      <div style="background:linear-gradient(135deg,var(--teal-pale),var(--white));border-radius:var(--radius-lg);padding:36px;border:1px solid var(--gray-100)">
-        <div style="font-size:2.5rem;margin-bottom:16px">&#x1F9D1;&#x200D;&#x1F4BB;</div>
-        <h3 style="color:var(--navy);font-size:1.2rem;margin-bottom:12px"><span class="lang-zh">杨辉 Ken Yang</span><span class="lang-en">Ken Yang</span></h3>
-        <p style="color:var(--teal);font-weight:600;font-size:0.85rem;margin-bottom:16px"><span class="lang-zh">AI 开发者 &#x2192; AI+EI 实践者</span><span class="lang-en">AI Developer &#x2192; AI+EI Practitioner</span></p>
-        <p style="color:var(--gray-600);font-size:0.9rem;line-height:1.7"><span class="lang-zh">在独自搭建 EI 知识库网站的深夜，我突然意识到：我正在教 AI 理解情绪，但真正需要学习 EI 的，是我自己。</span><span class="lang-en">Late at night while building the EI knowledge base, I suddenly realized: I was teaching AI to understand emotions, but the one who truly needed to learn EI was myself.</span></p>
+      <div class="prop-card">
+        <div class="prop-icon">🔬</div>
+        <h4><span class="lang-zh">科学测量</span><span class="lang-en">Scientifically Measured</span></h4>
+        <p><span class="lang-zh">行为频率量表提供客观、可操作的数据 —— 而非抽象的人格特质。</span><span class="lang-en">Behavioral frequency scale provides objective, actionable data — not abstract personality traits.</span></p>
       </div>
-      <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px">
-        <div style="display:flex;gap:16px;margin-bottom:20px">
-          <div style="width:4px;border-radius:2px;background:linear-gradient(180deg,var(--gold),var(--teal));flex-shrink:0"></div>
-          <div>
-            <h4 style="font-size:1rem;color:var(--navy);margin-bottom:6px"><span class="lang-zh">AI 三阶段 &#x2192; AI+EI 进化</span><span class="lang-en">AI 3 Stages &#x2192; AI+EI Evolution</span></h4>
-            <p style="font-size:0.85rem;color:var(--gray-500);line-height:1.6"><span class="lang-zh">AI 经历三个阶段：<strong>对话式</strong>（GPT 时代）、<strong>推理式</strong>（DeepSeek 时代）、<strong>执行式</strong>（Agent 时代）。AI+EI 是 Agent 时代的必需品——AI 高效执行，EI 决策和赋予意义。</span><span class="lang-en">AI evolved through three stages: <strong>Dialogue</strong> (GPT era), <strong>Reasoning</strong> (DeepSeek era), <strong>Execution</strong> (Agent era). AI+EI is the essential toolkit for the Agent era.</span></p>
-          </div>
-        </div>
-        <div style="display:flex;gap:16px">
-          <div style="width:4px;border-radius:2px;background:linear-gradient(180deg,var(--teal),var(--gold));flex-shrink:0"></div>
-          <div>
-            <h4 style="font-size:1rem;color:var(--navy);margin-bottom:6px"><span class="lang-zh">从书籍到技能包</span><span class="lang-en">From Books to Skill Packs</span></h4>
-            <p style="font-size:0.85rem;color:var(--gray-500);line-height:1.6"><span class="lang-zh">蒸馏六大 EI 核心著作，编译成 AI 智能体可直接安装的<strong>技能包</strong>。这就是 AI+EI 进化的起点。</span><span class="lang-en">I distilled six core EI works into <strong>skill packages</strong> that AI agents can directly install. This is the origin of the AI+EI evolution.</span></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-top:2.5rem">
-      <a href="#ai-ei" class="btn btn-primary"><span class="lang-zh">探索 AI+EI 进化</span><span class="lang-en">Explore AI+EI Evolution</span></a>
-    </div>
-  </div>
-</section>
-
-
-<section id="ai-ei" class="section-dark">
-  <div class="container">
-    <h2 class="section-title"><span class="lang-zh">AI+EI 进化 <span class="aiei-badge" style="vertical-align:middle">AI+EI</span></span><span class="lang-en">AI+EI Evolution <span class="aiei-badge" style="vertical-align:middle">AI+EI</span></span></h2>
-    <p class="section-desc"><span class="lang-zh">AI 越强大，人类情感智能越珍贵 — 技能系统 + 教练课 + AI 三阶段</span><span class="lang-en">The more advanced AI becomes, the more valuable human emotional intelligence grows — Skills + Coaching + 3 AI Stages</span></p>
-
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:2.5rem">
-      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);padding:24px;text-align:center;transition:var(--transition)">
-        <div style="font-size:1.8rem;margin-bottom:10px">❓</div>
-        <h4 style="color:var(--gold);font-size:0.9rem;margin-bottom:8px"><span class="lang-zh">解决的问题</span><span class="lang-en">The Problem</span></h4>
-        <p style="color:rgba(255,255,255,0.55);font-size:0.82rem;line-height:1.6"><span class="lang-zh">AI 可以推理代码、理解语义，但它不懂人的情绪。AI+EI 进化让 AI 具备情绪觉察、情绪推理、压力管理等"软技能"——输出更有人情味、更有情感深度的回应。</span><span class="lang-en">AI can reason about code and understand semantics, but not human emotions. AI+EI Evolution gives AI the "soft skills" — emotional awareness, reasoning, stress management — for more human-centered responses.</span></p>
-      </div>
-      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);padding:24px;text-align:center;transition:var(--transition)">
-        <div style="font-size:1.8rem;margin-bottom:10px">👥</div>
-        <h4 style="color:var(--gold);font-size:0.9rem;margin-bottom:8px"><span class="lang-zh">适合谁用</span><span class="lang-en">Who It's For</span></h4>
-        <p style="color:rgba(255,255,255,0.55);font-size:0.82rem;line-height:1.6"><span class="lang-zh">HR/OD 从业者 · 管理者 · EI 教练 · 个人成长爱好者 · AI 应用开发者</span><span class="lang-en">HR/OD professionals · Managers · EI coaches · Self-growth seekers · AI developers</span></p>
-      </div>
-      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);padding:24px;text-align:center;transition:var(--transition)">
-        <div style="font-size:1.8rem;margin-bottom:10px">✨</div>
-        <h4 style="color:var(--gold);font-size:0.9rem;margin-bottom:8px"><span class="lang-zh">实现效果</span><span class="lang-en">What You Get</span></h4>
-        <p style="color:rgba(255,255,255,0.55);font-size:0.82rem;line-height:1.6"><span class="lang-zh">AI 不再是冷冰冰的工具，而是一个懂情绪、会共情、能引导的"对话伙伴"。13+ 技能覆盖从自我觉察到积极影响力的完整 EI 光谱。</span><span class="lang-en">AI becomes an emotionally-aware dialogue partner. 13+ skills covering the full EI spectrum from self-awareness to positive influence.</span></p>
-      </div>
-    </div>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:2.5rem">
-      <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);border-radius:var(--radius-lg);padding:28px 24px;text-align:center;transition:var(--transition)">
-        <div style="font-size:2rem;margin-bottom:10px">📦</div>
-        <h4 style="color:var(--gold);font-size:1rem;margin-bottom:6px"><span class="lang-zh">技能包</span><span class="lang-en">Skill Packs</span></h4>
-        <p style="color:rgba(255,255,255,0.55);font-size:0.82rem;line-height:1.6;max-width:380px;margin:0 auto">
-          <span class="lang-zh">13+ 个可直接安装的 AI 技能包——从六大 EI 核心著作蒸馏而来，覆盖 Genos 认证体系、六种领导风格、MSCEIT 四分支等核心框架。每个技能包含 SKILL.md + test-prompts.json。</span>
-          <span class="lang-en">13+ installable AI skill packages — distilled from 6 core EI works, covering Genos certification, 6 leadership styles, MSCEIT 4-branch, and more.</span>
-        </p>
-        <a href="#skills" class="btn" style="display:inline-flex;margin-top:14px;padding:10px 24px;border:1px solid var(--gold);border-radius:50px;color:var(--gold);font-size:0.82rem;font-weight:600;text-decoration:none;background:transparent;align-items:center;gap:8px"><span class="lang-zh">查看全部技能包 →</span><span class="lang-en">View All Skill Packs →</span></a>
-      </div>
-      <div style="background:rgba(13,115,119,0.06);border:1px solid rgba(13,115,119,0.15);border-radius:var(--radius-lg);padding:28px 24px;text-align:center;transition:var(--transition)">
-        <div style="font-size:2rem;margin-bottom:10px">🎓</div>
-        <h4 style="color:var(--teal-light);font-size:1rem;margin-bottom:6px"><span class="lang-zh">教练课</span><span class="lang-en">Coaching</span></h4>
-        <p style="color:rgba(255,255,255,0.55);font-size:0.82rem;line-height:1.6;max-width:380px;margin:0 auto">
-          <span class="lang-zh">基于 Genos 六维框架的四级认证路径（Foundation → Master），配合 AI 辅助的 EI 自我觉察训练、线下工作坊和 Coach 社群。</span>
-          <span class="lang-en">4-level Genos-based certification (Foundation → Master), AI-assisted EI self-awareness training, offline workshops, and coach community.</span>
-        </p>
-        <a href="#coaching" class="btn" style="display:inline-flex;margin-top:14px;padding:10px 24px;border:1px solid var(--teal);border-radius:50px;color:var(--teal-light);font-size:0.82rem;font-weight:600;text-decoration:none;background:transparent;align-items:center;gap:8px"><span class="lang-zh">了解教练课 →</span><span class="lang-en">Explore Coaching →</span></a>
-      </div>
-    </div>
-
-    <div class="ai-grid">
-      <div class="ai-card"><div class="stage-icon s1">🔧</div><h4><span class="lang-zh">AI 赋能</span><span class="lang-en">AI Enable</span></h4><p><span class="lang-zh">技术支持 EI 实践：知识库构建、智能互动、情绪识别系统</span><span class="lang-en">Technology supports EI practice: knowledge base construction, smart engagement, emotion recognition systems</span></p><span class="en"><span class="lang-zh">工具层 · 赋能</span><span class="lang-en">Tool Level · Enable</span></span></div>
-      <div class="ai-card"><div class="stage-icon s2">🌱</div><h4><span class="lang-zh">AI 原生</span><span class="lang-en">AI Native</span></h4><p><span class="lang-zh">AI 创造新的情感互动体验：共情机器人、情境化关怀、AI 辅助教练</span><span class="lang-en">AI creates new emotional interaction experiences: empathetic bots, contextual compassion, AI-powered coaching</span></p><span class="en"><span class="lang-zh">原生层 · AI Native</span><span class="lang-en">Native Level · Native</span></span></div>
-      <div class="ai-card"><div class="stage-icon s3">🌅</div><h4><span class="lang-zh">AI 觉醒</span><span class="lang-en">AI Awaken</span></h4><p><span class="lang-zh">AI 是伙伴而非工具。探索 EI 的哲学维度：文化与情感的深度融合</span><span class="lang-en">AI as partner, not tool. Exploring the philosophical dimensions of EI: deep integration of culture and emotion</span></p><span class="en"><span class="lang-zh">生命层 · 觉醒</span><span class="lang-en">Life Level · Awaken</span></span></div>
-    </div>
-    <div style="margin-top:2.5rem;text-align:center;color:rgba(255,255,255,0.5);font-size:0.85rem;max-width:700px;margin-left:auto;margin-right:auto">
-      <p><span class="lang-zh">"AI 时代就是 EI 时代。情感智能是人类进化的下一个阶梯。" — 杨辉</span><span class="lang-en">"The AI era IS the EI era. Emotional intelligence is the next step in human evolution." — Ken Yang</span></p>
-      <p style="margin-top:8px;"><span class="lang-zh">"无论技术多先进，都无法取代人类真实的情感流动和临场感。"</span><span class="lang-en">"No matter how advanced technology becomes, it cannot replace the authentic emotional flow and field presence of human beings."</span></p>
     </div>
   </div>
 </section>
@@ -586,38 +520,86 @@ footer .brand em{font-style:normal;color:var(--gold)}
 
 <section class="section-light">
   <div class="container">
-    <h2 class="section-title"><span class="lang-zh">为什么情感智能至关重要 <span class="aiei-badge" style="vertical-align:middle">AI+EI</span></span><span class="lang-en">Why Emotional Intelligence Matters <span class="aiei-badge" style="vertical-align:middle">AI+EI</span></span></h2>
-    <p class="section-desc"><span class="lang-zh">对业务是变革性的，对人生是改变性的。</span><span class="lang-en">Game-changing for business. Life-changing for people.</span></p>
-    <div class="props-grid">
-      <div class="prop-card">
-        <div class="prop-icon">📈</div>
-        <h4><span class="lang-zh">绩效提升</span><span class="lang-en">Performance</span></h4>
-        <p><span class="lang-zh">EI 发展可带来 17-20% 可衡量的职场绩效提升，跨行业有效。</span><span class="lang-en">EI development drives 17-20% measurable improvement in workplace performance across industries.</span></p>
+    <h2 class="section-title"><span class="lang-zh">认证路径</span><span class="lang-en">Certification Pathway</span></h2>
+    <p class="section-desc"><span class="lang-zh">从基础到精通 — 四级认证对应 EI 行为频率进阶</span><span class="lang-en">From foundation to mastery — four levels corresponding to EI behavior frequency progression</span></p>
+    <div class="cert-pathway">
+      <div class="path-step ps1">
+        <div class="ps-icon">📖</div>
+        <h4><span class="lang-zh">基础认证</span><span class="lang-en">Foundation</span></h4>
+        <p><span class="lang-en">Foundation</span></p>
+        <span class="ps-badge"><span class="lang-zh">觉察</span><span class="lang-en">Awareness</span></span>
+        <ul><li><span class="lang-zh">理解六维模型</span><span class="lang-en">Understand 6-dimension model</span></li><li><span class="lang-zh">完成 360° 自我评估</span><span class="lang-en">Complete 360° self-assessment</span></li><li><span class="lang-zh">创建发展计划</span><span class="lang-en">Create development plan</span></li></ul>
       </div>
-      <div class="prop-card">
-        <div class="prop-icon">👔</div>
-        <h4><span class="lang-zh">领导力</span><span class="lang-en">Leadership</span></h4>
-        <p><span class="lang-zh">高 EI 领导者带领的团队绩效高出 20-30% —— 情绪共鸣驱动成果。</span><span class="lang-en">Leaders with high EI create teams that outperform by 20-30% — emotional resonance drives results.</span></p>
+      <div class="path-arrow">→</div>
+      <div class="path-step ps2">
+        <div class="ps-icon">🛠</div>
+        <h4><span class="lang-zh">实践者认证</span><span class="lang-en">Practitioner</span></h4>
+        <p><span class="lang-en">Practitioner</span></p>
+        <span class="ps-badge"><span class="lang-zh">应用</span><span class="lang-en">Application</span></span>
+        <ul><li><span class="lang-zh">行为频率："有时"</span><span class="lang-en">Behavior frequency: "Sometimes"</span></li><li><span class="lang-zh">完成 360° 反馈解读</span><span class="lang-en">Complete 360° feedback interpretation</span></li><li><span class="lang-zh">制定 90 天行为改变计划</span><span class="lang-en">90-day behavior change plan</span></li></ul>
       </div>
-      <div class="prop-card">
-        <div class="prop-icon">🔄</div>
-        <h4><span class="lang-zh">360° 洞察</span><span class="lang-en">360° Insight</span></h4>
-        <p><span class="lang-zh">多维度反馈揭示自我认知与他人实际体验之间的盲区。</span><span class="lang-en">Multi-rater feedback reveals blind spots between self-perception and how others experience you.</span></p>
+      <div class="path-arrow">→</div>
+      <div class="path-step ps3">
+        <div class="ps-icon">⭐</div>
+        <h4><span class="lang-zh">高级实践者</span><span class="lang-en">Senior Practitioner</span></h4>
+        <p><span class="lang-en">Senior Practitioner</span></p>
+        <span class="ps-badge"><span class="lang-zh">精通</span><span class="lang-en">Mastery</span></span>
+        <ul><li><span class="lang-zh">行为频率："通常"</span><span class="lang-en">Behavior frequency: "Usually"</span></li><li><span class="lang-zh">能够辅导他人发展 EI</span><span class="lang-en">Able to coach others in EI</span></li><li><span class="lang-zh">完成深度案例分析</span><span class="lang-en">Complete in-depth case analysis</span></li></ul>
       </div>
-      <div class="prop-card">
-        <div class="prop-icon">🧠</div>
-        <h4><span class="lang-zh">循证科学 <span class="aiei-tag">AI+EI</span></span><span class="lang-en">Evidence-Based <span class="aiei-tag">AI+EI</span></span></h4>
-        <p><span class="lang-zh">基于斯威本科技大学同行评审研究，20+ 年验证研究支持。</span><span class="lang-en">Built on peer-reviewed research from Swinburne University with 20+ years of validation studies.</span></p>
+      <div class="path-arrow">→</div>
+      <div class="path-step ps4">
+        <div class="ps-icon">👑</div>
+        <h4><span class="lang-zh">大师认证</span><span class="lang-en">Master</span></h4>
+        <p><span class="lang-en">Master</span></p>
+        <span class="ps-badge"><span class="lang-zh">赋能</span><span class="lang-en">Empowerment</span></span>
+        <ul><li><span class="lang-zh">频率："通常 → 总是"</span><span class="lang-en">Frequency: "Usually → Always"</span></li><li><span class="lang-zh">主导 EI 转型项目</span><span class="lang-en">Lead EI transformation projects</span></li><li><span class="lang-zh">推动组织 EI 文化建设</span><span class="lang-en">Drive organizational EI culture</span></li></ul>
       </div>
-      <div class="prop-card">
-        <div class="prop-icon">🌍</div>
-        <h4><span class="lang-zh">全球覆盖</span><span class="lang-en">Global Reach</span></h4>
-        <p><span class="lang-zh">覆盖 35+ 国家，翻译为多种语言，经跨文化验证。</span><span class="lang-en">Used across 35+ countries, translated into multiple languages with cross-cultural validation.</span></p>
+    </div>
+  </div>
+</section>
+
+
+<section id="conference" class="section-light">
+  <div class="container">
+    <h2 class="section-title"><span class="lang-zh">🎤 2026 情感智能全球峰会</span><span class="lang-en">🎤 2026 Genos EI Global Summit</span></h2>
+    <p class="section-desc"><span class="lang-zh">"EI in the Age of AI" — 当技术能模拟一切，人类不可替代的核心竞争力</span><span class="lang-en">"EI in the Age of AI" — When technology can simulate everything, what remains uniquely human?</span></p>
+    
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px" class="conference-grid">
+      <div style="background:linear-gradient(135deg,var(--navy),var(--navy-light));border-radius:var(--radius-lg);padding:32px;color:var(--white)">
+        <div style="font-size:2rem;margin-bottom:12px">🎯</div>
+        <h3 style="color:var(--gold);font-size:1.2rem;margin-bottom:12px"><span class="lang-zh">峰会主题</span><span class="lang-en">Summit Theme</span></h3>
+        <p style="color:rgba(255,255,255,0.6);font-size:0.9rem;line-height:1.7"><span class="lang-zh">Genos International 创始人 Ben Palmer 博士在 2024 年峰会上提出：AI 时代不是 EI 的终结，而是 EI 新的起点。2026 年峰会将继续深化这一议题，聚焦 EI 在 AI 时代的核心价值，发布 Genos EI 最新研究成果与企业实践案例。</span><span class="lang-en">Dr. Ben Palmer, founder of Genos International, proposed at the 2024 summit: The AI era is not the end of EI, but a new beginning. The 2026 summit will continue deepening this theme, focusing on EI's core value in the AI era.</span></p>
       </div>
-      <div class="prop-card">
-        <div class="prop-icon">🔬</div>
-        <h4><span class="lang-zh">科学测量</span><span class="lang-en">Scientifically Measured</span></h4>
-        <p><span class="lang-zh">行为频率量表提供客观、可操作的数据 —— 而非抽象的人格特质。</span><span class="lang-en">Behavioral frequency scale provides objective, actionable data — not abstract personality traits.</span></p>
+      <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-lg);padding:32px">
+        <div style="font-size:2rem;margin-bottom:12px">📅</div>
+        <h3 style="color:var(--navy);font-size:1.2rem;margin-bottom:12px"><span class="lang-zh">峰会焦点</span><span class="lang-en">Summit Highlights</span></h3>
+        <ul style="list-style:none;padding:0">
+          <li style="padding:8px 0;font-size:0.88rem;color:var(--gray-600);border-bottom:1px solid var(--gray-50)">🔬 <span class="lang-zh">Genos EI 最新研究发布（2002-2026 二十四年实证）</span><span class="lang-en">Latest Genos EI Research (2002-2026, 24 years of evidence)</span></li>
+          <li style="padding:8px 0;font-size:0.88rem;color:var(--gray-600);border-bottom:1px solid var(--gray-50)">🏢 <span class="lang-zh">企业 EI 实践案例：17-20% 绩效提升 ROI 实证</span><span class="lang-en">Enterprise EI Case Studies: 17-20% Performance ROI</span></li>
+          <li style="padding:8px 0;font-size:0.88rem;color:var(--gray-600);border-bottom:1px solid var(--gray-50)">🤖 <span class="lang-zh">AI+EI 三阶段模型：赋能 · 原生 · 觉醒</span><span class="lang-en">AI+EI 3-Stage Model: Enable · Native · Awaken</span></li>
+          <li style="padding:8px 0;font-size:0.88rem;color:var(--gray-600)">🎓 <span class="lang-zh">Genos EI 核心认证发布（Practitioner → Master 四级路径）</span><span class="lang-en">Genos EI Core Certification (Practitioner → Master Pathway)</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px" class="speaker-grid">
+      <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius);padding:20px;text-align:center">
+        <div style="font-size:2.5rem;margin-bottom:8px">👨‍🔬</div>
+        <h4 style="font-size:0.95rem;color:var(--navy)"><span class="lang-en">Dr. Ben Palmer</span></h4>
+        <p style="font-size:0.75rem;color:var(--teal);font-weight:600"><span class="lang-zh">Genos International 创始人</span></p>
+        <p style="font-size:0.75rem;color:var(--gray-400)"><span class="lang-en">Swinburne University</span></p>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius);padding:20px;text-align:center">
+        <div style="font-size:2.5rem;margin-bottom:8px">👩‍🔬</div>
+        <h4 style="font-size:0.95rem;color:var(--navy)"><span class="lang-en">Dr. Christina Wang</span></h4>
+        <p style="font-size:0.75rem;color:var(--teal);font-weight:600"><span class="lang-zh">王玉博士 · Genos EI 中国</span><span class="lang-en">Genos EI China</span></p>
+        <p style="font-size:0.75rem;color:var(--gray-400)"><span class="lang-en">EIDC</span></p>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius);padding:20px;text-align:center">
+        <div style="font-size:2.5rem;margin-bottom:8px">🌍</div>
+        <h4 style="font-size:0.95rem;color:var(--navy)"><span class="lang-zh">全球 EI 实践者</span><span class="lang-en">Global EI Practitioners</span></h4>
+        <p style="font-size:0.75rem;color:var(--teal);font-weight:600"><span class="lang-zh">35+ 国家代表</span><span class="lang-en">35+ Countries</span></p>
+        <p style="font-size:0.75rem;color:var(--gray-400)"><span class="lang-zh">企业 · 学术 · 教练</span><span class="lang-en">Enterprise · Academic · Coach</span></p>
       </div>
     </div>
   </div>
@@ -1002,86 +984,300 @@ footer .brand em{font-style:normal;color:var(--gold)}
 </section>
 
 
-<section id="coaching" class="section-light">
+<section id="timeline" class="section-light">
   <div class="container">
-    <h2 class="section-title"><span class="lang-zh">AI+EI 教练课 <span class="aiei-badge" style="vertical-align:middle">邀请制内测</span></span><span class="lang-en">AI+EI Coaching <span class="aiei-badge" style="vertical-align:middle">Invite-Only Beta</span></span></h2>
-    <p class="section-desc"><span class="lang-zh">不是理论课，是技能训练。带着你的 AI 一起来学 EI。</span><span class="lang-en">Not theory - skill training. Bring your AI and learn EI together.</span></p>
-
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
-      <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px 24px;border:1px solid var(--gray-100);text-align:center;transition:var(--transition);box-shadow:var(--shadow-sm)">
-        <div style="font-size:2rem;margin-bottom:12px">&#x1F9D8;</div>
-        <h4 style="font-size:1rem;color:var(--navy);margin-bottom:6px"><span class="lang-zh">EI 自我觉察训练</span><span class="lang-en">EI Self-Awareness</span></h4>
-        <p style="font-size:0.85rem;color:var(--gray-500);line-height:1.6"><span class="lang-zh">用 AI 辅助情绪标注 + 模式识别，每周一次深度自我复盘</span><span class="lang-en">AI-assisted emotion labeling + pattern recognition, weekly deep self-review</span></p>
-      </div>
-      <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px 24px;border:1px solid var(--gray-100);text-align:center;transition:var(--transition);box-shadow:var(--shadow-sm)">
-        <div style="font-size:2rem;margin-bottom:12px">&#x1F91D;</div>
-        <h4 style="font-size:1rem;color:var(--navy);margin-bottom:6px"><span class="lang-zh">EI 教练认证</span><span class="lang-en">EI Coach Certification</span></h4>
-        <p style="font-size:0.85rem;color:var(--gray-500);line-height:1.6"><span class="lang-zh">基于 Genos 六维框架，四级认证路径（Foundation &#x2192; Master）</span><span class="lang-en">Based on Genos 6-dimension framework, 4-level certification</span></p>
-      </div>
-      <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px 24px;border:1px solid var(--gray-100);text-align:center;transition:var(--transition);box-shadow:var(--shadow-sm)">
-        <div style="font-size:2rem;margin-bottom:12px">&#x26A1;</div>
-        <h4 style="font-size:1rem;color:var(--navy);margin-bottom:6px"><span class="lang-zh">AI+EI 工作坊</span><span class="lang-en">AI+EI Workshop</span></h4>
-        <p style="font-size:0.85rem;color:var(--gray-500);line-height:1.6"><span class="lang-zh">线下实操：安装 AI 技能包，体验 AI+EI 融合全流程</span><span class="lang-en">Hands-on: install AI skill packs, experience AI+EI integration end-to-end</span></p>
-      </div>
+    <h2 class="section-title"><span class="lang-zh">EI 百年演进史 <span class="aiei-badge" style="vertical-align:middle">AI+EI</span></span><span class="lang-en">100 Years of EI Evolution <span class="aiei-badge" style="vertical-align:middle">AI+EI</span></span></h2>
+    <p class="section-desc"><span class="lang-zh">六个里程碑塑造了情感智能理论的完整版图</span><span class="lang-en">Six milestones that shaped the complete landscape of emotional intelligence theory</span></p>
+    <div class="timeline-wrapper">
+      <svg viewbox="0 0 1100 480" xmlns="http://www.w3.org/2000/svg" style="background:#fafafa;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+        <defs>
+          <lineargradient id="tgGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c9a84c"></stop><stop offset="100%" stop-color="#e8cc7a"></stop></lineargradient>
+          <lineargradient id="tgTeal" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0d7377"></stop><stop offset="100%" stop-color="#14a3a8"></stop></lineargradient>
+          <filter id="tshadow"><fedropshadow dx="0" dy="2" stddeviation="3" flood-opacity="0.08"></fedropshadow></filter>
+        </defs>
+        <rect width="1100" height="480" fill="#fafafa" rx="16"></rect>
+        <text class="svg-en" x="550" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#0a1628">EI Theory Evolution (1920-2026)</text>
+        <text class="svg-zh" x="550" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#0a1628">EI 情感智能理论百年演进</text>
+        <text class="svg-en" x="550" y="56" text-anchor="middle" font-size="11" fill="#757575">The Evolution of Emotional Intelligence Theory (1920–2026)</text>
+        <text class="svg-zh" x="550" y="56" text-anchor="middle" font-size="11" fill="#757575">情感智能理论百年演进 (1920–2026)</text>
+        <line x1="80" y1="120" x2="1020" y2="120" stroke="url(#tgGold)" stroke-width="3" stroke-linecap="round"></line>
+        <line x1="80" y1="340" x2="1020" y2="340" stroke="url(#tgTeal)" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,4"></line>
+        <text class="svg-en" x="90" y="102" font-size="10" fill="#757575" font-weight="600">Germination</text>
+        <text class="svg-zh" x="90" y="117" font-size="10" fill="#757575" font-weight="600">萌芽期</text>
+        <text class="svg-en" x="380" y="102" font-size="10" fill="#757575" font-weight="600">Establishment</text>
+        <text class="svg-zh" x="380" y="117" font-size="10" fill="#757575" font-weight="600">建立期</text>
+        <text class="svg-en" x="700" y="102" font-size="10" fill="#757575" font-weight="600">Maturation</text>
+        <text class="svg-zh" x="700" y="117" font-size="10" fill="#757575" font-weight="600">成熟期</text>
+        <text class="svg-en" x="920" y="102" font-size="10" fill="#757575" font-weight="600">AI Fusion</text>
+        <text class="svg-zh" x="920" y="117" font-size="10" fill="#757575" font-weight="600">AI 融合</text>
+        <circle cx="120" cy="120" r="14" fill="#8B4513" filter="url(#tshadow)"></circle><text x="120" y="125" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">1920</text>
+        <text x="120" y="100" text-anchor="middle" font-size="11" fill="#8B4513" font-weight="700">Thorndike</text>
+        <text x="120" y="86" text-anchor="middle" font-size="9" fill="#757575">Edward Thorndike</text>
+        <rect x="45" y="140" width="150" height="36" rx="6" fill="#f5f0e8" stroke="#8B4513" stroke-width="0.5"></rect>
+        <text x="120" y="158" text-anchor="middle" font-size="9" fill="#444">"Social Intelligence"</text>
+        <text x="120" y="172" text-anchor="middle" font-size="8" fill="#8B4513">Human interaction as intelligence</text>
+        <line x1="120" y1="134" x2="120" y2="140" stroke="#8B4513" stroke-width="1"></line>
+        <circle cx="250" cy="120" r="14" fill="#1A5276" filter="url(#tshadow)"></circle><text x="250" y="125" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">1983</text>
+        <text x="250" y="100" text-anchor="middle" font-size="11" fill="#1A5276" font-weight="700">Gardner</text>
+        <text x="250" y="86" text-anchor="middle" font-size="9" fill="#757575">H. Gardner</text>
+        <rect x="175" y="140" width="150" height="36" rx="6" fill="#f5f0e8" stroke="#1A5276" stroke-width="0.5"></rect>
+        <text x="250" y="158" text-anchor="middle" font-size="9" fill="#444">Multiple Intelligences</text>
+        <text x="250" y="172" text-anchor="middle" font-size="8" fill="#1A5276">Intrapersonal × Interpersonal → EI's roots</text>
+        <line x1="250" y1="134" x2="250" y2="140" stroke="#1A5276" stroke-width="1"></line>
+        <circle cx="340" cy="120" r="14" fill="#2E4057" filter="url(#tshadow)"></circle><text x="340" y="125" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">1985</text>
+        <text x="340" y="100" text-anchor="middle" font-size="11" fill="#2E4057" font-weight="700">Payne</text>
+        <text x="340" y="86" text-anchor="middle" font-size="9" fill="#757575">Wayne Payne</text>
+        <rect x="270" y="140" width="140" height="36" rx="6" fill="#f5f0e8" stroke="#2E4057" stroke-width="0.5"></rect>
+        <text x="340" y="158" text-anchor="middle" font-size="8" fill="#444">First PhD thesis</text>
+        <text x="340" y="172" text-anchor="middle" font-size="9" fill="#2E4057" font-weight="600">"Emotional Intelligence"</text>
+        <line x1="340" y1="134" x2="340" y2="140" stroke="#2E4057" stroke-width="1"></line>
+        <circle cx="480" cy="120" r="16" fill="#0E6251" filter="url(#tshadow)"></circle><text x="480" y="125" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">1990</text>
+        <text x="480" y="96" text-anchor="middle" font-size="11" fill="#0E6251" font-weight="700">Mayer &amp; Salovey</text>
+        <text x="480" y="82" text-anchor="middle" font-size="9" fill="#757575">Mayer &amp; Salovey</text>
+        <rect x="405" y="144" width="150" height="40" rx="6" fill="#e8f8f5" stroke="#0E6251" stroke-width="0.8"></rect>
+        <text x="480" y="162" text-anchor="middle" font-size="9" fill="#0E6251" font-weight="600">★ Foundational Paper</text>
+        <text x="480" y="178" text-anchor="middle" font-size="8" fill="#444">MSCEIT — Academic Orthodoxy</text>
+        <line x1="480" y1="136" x2="480" y2="144" stroke="#0E6251" stroke-width="1"></line>
+        <circle cx="610" cy="120" r="16" fill="#C0392B" filter="url(#tshadow)"></circle><text x="610" y="125" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">1995</text>
+        <text x="610" y="96" text-anchor="middle" font-size="11" fill="#C0392B" font-weight="700">Goleman</text>
+        <text x="610" y="82" text-anchor="middle" font-size="9" fill="#757575">Daniel Goleman</text>
+        <rect x="530" y="144" width="160" height="48" rx="6" fill="#fdedec" stroke="#C0392B" stroke-width="0.8"></rect>
+        <text x="610" y="162" text-anchor="middle" font-size="9" fill="#C0392B" font-weight="600">🔥 "Emotional Intelligence" Bestseller</text>
+        <text x="610" y="176" text-anchor="middle" font-size="8" fill="#444">Workplace 4-Dimensions → Mainstream</text>
+        <text x="610" y="188" text-anchor="middle" font-size="8" fill="#C0392B">Why EQ matters more than IQ</text>
+        <line x1="610" y1="136" x2="610" y2="144" stroke="#C0392B" stroke-width="1"></line>
+        <circle cx="740" cy="120" r="16" fill="#6C3483" filter="url(#tshadow)"></circle><text x="740" y="125" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">1997</text>
+        <text x="740" y="96" text-anchor="middle" font-size="11" fill="#6C3483" font-weight="700">Bar-On</text>
+        <text x="740" y="82" text-anchor="middle" font-size="9" fill="#757575">Reuven Bar-On</text>
+        <rect x="660" y="144" width="160" height="40" rx="6" fill="#f5eef8" stroke="#6C3483" stroke-width="0.8"></rect>
+        <text x="740" y="162" text-anchor="middle" font-size="9" fill="#6C3483" font-weight="600">Handbook of EI</text>
+        <text x="740" y="178" text-anchor="middle" font-size="8" fill="#444">EQ-i — Trait Model Foundation</text>
+        <line x1="740" y1="136" x2="740" y2="140" stroke="#6C3483" stroke-width="1"></line>
+        <circle cx="870" cy="340" r="16" fill="url(#tgTeal)" filter="url(#tshadow)"></circle><text x="870" y="345" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">2002</text>
+        <text x="870" y="318" text-anchor="middle" font-size="11" fill="#0d7377" font-weight="700">Genos EI Model</text>
+        <text x="870" y="304" text-anchor="middle" font-size="9" fill="#757575">Palmer &amp; Stough</text>
+        <rect x="790" y="360" width="160" height="48" rx="6" fill="#e8f8f5" stroke="#0d7377" stroke-width="0.8"></rect>
+        <text x="870" y="378" text-anchor="middle" font-size="9" fill="#0d7377" font-weight="600">Swinburne University</text>
+        <text x="870" y="394" text-anchor="middle" font-size="8" fill="#444">6-Dimension Workplace Model</text>
+        <text x="870" y="406" text-anchor="middle" font-size="8" fill="#0d7377">360° Multi-Rater Assessment</text>
+        <line x1="870" y1="356" x2="870" y2="360" stroke="#0d7377" stroke-width="1"></line>
+        <circle cx="1020" cy="340" r="16" fill="url(#tgGold)" filter="url(#tshadow)"></circle><text x="1020" y="345" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">2026</text>
+        <text x="1020" y="318" text-anchor="middle" font-size="11" fill="#c9a84c" font-weight="700">AI + EI Era</text>
+        <text x="1020" y="304" text-anchor="middle" font-size="9" fill="#757575">Human-AI Synergy</text>
+        <rect x="950" y="360" width="140" height="48" rx="6" fill="#fef9e7" stroke="#c9a84c" stroke-width="0.8"></rect>
+        <text x="1020" y="378" text-anchor="middle" font-size="9" fill="#c9a84c" font-weight="600">Genos "EI in the age of AI"</text>
+        <text x="1020" y="394" text-anchor="middle" font-size="8" fill="#444">EIDC · AI+EI 3-Stage Model</text>
+        <line x1="1020" y1="356" x2="1020" y2="360" stroke="#c9a84c" stroke-width="1"></line>
+        <rect x="80" y="240" width="300" height="76" rx="10" fill="#0a1628" filter="url(#tshadow)"></rect>
+        <text x="230" y="264" text-anchor="middle" font-size="12" fill="#e8cc7a" font-weight="700">3 EI Model Comparison</text>
+        <text x="120" y="286" font-size="9" fill="#fff">🧠 Ability Model</text>
+        <text x="120" y="302" font-size="9" fill="#fff">Mayer-Salovey · MSCEIT</text>
+        <text x="240" y="286" font-size="9" fill="#fff">📋 Trait Model</text>
+        <text x="240" y="302" font-size="9" fill="#fff">Bar-On · EQ-i</text>
+        <text x="340" y="286" font-size="9" fill="#fff">🏢 Mixed Model</text>
+        <text x="340" y="302" font-size="9" fill="#fff">Goleman · ECI/ESCI</text>
+        <line x1="80" y1="240" x2="80" y2="340" stroke="#0a1628" stroke-width="1" stroke-dasharray="3,3"></line>
+        <rect x="440" y="240" width="310" height="76" rx="10" fill="#fff" stroke="#e0e0e0" stroke-width="1" filter="url(#tshadow)"></rect>
+        <text class="svg-en" x="595" y="264" text-anchor="middle" font-size="12" fill="#0a1628" font-weight="700">📚 Key References</text>
+        <text class="svg-zh" x="595" y="264" text-anchor="middle" font-size="12" fill="#0a1628" font-weight="700">📚 核心参考文献</text>
+        <text x="460" y="288" font-size="8.5" fill="#444">• Palmer, Stough, Gignac (2009) — Genos EI Inventory</text>
+        <text x="460" y="302" font-size="8.5" fill="#444">• Gignac (2008) — Genos EI Technical Manual</text>
+        <text x="460" y="316" font-size="8.5" fill="#444">• Mayer & Salovey (1990) — Emotional Intelligence</text>
+        <line x1="440" y1="240" x2="440" y2="340" stroke="#0a1628" stroke-width="1" stroke-dasharray="3,3"></line>
+        <line x1="80" y1="155" x2="80" y2="340" stroke="#d5d0c8" stroke-width="1" stroke-dasharray="4,4"></line>
+        <line x1="180" y1="200" x2="180" y2="340" stroke="#d5d0c8" stroke-width="1" stroke-dasharray="4,4"></line>
+        <text class="svg-en" x="550" y="430" text-anchor="middle" font-size="13" fill="#0a1628" font-weight="700">🧩 Genos EI 6-Dimension Workplace Model</text>
+        <text class="svg-zh" x="550" y="430" text-anchor="middle" font-size="13" fill="#0a1628" font-weight="700">🧩 Genos EI 六维职场模型</text>
+        <text class="svg-en" x="550" y="448" text-anchor="middle" font-size="9" fill="#757575">Self-Awareness → Awareness of Others → Authenticity → Emotional Reasoning → Self-Management → Positive Influence</text>
+        <text class="svg-zh" x="550" y="448" text-anchor="middle" font-size="9" fill="#757575">自我觉察 → 他人觉察 → 真诚 → 情绪推理 → 自我管理 → 积极影响力</text>
+        <circle cx="330" cy="468" r="4" fill="#0d7377"></circle><text x="340" y="472" font-size="8" fill="#444">Self-Awareness</text>
+        <circle cx="440" cy="468" r="4" fill="#14a3a8"></circle><text x="450" y="472" font-size="8" fill="#444">Awareness of Others</text>
+        <circle cx="550" cy="468" r="4" fill="#c9a84c"></circle><text x="560" y="472" font-size="8" fill="#444">Authenticity</text>
+        <circle cx="660" cy="468" r="4" fill="#e8cc7a"></circle><text x="670" y="472" font-size="8" fill="#444">Emotional Reasoning</text>
+        <circle cx="760" cy="468" r="4" fill="#0e6251"></circle><text x="770" y="472" font-size="8" fill="#444">Self-Management</text>
+        <circle cx="870" cy="468" r="4" fill="#1a5276"></circle><text x="880" y="472" font-size="8" fill="#444">Positive Influence</text>
+      </svg>
     </div>
+  </div>
+</section>
 
-    <div style="text-align:center;margin-top:2.5rem;padding:32px;background:linear-gradient(135deg,var(--gold-pale),var(--white));border-radius:var(--radius-lg);border:1px solid rgba(201,168,76,0.2)">
-      <h3 style="color:var(--navy);font-size:1.2rem;margin-bottom:8px"><span class="lang-zh">&#x1F39F; 内测邀请制</span><span class="lang-en">&#x1F39F; Invite-Only Beta</span></h3>
-      <p style="color:var(--gray-500);font-size:0.9rem;margin-bottom:20px;max-width:500px;margin-left:auto;margin-right:auto">
-        <span class="lang-zh">AI+EI 工具包与教练课目前以<strong>内测版</strong>形式开放。论坛结束后将组织线下工作坊进行深入交流。</span>
-        <span class="lang-en">The AI+EI toolkit and coaching are currently in <strong>invite-only beta</strong>. Offline workshops will follow the forum.</span>
-      </p>
-      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-        <span class="btn btn-primary" style="opacity:0.9;cursor:default"><span class="lang-zh">&#x1F4E7; 联系预约</span><span class="lang-en">&#x1F4E7; Contact to Join</span></span>
-        <a href="#conference" class="btn btn-ghost"><span class="lang-zh">了解论坛详情</span><span class="lang-en">Forum Details</span></a>
+
+<section id="scholars" class="section-white">
+  <div class="container">
+    <h2 class="section-title"><span class="lang-zh">七大理论贡献者</span><span class="lang-en">The Seven Key Contributors</span></h2>
+    <p class="section-desc"><span class="lang-zh">跨越一个世纪，七位学者/团队奠定了情感智能的理论基础</span><span class="lang-en">Across a century, seven scholars / groups laid the theoretical foundations of emotional intelligence</span></p>
+    <div class="scholars-grid">
+      <div class="scholar-card">
+        <div class="scholar-card-header">
+          <div class="scholar-era"><span class="lang-zh">1920 · 起源</span><span class="lang-en">1920 · Origin</span></div>
+          <div class="scholar-name"><span class="lang-en">Edward Thorndike</span><span class="lang-zh">Edward Thorndike</span></div>
+          <div class="scholar-role"><span class="lang-en">Columbia University</span><span class="lang-zh">哥伦比亚大学</span></div>
+          <span class="scholar-tag pioneer"><span class="lang-zh">先驱</span><span class="lang-en">Pioneer</span></span>
+        </div>
+        <div class="scholar-card-body">
+          <p><span class="lang-zh">1920 年提出"社会智力"——首次提出人际理解与情绪洞察属于智力范畴。EI 理论最早的原型。</span><span class="lang-en">In 1920, published "Social Intelligence" — first to propose that interpersonal understanding and emotional insight belong to the domain of intelligence. The earliest prototype of EI theory.</span></p>
+        </div>
+      </div>
+      <div class="scholar-card">
+        <div class="scholar-card-header">
+          <div class="scholar-era"><span class="lang-zh">1985 · 术语诞生</span><span class="lang-en">1985 · Term Birth</span></div>
+          <div class="scholar-name"><span class="lang-en">Wayne Payne</span><span class="lang-zh">Wayne Payne</span></div>
+          <div class="scholar-role"><span class="lang-zh">博士研究者</span><span class="lang-en">Doctoral Researcher</span></div>
+          <span class="scholar-tag pioneer"><span class="lang-zh">先驱</span><span class="lang-en">Pioneer</span></span>
+        </div>
+        <div class="scholar-card-body">
+          <p><span class="lang-zh">首次在 1985 年博士论文《情感研究》中提出"情感智能"术语。已知最早的 EI 概念学术记录。</span><span class="lang-en">First to coin the term "Emotional Intelligence" in his 1985 doctoral thesis "A Study of Emotion." The earliest known academic record of the EI concept.</span></p>
+        </div>
+      </div>
+      <div class="scholar-card">
+        <div class="scholar-card-header">
+          <div class="scholar-era"><span class="lang-zh">1983 · 理论根源</span><span class="lang-en">1983 · Theoretical Roots</span></div>
+          <div class="scholar-name"><span class="lang-en">Howard Gardner</span><span class="lang-zh">Howard Gardner</span></div>
+          <div class="scholar-role"><span class="lang-en">Harvard University</span><span class="lang-zh">哈佛大学</span></div>
+          <span class="scholar-tag founder"><span class="lang-zh">奠基</span><span class="lang-en">Foundational</span></span>
+        </div>
+        <div class="scholar-card-body">
+          <p><span class="lang-zh">提出多元智能理论（内省智能 + 人际智能），打破 IQ 单一维度。为 EI 理论提供了概念框架。</span><span class="lang-en">Proposed Multiple Intelligences Theory (Intrapersonal + Interpersonal), breaking the unitary view of IQ. Provided the conceptual framework for EI theory.</span></p>
+        </div>
+      </div>
+      <div class="scholar-card">
+        <div class="scholar-card-header">
+          <div class="scholar-era"><span class="lang-zh">1990 · 学术正统</span><span class="lang-en">1990 · Academic Orthodoxy</span></div>
+          <div class="scholar-name"><span class="lang-en">John Mayer &amp; Peter Salovey</span><span class="lang-zh">John Mayer &amp; Peter Salovey</span></div>
+          <div class="scholar-role"><span class="lang-en">Yale / University of New Hampshire</span><span class="lang-zh">耶鲁大学 / 新罕布什尔大学</span></div>
+          <span class="scholar-tag founder"><span class="lang-zh">奠基</span><span class="lang-en">Foundational</span></span>
+        </div>
+        <div class="scholar-card-body">
+          <p><span class="lang-zh">发表 1990 年开创性论文《情感智能》——首次正式定义与能力模型。开发 MSCEIT 测试，确立 EI 的学术合法性。</span><span class="lang-en">Published the seminal 1990 paper "Emotional Intelligence" — first formal definition and ability model. Developed the MSCEIT test, establishing EI's academic legitimacy.</span></p>
+        </div>
+      </div>
+      <div class="scholar-card">
+        <div class="scholar-card-header">
+          <div class="scholar-era"><span class="lang-zh">1997 · 测量系统</span><span class="lang-en">1997 · Measurement System</span></div>
+          <div class="scholar-name"><span class="lang-en">Reuven Bar-On</span><span class="lang-zh">Reuven Bar-On</span></div>
+          <div class="scholar-role"><span class="lang-zh">临床心理学家</span><span class="lang-en">Clinical Psychologist</span></div>
+          <span class="scholar-tag founder"><span class="lang-zh">奠基</span><span class="lang-en">Foundational</span></span>
+        </div>
+        <div class="scholar-card-body">
+          <p><span class="lang-zh">开发 EQ-i（情商问卷），建立特质模型。广泛应用于心理健康、压力管理和临床评估。</span><span class="lang-en">Developed the EQ-i (Emotional Quotient Inventory), establishing the Trait Model. Widely applied in mental health, stress management, and clinical assessment.</span></p>
+        </div>
+      </div>
+      <div class="scholar-card">
+        <div class="scholar-card-header">
+          <div class="scholar-era"><span class="lang-zh">1995 · 普及推广</span><span class="lang-en">1995 · Popularization</span></div>
+          <div class="scholar-name"><span class="lang-en">Daniel Goleman</span><span class="lang-zh">Daniel Goleman</span></div>
+          <div class="scholar-role"><span class="lang-zh">心理学家 / 科学记者</span><span class="lang-en">Psychologist / Science Journalist</span></div>
+          <span class="scholar-tag popularizer"><span class="lang-zh">普及者</span><span class="lang-en">Popularizer</span></span>
+        </div>
+        <div class="scholar-card-body">
+          <p><span class="lang-zh">《情商》全球销量 500 万+，将 EI 带入主流视野。提出职场四维模型，参与开发 ECI/ESCI 评估工具。</span><span class="lang-en">"Emotional Intelligence" — 5M+ copies sold worldwide. Brought EI to mainstream. Proposed workplace 4-dimension model, co-developed ECI/ESCI assessment tools.</span></p>
+        </div>
+      </div>
+      <div class="scholar-card">
+        <div class="scholar-card-header">
+          <div class="scholar-era"><span class="lang-zh">2002 · Genos EI</span><span class="lang-en">2002 · Genos EI</span></div>
+          <div class="scholar-name"><span class="lang-en">Ben Palmer &amp; Con Stough</span><span class="lang-zh">Ben Palmer &amp; Con Stough</span></div>
+          <div class="scholar-role"><span class="lang-en">Swinburne University / Genos International</span><span class="lang-zh">斯威本科技大学 / Genos International</span></div>
+          <span class="scholar-tag genos"><span class="lang-zh">Genos 创始人</span><span class="lang-en">Genos Founder</span></span>
+        </div>
+        <div class="scholar-card-body">
+          <p><span class="lang-zh">开发 Genos EI 框架与 360° 行为频率评估工具。聚焦职场行为频率而非能力/特质，提出"可发展的 EI"核心理念。Genos EI 国际峰会的理论奠基人。</span><span class="lang-en">Developed the Genos EI framework and 360° behavioral frequency assessment. Focuses on workplace behavioral frequency rather than ability or trait — "EI can be developed." Founders of the Genos EI framework and this summit's honored contributors.</span></p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- Conference moved to top of page -->
-
-
-<section class="section-light">
+<section id="models" class="section-light">
   <div class="container">
-    <h2 class="section-title"><span class="lang-zh">认证路径</span><span class="lang-en">Certification Pathway</span></h2>
-    <p class="section-desc"><span class="lang-zh">从基础到精通 — 四级认证对应 EI 行为频率进阶</span><span class="lang-en">From foundation to mastery — four levels corresponding to EI behavior frequency progression</span></p>
-    <div class="cert-pathway">
-      <div class="path-step ps1">
-        <div class="ps-icon">📖</div>
-        <h4><span class="lang-zh">基础认证</span><span class="lang-en">Foundation</span></h4>
-        <p><span class="lang-en">Foundation</span></p>
-        <span class="ps-badge"><span class="lang-zh">觉察</span><span class="lang-en">Awareness</span></span>
-        <ul><li><span class="lang-zh">理解六维模型</span><span class="lang-en">Understand 6-dimension model</span></li><li><span class="lang-zh">完成 360° 自我评估</span><span class="lang-en">Complete 360° self-assessment</span></li><li><span class="lang-zh">创建发展计划</span><span class="lang-en">Create development plan</span></li></ul>
+    <h2 class="section-title"><span class="lang-zh">三大 EI 模型对比</span><span class="lang-en">Three EI Models Compared</span></h2>
+    <p class="section-desc"><span class="lang-zh">能力模型 vs 特质模型 vs 混合模型 — 理论与测量的核心差异</span><span class="lang-en">Ability Model vs Trait Model vs Mixed Model — core differences in theory and measurement</span></p>
+    <div class="model-compare">
+      <table class="model-table">
+        <thead>
+          <tr><th><span class="lang-zh">对比维度</span><span class="lang-en">Dimension</span></th><th><span class="lang-en">🧠 Mayer-Salovey</span><br><span style="font-weight:400;font-size:0.8rem;opacity:0.7"><span class="lang-en">Ability Model</span><span class="lang-zh">能力模型</span></span></th><th><span class="lang-en">📋 Bar-On</span><br><span style="font-weight:400;font-size:0.8rem;opacity:0.7"><span class="lang-en">Trait Model</span><span class="lang-zh">特质模型</span></span></th><th><span class="lang-en">🏢 Goleman</span><br><span style="font-weight:400;font-size:0.8rem;opacity:0.7"><span class="lang-en">Mixed Model</span><span class="lang-zh">混合模型</span></span></th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="lang-zh">工具</span><span class="lang-en">Tool</span></td><td><span class="model-highlight"><span class="lang-zh">MSCEIT</span><span class="lang-en">MSCEIT</span></span></td><td><span class="model-highlight"><span class="lang-zh">EQ-i</span><span class="lang-en">EQ-i</span></span></td><td><span class="model-highlight"><span class="lang-zh">ECI / ESCI</span><span class="lang-en">ECI / ESCI</span></span></td></tr>
+          <tr><td><span class="lang-zh">方法</span><span class="lang-en">Method</span></td><td><span class="lang-zh">能力测试（对/错）</span><span class="lang-en">Ability test (right/wrong)</span></td><td><span class="lang-zh">自陈量表</span><span class="lang-en">Self-report inventory</span></td><td><span class="lang-zh">360° 多维度评估</span><span class="lang-en">360° multi-rater</span></td></tr>
+          <tr><td><span class="lang-zh">焦点</span><span class="lang-en">Focus</span></td><td><span class="lang-zh">情绪认知能力</span><span class="lang-en">Emotion cognition ability</span></td><td><span class="lang-zh">人格特质 + 社会功能</span><span class="lang-en">Personality traits + social function</span></td><td><span class="lang-zh">绩效 + 领导力</span><span class="lang-en">Performance + leadership</span></td></tr>
+          <tr><td><span class="lang-zh">维度数</span><span class="lang-en">Dimensions</span></td><td><span class="lang-zh">4 分支</span><span class="lang-en">4 branches</span></td><td><span class="lang-zh">5 因素 / 15 子量表</span><span class="lang-en">5 factors / 15 sub-scales</span></td><td><span class="lang-zh">4 维度 / 18 能力项</span><span class="lang-en">4 dimensions / 18 competencies</span></td></tr>
+          <tr><td><span class="lang-zh">题项</span><span class="lang-en">Items</span></td><td><span class="lang-zh">141 题</span><span class="lang-en">141 items</span></td><td><span class="lang-zh">133 题</span><span class="lang-en">133 items</span></td><td><span class="lang-zh">72 题</span><span class="lang-en">72 items</span></td></tr>
+          <tr><td><span class="lang-zh">基础</span><span class="lang-en">Basis</span></td><td><span class="lang-zh">情绪 = 认知能力</span><span class="lang-en">Emotion = cognitive ability</span></td><td><span class="lang-zh">情绪 = 人格特质</span><span class="lang-en">Emotion = personality traits</span></td><td><span class="lang-zh">情绪 = 绩效预测器</span><span class="lang-en">Emotion = performance predictor</span></td></tr>
+          <tr><td><span class="lang-zh">应用</span><span class="lang-en">Application</span></td><td><span class="lang-zh">学术研究</span><span class="lang-en">Academic research</span></td><td><span class="lang-zh">心理健康 / 临床</span><span class="lang-en">Mental health / clinical</span></td><td><span class="lang-zh">企业 / 领导力发展</span><span class="lang-en">Corporate / leadership dev</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<section id="dimensions" class="section-white">
+  <div class="container">
+    <h2 class="section-title"><span class="lang-zh">Genos EI 六个维度 <span class="aiei-badge" style="vertical-align:middle">AI+EI</span></span><span class="lang-en">Genos EI 6 Dimensions <span class="aiei-badge" style="vertical-align:middle">AI+EI</span></span></h2>
+    <p class="section-desc"><span class="lang-zh">从自我觉察到积极影响力的递进框架 — 每个维度通过可观察的职场行为来衡量</span><span class="lang-en">A progressive framework from self-awareness to positive influence — each dimension is measurable through observable workplace behaviors</span></p>
+    <div class="dim-grid">
+      <div class="dim-card">
+        <div class="dim-top"><span class="dim-num">1</span><div><h4><span class="lang-zh">情绪自我觉察 </span><span class="dim-en"><span class="lang-en">Emotional Self-Awareness</span></span></h4><span class="dim-area"><span class="lang-zh">觉察领域</span><span class="lang-en">Awareness Domain</span></span></div></div>
+        <p><span class="lang-zh">识别和理解自己的情绪及其对思维、决策和行为的影响。所有 EI 能力的基础。</span><span class="lang-en">Recognizing and understanding one's own emotions and their impact on thoughts, decisions, and behavior. The foundation of all EI competencies.</span></p>
+        <ul class="dim-behaviors">
+          <li><span class="lang-zh">识别情绪变化并准确理解触发因素</span><span class="lang-en">Identify emotional changes and accurately understand triggers</span></li>
+          <li><span class="lang-zh">觉察情绪如何影响工作表现和决策</span><span class="lang-en">Recognize how emotions affect work performance and decisions</span></li>
+          <li><span class="lang-zh">持续反思感受及其背后的心理需求</span><span class="lang-en">Continuously reflect on feelings and underlying psychological needs</span></li>
+        </ul>
       </div>
-      <div class="path-arrow">→</div>
-      <div class="path-step ps2">
-        <div class="ps-icon">🛠</div>
-        <h4><span class="lang-zh">实践者认证</span><span class="lang-en">Practitioner</span></h4>
-        <p><span class="lang-en">Practitioner</span></p>
-        <span class="ps-badge"><span class="lang-zh">应用</span><span class="lang-en">Application</span></span>
-        <ul><li><span class="lang-zh">行为频率："有时"</span><span class="lang-en">Behavior frequency: "Sometimes"</span></li><li><span class="lang-zh">完成 360° 反馈解读</span><span class="lang-en">Complete 360° feedback interpretation</span></li><li><span class="lang-zh">制定 90 天行为改变计划</span><span class="lang-en">90-day behavior change plan</span></li></ul>
+      <div class="dim-card">
+        <div class="dim-top"><span class="dim-num">2</span><div><h4><span class="lang-zh">他人情绪觉察 </span><span class="dim-en"><span class="lang-en">Awareness of Others</span></span></h4><span class="dim-area"><span class="lang-zh">觉察领域</span><span class="lang-en">Awareness Domain</span></span></div></div>
+        <p><span class="lang-zh">感知、理解并认可他人的感受。职场共情的核心——从"关注自己"转向"看见他人"。</span><span class="lang-en">Perceiving, understanding, and acknowledging others' feelings. The core of workplace empathy — shifting from "self-focus" to "seeing others."</span></p>
+        <ul class="dim-behaviors">
+          <li><span class="lang-zh">主动觉察并准确解读他人的情绪信号</span><span class="lang-en">Actively notice and accurately interpret others' emotional signals</span></li>
+          <li><span class="lang-zh">展现对他人的理解和尊重</span><span class="lang-en">Demonstrate understanding and respect for others' situations</span></li>
+          <li><span class="lang-zh">在沟通中使用共情语言确认他人感受</span><span class="lang-en">Use empathetic language to confirm others' feelings in communication</span></li>
+        </ul>
       </div>
-      <div class="path-arrow">→</div>
-      <div class="path-step ps3">
-        <div class="ps-icon">⭐</div>
-        <h4><span class="lang-zh">高级实践者</span><span class="lang-en">Senior Practitioner</span></h4>
-        <p><span class="lang-en">Senior Practitioner</span></p>
-        <span class="ps-badge"><span class="lang-zh">精通</span><span class="lang-en">Mastery</span></span>
-        <ul><li><span class="lang-zh">行为频率："通常"</span><span class="lang-en">Behavior frequency: "Usually"</span></li><li><span class="lang-zh">能够辅导他人发展 EI</span><span class="lang-en">Able to coach others in EI</span></li><li><span class="lang-zh">完成深度案例分析</span><span class="lang-en">Complete in-depth case analysis</span></li></ul>
+      <div class="dim-card">
+        <div class="dim-top"><span class="dim-num">3</span><div><h4><span class="lang-zh">真诚表达 </span><span class="dim-en"><span class="lang-en">Authenticity</span></span></h4><span class="dim-area"><span class="lang-zh">表达领域</span><span class="lang-en">Expression Domain</span></span></div></div>
+        <p><span class="lang-zh">开放、诚实、一致地表达想法和感受。言行一致、信守承诺，这是信任的基石。</span><span class="lang-en">Open, honest, and consistent expression of thoughts and feelings. Walking the talk and keeping commitments as the foundation of trust.</span></p>
+        <ul class="dim-behaviors">
+          <li><span class="lang-zh">真诚表达想法和感受，不虚伪</span><span class="lang-en">Express thoughts and feelings honestly without pretense</span></li>
+          <li><span class="lang-zh">信守承诺，言行始终一致</span><span class="lang-en">Keep promises — align words with actions consistently</span></li>
+          <li><span class="lang-zh">在压力下坚持原则，不扭曲自我</span><span class="lang-en">Uphold principles under pressure without distorting oneself</span></li>
+        </ul>
       </div>
-      <div class="path-arrow">→</div>
-      <div class="path-step ps4">
-        <div class="ps-icon">👑</div>
-        <h4><span class="lang-zh">大师认证</span><span class="lang-en">Master</span></h4>
-        <p><span class="lang-en">Master</span></p>
-        <span class="ps-badge"><span class="lang-zh">赋能</span><span class="lang-en">Empowerment</span></span>
-        <ul><li><span class="lang-zh">频率："通常 → 总是"</span><span class="lang-en">Frequency: "Usually → Always"</span></li><li><span class="lang-zh">主导 EI 转型项目</span><span class="lang-en">Lead EI transformation projects</span></li><li><span class="lang-zh">推动组织 EI 文化建设</span><span class="lang-en">Drive organizational EI culture</span></li></ul>
+      <div class="dim-card">
+        <div class="dim-top"><span class="dim-num">4</span><div><h4><span class="lang-zh">情绪推理 </span><span class="dim-en"><span class="lang-en">Emotional Reasoning</span></span></h4><span class="dim-area"><span class="lang-zh">整合领域</span><span class="lang-en">Thinking Domain</span></span></div></div>
+        <p><span class="lang-zh">在决策和问题解决中整合情绪信息与事实数据——避免"纯逻辑"或"纯情绪"的极端。</span><span class="lang-en">Integrating emotional information with factual data in decision-making and problem-solving — avoiding the extremes of "pure logic" or "pure emotion."</span></p>
+        <ul class="dim-behaviors">
+          <li><span class="lang-zh">做出重要决策时主动考虑情绪状态</span><span class="lang-en">Actively consider emotional state when making important decisions</span></li>
+          <li><span class="lang-zh">权衡事实数据与情绪信息，进行综合判断</span><span class="lang-en">Weigh factual data alongside emotional information for integrated judgment</span></li>
+          <li><span class="lang-zh">帮助团队平衡理性分析与情感智能</span><span class="lang-en">Help teams balance rational analysis with emotional intelligence</span></li>
+        </ul>
+      </div>
+      <div class="dim-card">
+        <div class="dim-top"><span class="dim-num">5</span><div><h4><span class="lang-zh">自我管理 </span><span class="dim-en"><span class="lang-en">Self-Management</span></span></h4><span class="dim-area"><span class="lang-zh">管理领域</span><span class="lang-en">Regulation Domain</span></span></div></div>
+        <p><span class="lang-zh">管理自己的情绪、时间和行为。在高压力下保持沉着、专注和高效。</span><span class="lang-en">Managing one's emotions, time, and behavior. Maintaining composure, focus, and productivity in high-pressure situations.</span></p>
+        <ul class="dim-behaviors">
+          <li><span class="lang-zh">在压力下保持情绪稳定和理性判断</span><span class="lang-en">Maintain emotional stability and rational judgment under stress</span></li>
+          <li><span class="lang-zh">有效管理时间和精力，避免情绪耗竭</span><span class="lang-en">Effectively manage time and energy to avoid emotional exhaustion</span></li>
+          <li><span class="lang-zh">从挫折中快速恢复，保持积极工作状态</span><span class="lang-en">Recover quickly from setbacks and maintain a positive work state</span></li>
+        </ul>
+      </div>
+      <div class="dim-card">
+        <div class="dim-top"><span class="dim-num">6</span><div><h4><span class="lang-zh">积极影响力 </span><span class="dim-en"><span class="lang-en">Positive Influence</span></span></h4><span class="dim-area"><span class="lang-zh">领导领域</span><span class="lang-en">Leadership Domain</span></span></div></div>
+        <p><span class="lang-zh">通过解决问题、有效反馈和支持他人，营造积极健康的工作环境。EI 发展的最高境界。</span><span class="lang-en">Creating a positive, healthy work environment through problem-solving, effective feedback, and supporting others. The highest level of EI development.</span></p>
+        <ul class="dim-behaviors">
+          <li><span class="lang-zh">主动识别和解决团队中的情绪与人际问题</span><span class="lang-en">Proactively identify and resolve emotional and interpersonal issues in teams</span></li>
+          <li><span class="lang-zh">给予具体、真诚、及时的正面反馈与建设性意见</span><span class="lang-en">Provide specific, sincere, timely positive feedback and constructive input</span></li>
+          <li><span class="lang-zh">以身作则，营造开放、包容、信任的团队文化</span><span class="lang-en">Lead by example in creating an open, inclusive, trusting team culture</span></li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
+
+
+
 
 
 <section id="cert-skills" class="cert-skills-section">
@@ -1145,6 +1341,41 @@ footer .brand em{font-style:normal;color:var(--gold)}
         <span class="lang-zh">下载全部技能 (.tar.gz)</span><span class="lang-en">Download All Skills (.tar.gz)</span>
       </a>
       <p style="margin-top:12px;font-size:0.8rem;color:var(--gray-400)"><span class="lang-zh">解压后每个目录即一个独立技能，在智能体中安装即可激活</span><span class="lang-en">Each directory is a standalone skill — install in your AI agent to activate</span></p>
+    </div>
+  </div>
+</section>
+
+
+<section id="evolution" class="section-white">
+  <div class="container">
+    <h2 class="section-title"><span class="lang-zh">理论进化树 <span class="aiei-badge" style="vertical-align:middle">AI+EI</span></span><span class="lang-en">Theory Evolution Timeline <span class="aiei-badge" style="vertical-align:middle">AI+EI</span></span></h2>
+    <p class="section-desc"><span class="lang-zh">从概念种子到 AI 融合 — 追溯 EI 理论层层演化的轨迹</span><span class="lang-en">From conceptual seed to AI integration — tracing how EI theory evolved layer by layer</span></p>
+    <div class="evolution-tree">
+      <div class="tree-node"><div class="tree-dot"></div><div class="tree-content"><div class="year">1920 — <span class="lang-zh">起源</span><span class="lang-en">Origin</span></div><h4><span class="lang-zh">桑代克 · 社会智力</span><span class="lang-en">Thorndike · Social Intelligence</span></h4><p><span class="lang-zh">首次突破：提出理解他人和管理关系构成智力的独立维度。</span><span class="lang-en">First breakthrough: proposed that understanding others and managing relationships constitute an independent dimension of intelligence.</span></p></div><div class="tree-spacer"></div></div>
+      <div class="tree-node"><div class="tree-dot"></div><div class="tree-spacer"></div><div class="tree-content"><div class="year">1983 — <span class="lang-zh">概念根源</span><span class="lang-en">Conceptual Roots</span></div><h4><span class="lang-zh">加德纳 · 多元智能</span><span class="lang-en">Gardner · Multiple Intelligences</span></h4><p><span class="lang-zh">内省智能（自我觉察）+ 人际智能（理解他人）直接为 EI 理论提供了概念框架。</span><span class="lang-en">Intrapersonal (self-awareness) + Interpersonal (understanding others) directly provided the conceptual framework for EI theory.</span></p></div></div>
+      <div class="tree-node"><div class="tree-dot"></div><div class="tree-content"><div class="year">1985 — <span class="lang-zh">术语诞生</span><span class="lang-en">Term Born</span></div><h4><span class="lang-zh">佩恩 · 首次使用"情感智能"</span><span class="lang-en">Payne · "Emotional Intelligence" First Used</span></h4><p><span class="lang-zh">博士论文首次写下"情感智能"一词，探索情绪在人类潜能发展中的作用。</span><span class="lang-en">Doctoral thesis first wrote the term "Emotional Intelligence," exploring emotion's role in human potential development.</span></p></div><div class="tree-spacer"></div></div>
+      <div class="tree-node"><div class="tree-dot" style="background:#0E6251;box-shadow:0 0 0 3px rgba(14,98,81,0.2)"></div><div class="tree-spacer"></div><div class="tree-content"><div class="year">1990 — <span class="lang-zh">奠基之作 ⭐</span><span class="lang-en">Foundational ⭐</span></div><h4><span class="lang-zh">梅耶 & 萨洛维 · 正式定义 EI</span><span class="lang-en">Mayer & Salovey · Formal EI Definition</span></h4><p><span class="lang-zh">发表开创性论文，建立四分支能力模型，开发 MSCEIT 评估工具。</span><span class="lang-en">Published the seminal paper, established the 4-branch ability model, and developed the MSCEIT assessment.</span></p></div></div>
+      <div class="tree-node"><div class="tree-dot" style="background:#C0392B;box-shadow:0 0 0 3px rgba(192,57,43,0.2)"></div><div class="tree-content"><div class="year">1995 — <span class="lang-zh">主流普及 🔥</span><span class="lang-en">Mainstream 🔥</span></div><h4><span class="lang-zh">戈尔曼 · 《情商》全球畅销</span><span class="lang-en">Goleman · "Emotional Intelligence" Global Bestseller</span></h4><p><span class="lang-zh">将 EI 从学术界带入公众视野。职场四维模型成为最广泛认可的 EI 框架。</span><span class="lang-en">Brought EI from academia to the public. Workplace 4-dimension model became the most widely recognized EI framework.</span></p></div><div class="tree-spacer"></div></div>
+      <div class="tree-node"><div class="tree-dot" style="background:#6C3483;box-shadow:0 0 0 3px rgba(108,51,131,0.2)"></div><div class="tree-spacer"></div><div class="tree-content"><div class="year">1997 — <span class="lang-zh">测量系统</span><span class="lang-en">Measurement</span></div><h4><span class="lang-zh">巴昂 · EQ-i 量表</span><span class="lang-en">Bar-On · EQ-i Inventory</span></h4><p><span class="lang-zh">建立特质模型，将 EI 操作化为 5 因素 15 子量表，用于实践评估。</span><span class="lang-en">Established the trait model, operationalizing EI into 5 factors and 15 sub-scales for practical assessment.</span></p></div></div>
+      <div class="tree-node"><div class="tree-dot" style="background:#0d7377;box-shadow:0 0 0 3px rgba(13,115,119,0.2)"></div><div class="tree-content"><div class="year">2002 — <span class="lang-zh">职场应用</span><span class="lang-en">Workplace Application</span></div><h4><span class="lang-zh">帕尔默 & 斯托 · Genos EI</span><span class="lang-en">Palmer & Stough · Genos EI</span></h4><p><span class="lang-zh">专为职场设计：六维行为模型、360° 评估、EI 培训与绩效提升的 ROI 实证。</span><span class="lang-en">Designed specifically for the workplace: 6-dimension behavioral model, 360° assessment, proven ROI between EI training and performance.</span></p></div><div class="tree-spacer"></div></div>
+      <div class="tree-node"><div class="tree-dot" style="background:#c9a84c;box-shadow:0 0 0 3px rgba(201,168,76,0.2)"></div><div class="tree-spacer"></div><div class="tree-content"><div class="year">2026 — <span class="lang-zh">AI 融合</span><span class="lang-en">AI Integration</span></div><h4><span class="lang-zh">Genos "AI 时代的情感智能"</span><span class="lang-en">Genos "EI in the Age of AI"</span></h4><p><span class="lang-zh">Genos 全球峰会聚焦 EI 在 AI 时代的全新价值。AI+EI 三阶段模型：赋能 → 原生 → 觉醒。</span><span class="lang-en">Genos global conference focused on EI's renewed value in the AI era. AI+EI 3-stage model: Enable → Native → Awaken. <span class="aiei-badge aiei-badge-sm">AI+EI</span></span></p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="ai-ei" class="section-dark">
+  <div class="container">
+    <h2 class="section-title"><span class="lang-zh">AI 时代的情感智能 <span class="aiei-badge" style="vertical-align:middle">AI+EI</span></span><span class="lang-en">Emotional Intelligence in the AI Era <span class="aiei-badge" style="vertical-align:middle">AI+EI</span></span></h2>
+    <p class="section-desc"><span class="lang-zh">AI 越强大，人类情感智能越珍贵</span><span class="lang-en">The more advanced AI becomes, the more valuable human emotional intelligence grows</span></p>
+    <div class="ai-grid">
+      <div class="ai-card"><div class="stage-icon s1">🔧</div><h4><span class="lang-zh">AI 赋能</span><span class="lang-en">AI Enable</span></h4><p><span class="lang-zh">技术支持 EI 实践：知识库构建、智能互动、情绪识别系统</span><span class="lang-en">Technology supports EI practice: knowledge base construction, smart engagement, emotion recognition systems</span></p><span class="en"><span class="lang-zh">工具层 · 赋能</span><span class="lang-en">Tool Level · Enable</span></span></div>
+      <div class="ai-card"><div class="stage-icon s2">🌱</div><h4><span class="lang-zh">AI 原生</span><span class="lang-en">AI Native</span></h4><p><span class="lang-zh">AI 创造新的情感互动体验：共情机器人、情境化关怀、AI 辅助教练</span><span class="lang-en">AI creates new emotional interaction experiences: empathetic bots, contextual compassion, AI-powered coaching</span></p><span class="en"><span class="lang-zh">原生层 · AI Native</span><span class="lang-en">Native Level · Native</span></span></div>
+      <div class="ai-card"><div class="stage-icon s3">🌅</div><h4><span class="lang-zh">AI 觉醒</span><span class="lang-en">AI Awaken</span></h4><p><span class="lang-zh">AI 是伙伴而非工具。探索 EI 的哲学维度：文化与情感的深度融合</span><span class="lang-en">AI as partner, not tool. Exploring the philosophical dimensions of EI: deep integration of culture and emotion</span></p><span class="en"><span class="lang-zh">生命层 · 觉醒</span><span class="lang-en">Life Level · Awaken</span></span></div>
+    </div>
+    <div style="margin-top:2.5rem;text-align:center;color:rgba(255,255,255,0.5);font-size:0.85rem;max-width:700px;margin-left:auto;margin-right:auto">
+      <p><span class="lang-zh">"AI 时代就是 EI 时代。情感智能是人类进化的下一个阶梯。" — 杨辉</span><span class="lang-en">"The AI era IS the EI era. Emotional intelligence is the next step in human evolution." — Ken Yang</span></p>
+      <p style="margin-top:8px;"><span class="lang-zh">"无论技术多先进，都无法取代人类真实的情感流动和临场感。"</span><span class="lang-en">"No matter how advanced technology becomes, it cannot replace the authentic emotional flow and field presence of human beings."</span></p>
     </div>
   </div>
 </section>
