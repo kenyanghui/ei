@@ -51,7 +51,7 @@ section{padding:5rem 0}
 .section-light{background:var(--off-white)}
 .section-dark{background:var(--navy);color:var(--white)}
 .section-dark .section-title{color:var(--white)}
-.section-dark .section-desc{color:rgba(255,255,255,0.6)}
+.section-dark .section-desc{color:rgba(255,255,255,0.75)}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 28px;border-radius:50px;font-weight:600;font-size:0.92rem;transition:var(--transition);cursor:pointer;border:none;font-family:var(--font-display)}
 .btn-primary{background:var(--gold);color:var(--navy)}
 .btn-primary:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 8px 24px rgba(201,168,76,0.3)}
@@ -78,7 +78,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .hero{min-height:90vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--off-white) 0%,var(--white) 40%,var(--teal-pale) 100%);position:relative;overflow:hidden;padding-top:64px}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(13,115,119,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(13,115,119,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
 .hero-content{text-align:center;z-index:2;padding:0 24px;max-width:900px}
-.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 18px;background:var(--gold-pale);border-radius:50px;color:var(--gold);font-size:0.78rem;font-weight:600;letter-spacing:0.5px;margin-bottom:1.5rem}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 18px;background:var(--gold);border-radius:50px;color:var(--white);font-size:0.78rem;font-weight:600;letter-spacing:0.5px;margin-bottom:1rem}
 .hero h1{font-size:clamp(2.2rem,5vw,3.8rem);color:var(--navy);margin-bottom:0.3em;font-weight:800}
 .hero h1 .highlight{color:var(--teal)}
 .hero p{font-size:clamp(1rem,1.8vw,1.2rem);color:var(--gray-500);max-width:680px;margin:0 auto 2.5rem;line-height:1.8}
@@ -135,7 +135,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .genos-grid-item .step{display:flex;align-items:center;gap:10px;margin-bottom:6px}
 .genos-grid-item .num{width:28px;height:28px;border-radius:50%;background:var(--gold);color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:800;flex-shrink:0}
 .genos-grid-item h4{font-size:0.92rem;color:var(--white)}
-.genos-grid-item p{font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.5}
+.genos-grid-item p{font-size:0.82rem;color:rgba(255,255,255,0.65);line-height:1.5}
 .genos-grid-item .cn{font-size:0.72rem;color:var(--gold-light);margin-top:2px}
 
 /* ===== Value Props ===== */
@@ -188,8 +188,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .agent-card-header .src{font-size:0.75rem;color:rgba(255,255,255,0.35)}
 .agent-card-body{padding:16px 24px 20px}
 .agent-card-body .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
-.agent-card-body .tags span{border:1px solid rgba(255,255,255,0.1);padding:1px 8px;border-radius:4px;font-size:0.72rem;color:rgba(255,255,255,0.5)}
-.agent-card-body p{font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.5;margin-bottom:10px}
+.agent-card-body .tags span{border:1px solid rgba(255,255,255,0.15);padding:1px 8px;border-radius:4px;font-size:0.72rem;color:rgba(255,255,255,0.6)}
+.agent-card-body p{font-size:0.8rem;color:rgba(255,255,255,0.65);line-height:1.5;margin-bottom:10px}
 .agent-card-body .trigger{font-size:0.72rem;color:var(--gold);background:rgba(201,168,76,0.06);padding:8px 12px;border-radius:6px;border:1px solid rgba(201,168,76,0.1);margin-bottom:10px;line-height:1.4}
 .agent-card-body .links{display:flex;gap:8px}
 .agent-card-body .links a{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:50px;font-size:0.75rem;font-weight:600;transition:var(--transition)}
@@ -242,7 +242,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .dim-card .dim-num{width:36px;height:36px;border-radius:50%;background:var(--teal);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:800;flex-shrink:0}
 .dim-card h4{font-size:1rem;color:var(--navy);margin-bottom:2px}
 .dim-card .dim-en{font-size:0.78rem;color:var(--gray-400);font-weight:400}
-.dim-card .dim-area{font-size:0.72rem;color:var(--gold);font-weight:600}
+.dim-card .dim-area{font-size:0.72rem;color:#7A6219;font-weight:600}
 .dim-card p{font-size:0.88rem;color:var(--gray-500);line-height:1.6;margin-bottom:12px}
 .dim-card .dim-behaviors{list-style:none;padding:0}
 .dim-card .dim-behaviors li{padding:5px 0;font-size:0.84rem;color:var(--gray-600);line-height:1.5;padding-left:16px;position:relative}
@@ -296,7 +296,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .ai-card .stage-icon.s2{background:rgba(13,115,119,0.12);color:var(--teal-light)}
 .ai-card .stage-icon.s3{background:rgba(255,255,255,0.08);color:var(--white)}
 .ai-card h4{color:var(--white);font-size:1rem;margin-bottom:8px}
-.ai-card p{color:rgba(255,255,255,0.55);font-size:0.84rem;line-height:1.5}
+.ai-card p{color:rgba(255,255,255,0.68);font-size:0.84rem;line-height:1.5}
 .ai-card .en{display:block;font-size:0.68rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-top:6px}
 @media(max-width:768px){.ai-grid{grid-template-columns:1fr}}
 
@@ -341,19 +341,84 @@ footer .brand em{font-style:normal;color:var(--gold)}
 
 
 /* ===== Responsive ===== */
+@media(max-width:900px){
+  .nav-logo{font-size:1rem}
+  .nav-links a{padding:8px 10px;font-size:0.8rem}
+  .brand-bar-inner{gap:16px}
+  .brand-bar span{font-size:0.7rem}
+  .brand-bar strong{font-size:0.78rem}
+}
 @media(max-width:768px){
   .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:rgba(255,255,255,0.98);flex-direction:column;padding:16px;gap:4px;border-bottom:1px solid var(--gray-100)}
   .nav-links.open{display:flex}
   .mobile-toggle{display:flex}
-  .hero-stats{gap:24px}
+  .hero-stats{gap:24px;margin-top:2rem}
+  .hero-stat-number{font-size:1.4rem}
+  .hero p{font-size:0.95rem}
   .scholars-grid{grid-template-columns:1fr}
-  .skill-tabs{overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start;padding-bottom:8px}
+  .skill-tabs{overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start;padding-bottom:8px;margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px;-webkit-overflow-scrolling:touch}
+  .skill-tab{padding:8px 16px;font-size:0.8rem;white-space:nowrap}
   .skill-card{padding:20px}
+  .skill-grid{gap:12px}
+  .section-desc{font-size:0.92rem;margin-bottom:1.5rem}
   section{padding:3rem 0}
+  .container{padding:0 16px}
+  .props-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .prop-card{padding:20px 16px}
+  .genos-hero .container{gap:24px}
+  .genos-grid-item{padding:14px}
+  .genos-hero-left .metrics{gap:20px}
+  .genos-hero-left .metrics .num{font-size:1.4rem}
+  .cs-grid{gap:12px;grid-template-columns:1fr}
+  .conference-grid,[style*="grid-template-columns:1fr 1fr"][style*="display:grid"]{grid-template-columns:1fr!important}
+  .speaker-grid,[style*="grid-template-columns:repeat(3,1fr)"][style*="display:grid"]{grid-template-columns:1fr!important}
+  #dialogue [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
+  #coaching [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important}
+  .cert-pathway{flex-direction:column;align-items:stretch;padding:20px 16px}
+  .path-step{max-width:none;min-width:0}
+  .path-arrow{display:none}
+  .tree-node,.tree-node:nth-child(even){flex-direction:column!important;padding-left:28px;gap:8px}
+  .evolution-tree::before{left:10px}
+  .tree-dot{left:3px;transform:none}
+  .tree-content,.tree-spacer{width:100%}
+  .model-table{font-size:0.78rem}
+  .model-table thead th,.model-table tbody td{padding:10px 8px}
+  .dim-grid{grid-template-columns:1fr}
+  .agent-grid{grid-template-columns:1fr}
+  .cs-download-area{padding:24px 16px}
+  .cs-download-btn{width:100%;justify-content:center}
+  footer{padding:2rem 16px;font-size:0.78rem}
+  .scholar-card-header{padding:20px 20px 14px}
+  .scholar-card-body{padding:0 20px 20px}
 }
 @media(max-width:480px){
   .hero-cta{flex-direction:column;align-items:center}
-  .btn{width:100%;justify-content:center}
+  .btn{width:100%;justify-content:center;padding:12px 20px;font-size:0.85rem}
+  .hero h1{font-size:clamp(1.6rem,7vw,2.2rem)}
+  .hero p{font-size:0.9rem;margin:0 auto 1rem}
+  .hero-stats{gap:16px;margin-top:1.5rem}
+  .hero-stat-number{font-size:1.2rem}
+  .hero-stat-label{font-size:0.7rem}
+  .hero-badge{font-size:0.7rem;padding:4px 12px}
+  .nav-inner{padding:0 12px}
+  .nav-logo{font-size:0.9rem}
+  .lang-toggle{padding:3px 8px;font-size:0.72rem}
+  .section-title{font-size:clamp(1.2rem,5vw,1.6rem)}
+  .section-desc{font-size:0.85rem}
+  .skill-card{padding:16px}
+  .skill-card .skill-header{gap:12px}
+  .skill-icon{width:44px;height:44px;font-size:1.1rem;border-radius:10px}
+  .skill-meta h3{font-size:1rem}
+  .skill-footer{flex-direction:column;align-items:stretch;gap:12px}
+  .skill-download{width:100%;justify-content:center;padding:10px 20px;font-size:0.85rem}
+  .props-grid{grid-template-columns:1fr;gap:12px}
+  .btn-outline{width:100%;justify-content:center}
+  .conference-grid{padding:0}
+  #conference [style*="padding:32px"]{padding:20px!important}
+  .speaker-grid{gap:12px}
+  .speaker-grid > div{padding:16px!important}
+  .cs-card{padding:16px}
+  .toast{bottom:16px;right:16px;left:16px;text-align:center;font-size:0.82rem}
 }
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -468,7 +533,7 @@ footer .brand em{font-style:normal;color:var(--gold)}
     <div style="text-align:center;margin-top:2.5rem;padding:2.5rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);max-width:600px;margin-left:auto;margin-right:auto">
       <div style="font-size:1.8rem;margin-bottom:12px">📧</div>
       <h3 style="color:var(--gold);font-size:1.1rem;margin-bottom:8px"><span class="lang-zh">📧 联系预约</span><span class="lang-en">📧 Contact</span></h3>
-      <p style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-bottom:16px;line-height:1.6">
+      <p style="color:rgba(255,255,255,0.65);font-size:0.85rem;margin-bottom:16px;line-height:1.6">
         <span class="lang-zh">AI+EI 工具包与教练课目前以内测版形式开放。论坛结束后将组织线下工作坊进行深入交流。</span>
         <span class="lang-en">AI+EI toolkits and coaching are currently in beta. Offline workshops will be organized after the forum.</span>
       </p>
@@ -633,17 +698,17 @@ footer .brand em{font-style:normal;color:var(--gold)}
       <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);padding:24px;text-align:center;transition:var(--transition)">
         <div style="font-size:1.8rem;margin-bottom:10px">❓</div>
         <h4 style="color:var(--gold);font-size:0.9rem;margin-bottom:8px"><span class="lang-zh">解决的问题</span><span class="lang-en">The Problem</span></h4>
-        <p style="color:rgba(255,255,255,0.55);font-size:0.82rem;line-height:1.6"><span class="lang-zh">AI 可以推理代码、理解语义，但它不懂人的情绪。AI+EI 进化让 AI 具备情绪觉察、情绪推理、压力管理等"软技能"——输出更有人情味、更有情感深度的回应。</span><span class="lang-en">AI can reason about code and understand semantics, but not human emotions. AI+EI Evolution gives AI the "soft skills" — emotional awareness, reasoning, stress management — for more human-centered responses.</span></p>
+        <p style="color:rgba(255,255,255,0.68);font-size:0.82rem;line-height:1.6"><span class="lang-zh">AI 可以推理代码、理解语义，但它不懂人的情绪。AI+EI 进化让 AI 具备情绪觉察、情绪推理、压力管理等"软技能"——输出更有人情味、更有情感深度的回应。</span><span class="lang-en">AI can reason about code and understand semantics, but not human emotions. AI+EI Evolution gives AI the "soft skills" — emotional awareness, reasoning, stress management — for more human-centered responses.</span></p>
       </div>
       <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);padding:24px;text-align:center;transition:var(--transition)">
         <div style="font-size:1.8rem;margin-bottom:10px">👥</div>
         <h4 style="color:var(--gold);font-size:0.9rem;margin-bottom:8px"><span class="lang-zh">适合谁用</span><span class="lang-en">Who It's For</span></h4>
-        <p style="color:rgba(255,255,255,0.55);font-size:0.82rem;line-height:1.6"><span class="lang-zh">HR/OD 从业者 · 管理者 · EI 教练 · 个人成长爱好者 · AI 应用开发者</span><span class="lang-en">HR/OD professionals · Managers · EI coaches · Self-growth seekers · AI developers</span></p>
+        <p style="color:rgba(255,255,255,0.68);font-size:0.82rem;line-height:1.6"><span class="lang-zh">HR/OD 从业者 · 管理者 · EI 教练 · 个人成长爱好者 · AI 应用开发者</span><span class="lang-en">HR/OD professionals · Managers · EI coaches · Self-growth seekers · AI developers</span></p>
       </div>
       <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);padding:24px;text-align:center;transition:var(--transition)">
         <div style="font-size:1.8rem;margin-bottom:10px">✨</div>
         <h4 style="color:var(--gold);font-size:0.9rem;margin-bottom:8px"><span class="lang-zh">实现效果</span><span class="lang-en">What You Get</span></h4>
-        <p style="color:rgba(255,255,255,0.55);font-size:0.82rem;line-height:1.6"><span class="lang-zh">AI 不再是冷冰冰的工具，而是一个懂情绪、会共情、能引导的"对话伙伴"。13+ 技能覆盖从自我觉察到积极影响力的完整 EI 光谱。</span><span class="lang-en">AI becomes an emotionally-aware dialogue partner. 13+ skills covering the full EI spectrum from self-awareness to positive influence.</span></p>
+        <p style="color:rgba(255,255,255,0.68);font-size:0.82rem;line-height:1.6"><span class="lang-zh">AI 不再是冷冰冰的工具，而是一个懂情绪、会共情、能引导的"对话伙伴"。13+ 技能覆盖从自我觉察到积极影响力的完整 EI 光谱。</span><span class="lang-en">AI becomes an emotionally-aware dialogue partner. 13+ skills covering the full EI spectrum from self-awareness to positive influence.</span></p>
       </div>
     </div>
 
@@ -651,7 +716,7 @@ footer .brand em{font-style:normal;color:var(--gold)}
       <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);border-radius:var(--radius-lg);padding:28px 24px;text-align:center;transition:var(--transition)">
         <div style="font-size:2rem;margin-bottom:10px">📦</div>
         <h4 style="color:var(--gold);font-size:1rem;margin-bottom:6px"><span class="lang-zh">技能包</span><span class="lang-en">Skill Packs</span></h4>
-        <p style="color:rgba(255,255,255,0.55);font-size:0.82rem;line-height:1.6;max-width:380px;margin:0 auto">
+        <p style="color:rgba(255,255,255,0.68);font-size:0.82rem;line-height:1.6;max-width:380px;margin:0 auto">
           <span class="lang-zh">13+ 个可直接安装的 AI 技能包——从六大 EI 核心著作蒸馏而来，覆盖 Genos 认证体系、六种领导风格、MSCEIT 四分支等核心框架。每个技能包含 SKILL.md + test-prompts.json。</span>
           <span class="lang-en">13+ installable AI skill packages — distilled from 6 core EI works, covering Genos certification, 6 leadership styles, MSCEIT 4-branch, and more.</span>
         </p>
@@ -660,7 +725,7 @@ footer .brand em{font-style:normal;color:var(--gold)}
       <div style="background:rgba(13,115,119,0.06);border:1px solid rgba(13,115,119,0.15);border-radius:var(--radius-lg);padding:28px 24px;text-align:center;transition:var(--transition)">
         <div style="font-size:2rem;margin-bottom:10px">🎓</div>
         <h4 style="color:var(--teal-light);font-size:1rem;margin-bottom:6px"><span class="lang-zh">教练课</span><span class="lang-en">Coaching</span></h4>
-        <p style="color:rgba(255,255,255,0.55);font-size:0.82rem;line-height:1.6;max-width:380px;margin:0 auto">
+        <p style="color:rgba(255,255,255,0.68);font-size:0.82rem;line-height:1.6;max-width:380px;margin:0 auto">
           <span class="lang-zh">基于 Genos 六维框架的四级认证路径（Foundation → Master），配合 AI 辅助的 EI 自我觉察训练、线下工作坊和 Coach 社群。</span>
           <span class="lang-en">4-level Genos-based certification (Foundation → Master), AI-assisted EI self-awareness training, offline workshops, and coach community.</span>
         </p>
