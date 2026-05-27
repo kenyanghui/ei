@@ -57,6 +57,8 @@ img{max-width:100%}
 h1,h2,h3,h4{font-family:var(--font-display);line-height:1.25;font-weight:700;letter-spacing:-0.01em}
 .container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
 section{padding:3rem 0}
+@media(min-width:900px){section{padding:5rem 0}}
+@media(min-width:1400px){section{padding:7rem 0}}
 .section-title{font-size:clamp(1.6rem,3.5vw,2.4rem);text-align:center;margin-bottom:0.3em;letter-spacing:-0.02em;font-weight:700;font-family:var(--font-display);color:var(--navy)}
 .section-dark .section-title{font-weight:700}
 .section-desc{text-align:center;color:var(--gray-500);font-size:1.05rem;margin-bottom:2rem;max-width:680px;margin-left:auto;margin-right:auto}
@@ -385,6 +387,7 @@ footer .brand em{font-style:normal;color:var(--gold)}
   .hero-stats{gap:24px;margin-top:2rem}
   .hero-stat-number{font-size:1.4rem}
   .hero p{font-size:0.95rem}
+  .hero h1{font-size:clamp(2rem,6vw,2.8rem)}
   .scholars-grid{grid-template-columns:1fr}
   .skill-tabs{overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start;padding-bottom:8px;margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px;-webkit-overflow-scrolling:touch}
   .skill-tab{padding:8px 16px;font-size:0.8rem;white-space:nowrap}
@@ -449,6 +452,48 @@ footer .brand em{font-style:normal;color:var(--gold)}
   .speaker-grid > div{padding:16px!important}
   .cs-card{padding:16px}
   .toast{bottom:16px;right:16px;left:16px;text-align:center;font-size:0.82rem}
+}
+/* Desktop optimizations: better readability, tighter grids, generous spacing */
+@media(min-width:1200px){
+  .container{padding:0 40px}
+  .section-title{font-size:2.6rem;margin-bottom:0.5em}
+  .section-desc{font-size:1.1rem;max-width:740px;margin-bottom:3rem}
+  .props-grid{max-width:1000px;margin-left:auto;margin-right:auto}
+  .prop-card{padding:32px 28px}
+  .prop-card h4{font-size:1.1rem}
+  .prop-card p{font-size:0.95rem}
+  .ai-grid{max-width:1000px;margin-left:auto;margin-right:auto}
+  .ai-card{padding:36px 32px}
+  .ai-card h4{font-size:1.1rem;margin-bottom:12px}
+  .ai-card p{font-size:0.9rem}
+  .conference-grid{max-width:1000px;margin-left:auto;margin-right:auto;gap:28px}
+  .speaker-grid{gap:20px}
+  .agent-grid{max-width:1100px;margin-left:auto;margin-right:auto}
+  .agent-card-header{padding:24px 28px 16px}
+  .agent-card-body{padding:20px 28px 24px}
+  .skill-card{padding:32px}
+  .skill-card .skill-meta h3{font-size:1.3rem}
+  .skill-card .skill-icon{width:64px;height:64px;font-size:1.6rem;border-radius:16px}
+  .scholars-grid{max-width:1100px;margin-left:auto;margin-right:auto}
+  .scholar-card-header{padding:28px 32px 18px}
+  .scholar-card-body{padding:0 32px 28px}
+  .dim-grid{max-width:1100px;margin-left:auto;margin-right:auto}
+  .hero h1{font-size:4rem}
+  .hero p{font-size:1.2rem;max-width:740px}
+  .hero-stats{gap:48px}
+  .hero-stat-number{font-size:2.2rem}
+  .hero-stat-label{font-size:0.85rem;letter-spacing:1.5px}
+  .cs-grid{max-width:1100px;margin-left:auto;margin-right:auto}
+  .skill-tabs{gap:12px}
+  .skill-tab{padding:12px 28px;font-size:0.92rem}
+  .cert-pathway{padding:36px 32px;gap:16px}
+}
+@media(min-width:1400px){
+  :root{--max-w:1320px}
+  .section-title{font-size:2.8rem}
+  .container{padding:0 48px}
+  .hero h1{font-size:4.4rem}
+  .hero-content{max-width:1080px}
 }
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
