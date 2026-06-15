@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI+EI 教练工作坊 · 详细教案</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--white:#fff;--off-white:#faf7f2;--gray-100:#ebe5dd;--gray-200:#d5cec4;--gray-400:#9e9488;--gray-500:#7a7166;--gray-600:#5c544a;--gray-700:#3d3730;--gray-900:#1a1714;--navy:#0f111a;--teal:#0d7377;--teal-light:#14a3a8;--coral:#d4735e;--gold:#c9a84c;--gold-pale:rgba(201,168,76,0.10);--teal-pale:rgba(13,115,119,0.06);--shadow:0 4px 20px rgba(0,0,0,0.06);--radius:10px;--radius-lg:16px;--font-display:'Playfair Display','Georgia','Times New Roman',serif;--font-body:'DM Sans','SF Pro Text',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;--max-w:900px}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--off-white);color:var(--gray-900);line-height:1.8;font-size:16px}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+nav{background:linear-gradient(135deg,#0f111a 0%,#1a1423 40%,#132138 100%);color:var(--white);padding:30px 0 24px;position:sticky;top:0;z-index:100}
+nav h1{font-family:var(--font-display);font-size:1.2rem;margin-bottom:4px}
+nav .sub{color:rgba(255,255,255,0.6);font-size:0.82rem}
+nav a{color:var(--gold);text-decoration:none;font-size:0.85rem}
+nav a:hover{color:var(--gold-light)}
+.toc{background:var(--white);border-radius:var(--radius-lg);padding:24px 28px;margin:24px 0;box-shadow:var(--shadow)}
+.toc h2{font-family:var(--font-display);font-size:1rem;margin-bottom:12px;color:var(--navy)}
+.toc li{margin:6px 0;list-style:none;font-size:0.9rem}
+.toc a{color:var(--teal);text-decoration:none}
+.toc a:hover{text-decoration:underline}
+.section{padding:28px 0;border-bottom:1px solid var(--gray-100)}
+.section:last-child{border-bottom:none}
+.section h2{font-family:var(--font-display);font-size:1.3rem;color:var(--navy);margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--gold)}
+.section h3{font-size:1.05rem;color:var(--teal);margin:20px 0 10px}
+.section h4{font-size:0.95rem;color:var(--gray-700);margin:16px 0 8px}
+.section p{margin:10px 0;color:var(--gray-600)}
+.section blockquote{background:var(--teal-pale);border-left:3px solid var(--teal);padding:14px 18px;margin:14px 0;border-radius:0 var(--radius) var(--radius) 0;font-size:0.92rem;color:var(--gray-700)}
+.section blockquote p{margin:0;color:var(--gray-700)}
+.section table{width:100%;border-collapse:collapse;margin:14px 0;font-size:0.88rem}
+.section th,.section td{border:1px solid var(--gray-200);padding:8px 12px;text-align:left}
+.section th{background:var(--off-white);font-weight:600;color:var(--gray-700)}
+.section td{color:var(--gray-600)}
+.section pre{background:var(--navy);color:#e8e4df;padding:14px 18px;border-radius:var(--radius);overflow-x:auto;font-size:0.85rem;line-height:1.5;margin:14px 0}
+.section code{font-family:'SF Mono','Fira Code',monospace}
+.section ul,.section ol{margin:10px 0;padding-left:24px;color:var(--gray-600)}
+.section li{margin:4px 0}
+.footer{text-align:center;padding:30px 0;font-size:0.82rem;color:var(--gray-400)}
+@media(max-width:768px){nav{padding:20px 0 16px}nav h1{font-size:1rem}.section h2{font-size:1.1rem}.toc{padding:16px 20px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container">
+    <h1>AI+EI 教练工作坊 · 详细教案</h1>
+    <div class="sub">版本 v1.0（内测版）| 总时长 6 小时 | 王玉博士 + 杨辉 Ken Yang</div>
+    <a href="./">⬅ 返回资源中心</a>
+  </div>
+</nav>
+<main class="container">
+
+<div class="toc">
+<h2>目录</h2>
+<ol>
+<li><a href="#s1">课前准备清单</a></li>
+<li><a href="#s2">模块一：开场与连接（30 分钟）</a></li>
+<li><a href="#s3">模块二：Genos EI 六维模型精讲（90 分钟）</a></li>
+<li><a href="#s4">模块三：AI+EI 进化论（45 分钟）</a></li>
+<li><a href="#s5">模块四：AI 蒸馏 EI — 六大学者技能卡（45 分钟）</a></li>
+<li><a href="#s6">模块五：AI Agent EI 教练技能实操（60 分钟）</a></li>
+<li><a href="#s7">模块六：认证路径与个人发展计划（30 分钟）</a></li>
+<li><a href="#s8">模块七：总结与下一步（15 分钟）</a></li>
+<li><a href="#s9">备选方案与应急预案</a></li>
+</ol>
+</div>
+
+<div class="section" id="s1">
+<h2>一、课前准备清单</h2>
+<h3>1.1 讲师准备</h3>
+<ul>
+<li>投影/屏幕：准备 Keynote/PPT，含 Genos 六维图、AI+EI 三层架构图、技能卡预览</li>
+<li>AI 演示环境：笔记本电脑安装 Claude Code + 所有 13 个技能包</li>
+<li>学员练习环境：确认场地 Wi-Fi，准备备用热点</li>
+<li>太极对话脚本：杨辉（AI 视角）x 司南（EI 视角）的关键对话节点</li>
+<li>分组材料：6 组标签（对应 Genos 六维）、大白纸、马克笔</li>
+<li>音频设备：无线麦克风、背景音乐播放器</li>
+<li>在线版：腾讯会议室 + 分组讨论间预设 + 屏幕共享权限</li>
+</ul>
+<h3>1.2 学员课前通知</h3>
+<ul>
+<li>笔记本电脑 + Claude Code 安装确认</li>
+<li>准备一个真实的职场 EI 挑战场景</li>
+<li>完成 EI 预评估问卷（可选）</li>
+<li>加入工作坊临时微信群</li>
+</ul>
+</div>
+
+<div class="section" id="s2">
+<h2>二、模块一：开场与连接（30 分钟）</h2>
+
+<h3>时间线</h3>
+<table>
+<tr><th>时间</th><th>时长</th><th>环节</th><th>形式</th></tr>
+<tr><td>0:00-0:05</td><td>5'</td><td>签到与暖场</td><td>签到、入座、背景音乐</td></tr>
+<tr><td>0:05-0:12</td><td>7'</td><td>开场致辞 + 主题引入</td><td>演讲（王玉博士）</td></tr>
+<tr><td>0:12-0:20</td><td>8'</td><td>太极对话片段展示</td><td>互动演绎（杨辉+司南）</td></tr>
+<tr><td>0:20-0:28</td><td>8'</td><td>破冰：AI 能懂你的情绪吗？</td><td>全员互动</td></tr>
+<tr><td>0:28-0:30</td><td>2'</td><td>模块过渡</td><td>讲师串场</td></tr>
+</table>
+
+<h3>开场致辞要点</h3>
+<blockquote>
+<p>"今天有一个词贯穿全场——'温度'。去年这个时候，ChatGPT 刚刚让全世界惊叹；今年，DeepSeek 让我们看到了推理的深度。当 AI 可以代替 80% 的逻辑工作时，人类剩下的是什么？答案是：情感智能。"</p>
+</blockquote>
+
+<h3>太极对话片段（精简版）</h3>
+<blockquote>
+<p><strong>杨辉（AI 视角）</strong>：我花了三个月搭建 EI 知识库，把六本经典著作蒸馏成 AI 可以安装的技能包。我以为我胜利了——AI 终于懂了情绪。</p>
+<p><strong>司南（EI 视角）</strong>：那你自己呢？</p>
+<p><strong>杨辉</strong>：……我愣住了。我发现当同事质疑我的方案时，我第一反应是防御，不是觉察。AI 学会了 EI，我没有。</p>
+<p><strong>司南</strong>：这就是今天要开始的地方。AI 可以是镜子，但照镜子的人，是你自己。</p>
+</blockquote>
+
+<h3>破冰：AI 能懂你的情绪吗？</h3>
+<ol>
+<li>大屏幕显示六个情绪词：喜悦 · 焦虑 · 期待 · 困惑 · 疲惫 · 好奇</li>
+<li>每人选择最接近自己当下心情的词语</li>
+<li>讲师在 AI 终端输入情绪分布数据，AI 生成回应</li>
+<li>提问："你觉得 AI 的回应触及你的情绪了吗？"</li>
+</ol>
+</div>
+
+<div class="section" id="s3">
+<h2>三、模块二：Genos EI 六维模型精讲（90 分钟）</h2>
+
+<h3>时间线</h3>
+<table>
+<tr><th>时间</th><th>时长</th><th>环节</th></tr>
+<tr><td>0:30-0:45</td><td>15'</td><td>EI 模型全景 + Genos 独特性</td></tr>
+<tr><td>0:45-1:00</td><td>15'</td><td>维度 1-2（觉察领域）</td></tr>
+<tr><td>1:00-1:15</td><td>15'</td><td>维度 3-4（行动+整合领域）</td></tr>
+<tr><td>1:15-1:30</td><td>15'</td><td>维度 5-6（管理+领导领域）</td></tr>
+<tr><td>1:30-1:50</td><td>20'</td><td>六维小组协作练习</td></tr>
+<tr><td>1:50-2:00</td><td>10'</td><td>休息</td></tr>
+</table>
+
+<h3>Genos 与其他模型对比</h3>
+<table>
+<tr><th>对比维度</th><th>Goleman</th><th>Mayer-Salovey</th><th>Bar-On</th><th>Genos（我们的框架）</th></tr>
+<tr><td>EI 定义</td><td>情商能力</td><td>认知能力</td><td>人格特质×社会功能</td><td><strong>职场行为频率</strong></td></tr>
+<tr><td>测量方式</td><td>能力自评</td><td>表现测试</td><td>自陈量表</td><td><strong>360° 行为频率评分</strong></td></tr>
+<tr><td>维度数</td><td>4 维（18 项）</td><td>4 分支</td><td>5 因素</td><td><strong>6 维（18 行为指标）</strong></td></tr>
+<tr><td>核心问题</td><td>"你能做什么？"</td><td>"你的能力多强？"</td><td>"你是什么样的人？"</td><td><strong>"你多常这样做？"</strong></td></tr>
+</table>
+
+<blockquote>
+<p>职场情商不是'你懂不懂情绪'，而是'你每天在工作中多常展示 EI 行为？' 频率 = 影响力。</p>
+</blockquote>
+
+<h3>六维度概要</h3>
+<p><strong>维度 1：情绪自我觉察</strong> — 识别自己的情绪变化，理解触发因素，分析情绪对决策和绩效的影响。工具：情绪逻辑链。</p>
+<p><strong>维度 2：他人情绪觉察</strong> — 感知和理解他人的感受，多模态信号解码。三层次共情：认知→情感→慈悲。</p>
+<p><strong>维度 3：真诚表达</strong> — 言行一致、承诺管理、坦诚表达。核心理念：所想 = 所言 = 所为。</p>
+<p><strong>维度 4：情绪推理</strong> — 在决策中整合情绪信息与事实数据。情绪是数据，好的决策 = 事实 × 情绪 × 影响。</p>
+<p><strong>维度 5：自我管理</strong> — 压力调节、精力管理、挫折恢复力。工具：4-7-8 呼吸法、STOP 法。</p>
+<p><strong>维度 6：积极影响力</strong> — 正面反馈、情绪问题解决、榜样领导力。核心概念：情感账户。</p>
+
+<h3>六维小组协作练习</h3>
+<p>6 组各认领一个维度：回顾核心定义 → 讨论最难场景 → AI 演示对应技能包。每组 1 分钟分享"最难场景"。</p>
+</div>
+
+<div class="section" id="s4">
+<h2>四、模块三：AI+EI 进化论（45 分钟）</h2>
+
+<h3>AI 三阶段</h3>
+<blockquote>
+<p><strong>第一幕：对话式（GPT 时代）</strong> — AI 可以对话，但只是文本生成器。它可以复述 EI 理论，但不懂情绪。</p>
+<p><strong>第二幕：推理式（DeepSeek 时代）</strong> — AI 可以思考了。它可以分析情绪模式，但依然没有感受。</p>
+<p><strong>第三幕：执行式（Agent 时代）</strong> — AI 可以行动了。AI 高效执行，但如果没有人用 EI 来决策和赋予意义，执行就是空的。</p>
+</blockquote>
+
+<h3>AI+EI 三层架构</h3>
+<table>
+<tr><th>层级</th><th>定位</th><th>典型应用</th></tr>
+<tr><td>🔧 AI 赋能 AI Enable</td><td>工具层</td><td>EI 知识库、智能互动、情绪识别</td></tr>
+<tr><td>🌱 AI 原生 AI Native</td><td>原生层</td><td>共情机器人、AI 辅助教练</td></tr>
+<tr><td>🌅 AI 觉醒 AI Awaken</td><td>生命层</td><td>AI 作为对话伙伴、文化融合</td></tr>
+</table>
+<blockquote>
+<p>AI 越强大，人类情感智能越珍贵。AI 是伙伴而非工具——就像望远镜不是替代眼睛，而是延伸视觉。</p>
+</blockquote>
+
+<h3>实操演示：AI 技能包安装与使用</h3>
+<p>展示技能包结构（SKILL.md + test-prompts.json）→ 安装演示 → 运行演示（输入触发词"情绪很乱，帮我分析一下"）→ QA 互动。</p>
+</div>
+
+<div class="section" id="s5">
+<h2>五、模块四：AI 蒸馏 EI — 六大学者技能卡（45 分钟）</h2>
+
+<h3>六张技能卡总览</h3>
+<table>
+<tr><th>卡片</th><th>学者</th><th>核心框架</th><th>标志性工具</th></tr>
+<tr><td>🧠 Goleman EQ-4</td><td>戈尔曼</td><td>自我觉察→自我管理→社会觉察→关系管理</td><td>STOP 法、NVC</td></tr>
+<tr><td>👔 Goleman 6 领导力</td><td>戈尔曼</td><td>六种领导力风格</td><td>情境-风格矩阵</td></tr>
+<tr><td>🔬 MSCEIT</td><td>梅耶 & 萨洛维</td><td>感知→促进→理解→管理</td><td>情绪词汇表、情绪逻辑链</td></tr>
+<tr><td>📊 EQ-i</td><td>巴昂</td><td>自我认知→自我表达→人际→决策→压力管理</td><td>4-7-8 呼吸法、认知重构</td></tr>
+<tr><td>🏢 Genos 六维</td><td>Palmer & Stough</td><td>六维职场行为频率</td><td>360° 行为频率评估</td></tr>
+<tr><td>🎯 多元智能</td><td>加德纳</td><td>八种智能组合</td><td>八智能雷达图</td></tr>
+</table>
+
+<h3>流程</h3>
+<p>蒸馏理念讲解（5'）→ 六张技能卡巡览（15'）→ 小组探索：每人选一张卡（15'）→ 教练互练：两人组 5 分钟互练（10'）</p>
+</div>
+
+<div class="section" id="s6">
+<h2>六、模块五：AI Agent EI 教练技能实操（60 分钟）</h2>
+
+<h3>7 套认证技能包</h3>
+<table>
+<tr><th>技能包名</th><th>对应六维</th><th>触发词示例</th></tr>
+<tr><td>ei-self-awareness-coach</td><td>情绪自我觉察</td><td>"情绪很乱""帮我分析感受"</td></tr>
+<tr><td>ei-resonant-leadership</td><td>积极影响力（领导力）</td><td>"团队士气低落""如何领导"</td></tr>
+<tr><td>ei-emotional-reasoning</td><td>情绪推理</td><td>"无法决定""直觉与逻辑冲突"</td></tr>
+<tr><td>ei-stress-resilience</td><td>自我管理</td><td>"压力太大""焦虑""burnout"</td></tr>
+<tr><td>ei-workplace-positive-influence</td><td>积极影响力</td><td>"同事不配合""跨团队协作"</td></tr>
+<tr><td>ei-multiple-intelligences</td><td>自我觉察（延伸）</td><td>"不知道擅长什么""发现天赋"</td></tr>
+<tr><td>ei-cert-meta-skill</td><td>元技能（全部）</td><td>"想了解 EI 认证""认证路径"</td></tr>
+</table>
+
+<h3>三人组教练实战</h3>
+<p>角色分配：客户（提出 EI 挑战）→ 教练（使用 AI 技能包引导）→ 观察员（记录工具使用）。</p>
+<p>流程：客户陈述 5' → 教练用 AI 辅助 5' → 观察员反馈 3' → 角色反思 2'。</p>
+
+<blockquote>
+<p>AI 是辅助，不是替代。技能包给你的是一张地图，但行走的人是你。AI 可以说'试试 STOP 法'，但什么时候用、怎么用、用多久——那是你的 EI。</p>
+</blockquote>
+
+<h3>案例实战：团队士气问题</h3>
+<p><strong>背景</strong>：12 人开发团队，连续两个月加班后氛围恶化。午餐没人聊天，例会变汇报，两位骨干在看机会。</p>
+<p>讨论框架：诊断（ei-self-awareness-coach）→ 共情（教练 EI）→ 风格（ei-resonant-leadership）→ 行动（ei-workplace-positive-influence）→ 衡量（ei-cert-meta-skill）</p>
+</div>
+
+<div class="section" id="s7">
+<h2>七、模块六：认证路径与个人发展计划（30 分钟）</h2>
+
+<h3>四级认证路径</h3>
+<pre>📖 Foundation → 🛠 Practitioner → ⭐ Senior Practitioner → 👑 Master
+   觉察             应用                 精通                  赋能
+   "是什么"         "怎么做"            "教别人"              "推动改变"</pre>
+
+<h3>个人 EI 发展计划模板</h3>
+<ol>
+<li>当前最想发展的两个维度</li>
+<li>一个维度的"下周重点行为"（具体可衡量）</li>
+<li>触发场景识别（什么场景下容易退回到低 EI 行为）</li>
+<li>AI 支持方案（使用哪个技能包）</li>
+<li>360° 反馈者选择（3-5 人）</li>
+</ol>
+</div>
+
+<div class="section" id="s8">
+<h2>八、模块七：总结与下一步（15 分钟）</h2>
+<p>每人一句话总结 → 太极对话结尾 → 资源与社群介绍 → 王玉博士结语</p>
+<blockquote>
+<p>AI 时代就是 EI 时代。情感智能是人类进化的下一个阶梯。今天只是一个开始。</p>
+</blockquote>
+</div>
+
+<div class="section" id="s9">
+<h2>九、备选方案与应急预案</h2>
+<table>
+<tr><th>问题</th><th>预案</th></tr>
+<tr><td>Wi-Fi 断连</td><td>讲师手机热点 + 投屏；学员练习改纯纸笔</td></tr>
+<tr><td>AI 演示失败</td><td>准备录屏视频；手册中提供完整文字版操作流程</td></tr>
+<tr><td>时间超支</td><td>模块二/四/五/六均有可压缩环节（总计可压缩 50'）</td></tr>
+<tr><td>参与度低</td><td>每 30 分钟一次邻座分享；匿名投票工具；讲师走动邀请发言</td></tr>
+</table>
+</div>
+
+<div class="footer">
+教案版本 v1.0 &middot; 2026.06 &middot; Genos EI 2026 第三届中国论坛 AI+EI 教练工作坊
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技能包说明 · AI+EI 教练工作坊</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--white:#fff;--off-white:#faf7f2;--gray-100:#ebe5dd;--gray-200:#d5cec4;--gray-400:#9e9488;--gray-500:#7a7166;--gray-600:#5c544a;--gray-700:#3d3730;--gray-900:#1a1714;--navy:#0f111a;--teal:#0d7377;--teal-light:#14a3a8;--coral:#d4735e;--gold:#c9a84c;--gold-pale:rgba(201,168,76,0.10);--teal-pale:rgba(13,115,119,0.06);--rose-pale:rgba(196,90,108,0.08);--shadow:0 4px 20px rgba(0,0,0,0.06);--radius:10px;--radius-lg:16px;--font-display:'Playfair Display','Georgia','Times New Roman',serif;--font-body:'DM Sans','SF Pro Text',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;--max-w:900px}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--off-white);color:var(--gray-900);line-height:1.8;font-size:16px}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+nav{background:linear-gradient(135deg,#0f111a 0%,#1a1423 40%,#132138 100%);color:var(--white);padding:30px 0 24px;position:sticky;top:0;z-index:100}
+nav h1{font-family:var(--font-display);font-size:1.2rem;margin-bottom:4px}
+nav .sub{color:rgba(255,255,255,0.6);font-size:0.82rem}
+nav a{color:var(--gold);text-decoration:none;font-size:0.85rem}
+nav a:hover{color:var(--gold-light)}
+.toc{background:var(--white);border-radius:var(--radius-lg);padding:24px 28px;margin:24px 0;box-shadow:var(--shadow)}
+.toc h2{font-family:var(--font-display);font-size:1rem;margin-bottom:12px;color:var(--navy)}
+.toc li{margin:6px 0;list-style:none;font-size:0.9rem}
+.toc a{color:var(--teal);text-decoration:none}
+.toc a:hover{text-decoration:underline}
+.section{padding:28px 0;border-bottom:1px solid var(--gray-100)}
+.section:last-child{border-bottom:none}
+.section h2{font-family:var(--font-display);font-size:1.3rem;color:var(--navy);margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--gold)}
+.section h3{font-size:1.05rem;color:var(--teal);margin:20px 0 10px}
+.section h4{font-size:0.95rem;color:var(--gray-700);margin:16px 0 8px}
+.section p{margin:10px 0;color:var(--gray-600)}
+.section blockquote{background:var(--teal-pale);border-left:3px solid var(--teal);padding:14px 18px;margin:14px 0;border-radius:0 var(--radius) var(--radius) 0;font-size:0.92rem;color:var(--gray-700)}
+.section blockquote p{margin:0;color:var(--gray-700)}
+.section table{width:100%;border-collapse:collapse;margin:14px 0;font-size:0.88rem}
+.section th,.section td{border:1px solid var(--gray-200);padding:8px 12px;text-align:left}
+.section th{background:var(--off-white);font-weight:600;color:var(--gray-700)}
+.section td{color:var(--gray-600)}
+.section pre{background:var(--navy);color:#e8e4df;padding:14px 18px;border-radius:var(--radius);overflow-x:auto;font-size:0.85rem;line-height:1.5;margin:14px 0;white-space:pre-wrap;word-break:break-word}
+.section code{font-family:'SF Mono','Fira Code',monospace}
+.section ul,.section ol{margin:10px 0;padding-left:24px;color:var(--gray-600)}
+.section li{margin:4px 0}
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0}
+.card-item{background:var(--teal-pale);border-radius:var(--radius);padding:16px 18px;font-size:0.88rem;border-left:3px solid var(--teal)}
+.card-item strong{color:var(--navy);display:block;margin-bottom:4px}
+.card-item.gold{background:var(--gold-pale);border-left-color:var(--gold)}
+.card-item.rose{background:var(--rose-pale);border-left-color:var(--coral)}
+.tag{display:inline-block;background:var(--teal-pale);color:var(--teal);padding:2px 8px;border-radius:4px;font-size:0.78rem;margin:2px}
+.alert{border:1px solid var(--coral);border-radius:var(--radius);padding:14px 18px;margin:14px 0;background:var(--rose-pale);font-size:0.9rem}
+.alert strong{color:var(--coral)}
+.footer{text-align:center;padding:30px 0;font-size:0.82rem;color:var(--gray-400)}
+@media(max-width:768px){.card-grid{grid-template-columns:1fr}nav{padding:20px 0 16px}nav h1{font-size:1rem}.section h2{font-size:1.1rem}.toc{padding:16px 20px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container">
+    <h1>AI 技能包说明 · AI+EI 教练工作坊</h1>
+    <div class="sub">版本 v1.0（内测版）| 13 套技能包（7 认证 + 6 蒸馏）| 适用 Claude Code</div>
+    <a href="./">⬅ 返回资源中心</a>
+  </div>
+</nav>
+<main class="container">
+
+<div class="toc">
+<h2>目录</h2>
+<ol>
+<li><a href="#s1">什么是 AI 技能包</a></li>
+<li><a href="#s2">安装指南</a></li>
+<li><a href="#s3">Genos 认证技能包（7 套）</a></li>
+<li><a href="#s4">理论蒸馏技能包（6 套）</a></li>
+<li><a href="#s5">使用最佳实践</a></li>
+<li><a href="#s6">自定义开发指南</a></li>
+<li><a href="#s7">常见问题</a></li>
+</ol>
+</div>
+
+<div class="section" id="s1">
+<h2>一、什么是 AI 技能包</h2>
+<p>AI 技能包（Skill Pack）是为 AI Agent（如 Claude Code）设计的<strong>专业技能模块</strong>。每个技能包封装了一套完整的知识框架、工作流程和实践工具。</p>
+
+<h3>技能包结构</h3>
+<pre>ei-self-awareness-coach/
+├── SKILL.md              ← 技能定义、工作流程、边界条件
+└── test-prompts.json     ← 测试触发词和期望响应</pre>
+
+<h3>SKILL.md 包含</h3>
+<ul>
+<li><strong>触发条件</strong>：哪些用户输入应该激活本技能</li>
+<li><strong>核心工作流程</strong>：AI 被激活后应遵循的步骤</li>
+<li><strong>知识框架</strong>：核心理论和模型</li>
+<li><strong>工具库</strong>：AI 可以调用的具体工具和方法</li>
+<li><strong>边界条件</strong>：什么情况下不适用</li>
+<li><strong>输出格式</strong>：期望的输出结构</li>
+</ul>
+
+<h3>技能包如何工作</h3>
+<ol>
+<li><strong>匹配触发词</strong>：AI 将用户输入与已安装技能包的触发条件匹配</li>
+<li><strong>激活技能</strong>：匹配成功后 AI 加载对应 SKILL.md 作为上下文</li>
+<li><strong>按框架执行</strong>：遵循工作流程和工具库响应</li>
+<li><strong>输出结果</strong>：按定义格式呈现</li>
+</ol>
+<blockquote>核心原则：技能包是<strong>框架</strong>，不是脚本。AI 在框架内仍有灵活性；教练在 AI 输出基础上仍有判断权。</blockquote>
+</div>
+
+<div class="section" id="s2">
+<h2>二、安装指南</h2>
+
+<h3>方法一：自动安装（推荐）</h3>
+<pre>curl -fsSL https://ei2026.netlify.app/skills/install.sh | bash</pre>
+
+<h3>方法二：手动安装单个</h3>
+<pre>mkdir -p ~/.claude/skills/
+curl -LO https://ei2026.netlify.app/skills/ei-self-awareness-coach.tar.gz
+tar -xzf ei-self-awareness-coach.tar.gz -C ~/.claude/skills/
+# 验证
+ls ~/.claude/skills/ei-self-awareness-coach/
+# 输出：SKILL.md  test-prompts.json</pre>
+
+<h3>方法三：批量安装全部 13 个</h3>
+<pre>SKILLS=(
+  ei-self-awareness-coach ei-resonant-leadership
+  ei-emotional-reasoning ei-stress-resilience
+  ei-workplace-positive-influence ei-multiple-intelligences
+  ei-cert-meta-skill ei-goleman-eq4 ei-goleman-6-leadership
+  ei-msceit ei-eq-i ei-genos-six-dimensions
+)
+mkdir -p ~/.claude/skills/
+for skill in "${SKILLS[@]}"; do
+  echo "安装: $skill"
+  curl -fsSL "https://ei2026.netlify.app/skills/${skill}.tar.gz" \
+    | tar -xz -C ~/.claude/skills/
+done
+echo "✅ 全部安装完成"</pre>
+
+<h3>验证安装</h3>
+<pre>for skill in ~/.claude/skills/ei-*/; do
+  name=$(basename "$skill")
+  if [ -f "$skill/SKILL.md" ]; then echo "✅ $name"; else echo "❌ $name"; fi
+done</pre>
+
+<h3>功能验证</h3>
+<p>在 AI Agent 中输入：<code>"情绪很乱，帮我分析一下"</code>。应返回情绪标注→逻辑链追溯→模式识别。</p>
+</div>
+
+<div class="section" id="s3">
+<h2>三、Genos 认证技能包（7 套）</h2>
+
+<h3>3.1 ei-self-awareness-coach</h3>
+<table>
+<tr><th>项目</th><th>内容</th></tr>
+<tr><td>对应维度</td><td>Genos 维度 1：情绪自我觉察</td></tr>
+<tr><td>难度</td><td>⭐ 入门级</td></tr>
+<tr><td>触发词</td><td>"情绪很乱" "帮我分析感受" "不知道为什么很烦躁"</td></tr>
+</table>
+<p><strong>工作流</strong>：情绪标注 → 逻辑链追溯（事件→感受→情绪→想法→行为→结果）→ 模式识别 → 行动计划</p>
+
+<h3>3.2 ei-resonant-leadership</h3>
+<table>
+<tr><th>项目</th><th>内容</th></tr>
+<tr><td>对应维度</td><td>Genos 维度 6：积极影响力（领导力）</td></tr>
+<tr><td>难度</td><td>⭐⭐⭐ 进阶级</td></tr>
+<tr><td>触发词</td><td>"团队士气低落" "如何领导" "新晋管理者怎么带团队"</td></tr>
+</table>
+<p><strong>工作流</strong>：情境诊断 → 六种领导力风格评估 → 共鸣策略匹配 → 行动规划</p>
+
+<h3>3.3 ei-emotional-reasoning</h3>
+<table>
+<tr><th>项目</th><th>内容</th></tr>
+<tr><td>对应维度</td><td>Genos 维度 4：情绪推理</td></tr>
+<tr><td>难度</td><td>⭐⭐ 中级</td></tr>
+<tr><td>触发词</td><td>"无法决定" "直觉与逻辑冲突" "应该选 A 还是 B"</td></tr>
+</table>
+<p><strong>工作流</strong>：四象限矩阵（事实数据 × 情绪信息）→ 数据收集 → 情绪收集 → 整合分析 → 决策输出</p>
+
+<h3>3.4 ei-stress-resilience</h3>
+<table>
+<tr><th>项目</th><th>内容</th></tr>
+<tr><td>对应维度</td><td>Genos 维度 5：自我管理</td></tr>
+<tr><td>难度</td><td>⭐⭐ 中级</td></tr>
+<tr><td>触发词</td><td>"压力太大" "焦虑" "burnout" "失眠" "如何放松"</td></tr>
+</table>
+<p><strong>工作流</strong>：压力评估 → 即时调节（4-7-8呼吸/STOP法/接地技术）→ 认知重构 → 韧性规划</p>
+
+<div class="alert">
+<strong>⚠ 安全边界：</strong>仅适用于日常压力和轻度焦虑。如用户表达自伤/自杀意念、持续两周以上严重困扰、无法日常功能，应输出转介建议。
+</div>
+
+<h3>3.5 ei-workplace-positive-influence</h3>
+<table>
+<tr><th>项目</th><th>内容</th></tr>
+<tr><td>对应维度</td><td>Genos 维度 6：积极影响力（协作）</td></tr>
+<tr><td>难度</td><td>⭐⭐⭐ 进阶级</td></tr>
+<tr><td>触发词</td><td>"同事不配合" "跨团队协作" "冲突处理" "如何给反馈"</td></tr>
+</table>
+<p><strong>工作流</strong>：关系诊断（情感账户审计）→ 策略选择（共情→利益→证据→行动）→ SBI 反馈准备 → 行动计划</p>
+
+<h3>3.6 ei-multiple-intelligences</h3>
+<table>
+<tr><th>项目</th><th>内容</th></tr>
+<tr><td>对应维度</td><td>Genos 维度 1 延伸（多元智能视角）</td></tr>
+<tr><td>难度</td><td>⭐ 入门级</td></tr>
+<tr><td>触发词</td><td>"不知道擅长什么" "发现天赋" "我的优势是什么"</td></tr>
+</table>
+<p><strong>工作流</strong>：八维探索（语言·逻辑·音乐·身体·空间·人际·内省·自然）→ 优势组合识别 → 应用建议</p>
+
+<h3>3.7 ei-cert-meta-skill</h3>
+<table>
+<tr><th>项目</th><th>内容</th></tr>
+<tr><td>类型</td><td>元技能—覆盖全部 Genos 六维</td></tr>
+<tr><td>难度</td><td>⭐ 导航级</td></tr>
+<tr><td>触发词</td><td>"想了解 EI 认证" "认证路径" "EI 发展路线图"</td></tr>
+</table>
+<p><strong>工作流</strong>：需求诊断 → 路径推荐（Foundation→Practitioner→Senior→Master）→ 维度匹配 → 下一步行动</p>
+
+<h3>认证路径</h3>
+<pre>📖 Foundation → 🛠 Practitioner → ⭐ Senior Practitioner → 👑 Master
+   觉察             应用                 精通                  赋能
+   "是什么"         "怎么做"            "教别人"              "推动改变"</pre>
+<table>
+<tr><th>级别</th><th>核心要求</th><th>时间跨度</th></tr>
+<tr><td>Foundation</td><td>理解六维模型 + 360° 自评 + 发展计划</td><td>1-2 个月</td></tr>
+<tr><td>Practitioner</td><td>360° 反馈解读 + 90 天行为改变</td><td>3-6 个月</td></tr>
+<tr><td>Senior Practitioner</td><td>辅导他人 + 案例分析</td><td>6-12 个月</td></tr>
+<tr><td>Master</td><td>主导转型项目 + 组织文化</td><td>12-24 个月</td></tr>
+</table>
+</div>
+
+<div class="section" id="s4">
+<h2>四、理论蒸馏技能包（6 套）</h2>
+<blockquote>AI 蒸馏不是复制话语，而是<strong>提炼思维框架</strong>。将六位 EI 理论家的核心著作提取为 AI 可直接运行的思维框架。</blockquote>
+
+<h3>技能包 8：ei-goleman-eq4</h3>
+<p><strong>学者</strong>：戈尔曼 | <strong>框架</strong>：自我觉察→自我管理→社会觉察→关系管理 | <strong>工具</strong>：STOP 法、NVC、共情四层次</p>
+
+<h3>技能包 9：ei-goleman-6-leadership</h3>
+<p><strong>学者</strong>：戈尔曼 | <strong>框架</strong>：六种领导力风格（指令·愿景·亲和·民主·领跑·教练） | <strong>工具</strong>：情境-风格矩阵</p>
+
+<h3>技能包 10：ei-msceit</h3>
+<p><strong>学者</strong>：梅耶 & 萨洛维 | <strong>框架</strong>：感知→促进→理解→管理 | <strong>工具</strong>：情绪词汇表、情绪逻辑链</p>
+
+<h3>技能包 11：ei-eq-i</h3>
+<p><strong>学者</strong>：巴昂 | <strong>框架</strong>：五因素（自我认知→自我表达→人际→决策→压力管理） | <strong>工具</strong>：4-7-8 呼吸法、认知重构三步法</p>
+
+<h3>技能包 12：ei-genos-six-dimensions</h3>
+<p><strong>学者</strong>：Palmer & Stough | <strong>框架</strong>：六维职场行为频率 | <strong>18 项行为指标</strong>（每维度 3 项）</p>
+
+<h3>技能包 13：ei-multiple-intelligences</h3>
+<p><strong>学者</strong>：加德纳 | <strong>框架</strong>：八种智能组合 | 与认证技能包 6 功能相同</p>
+</div>
+
+<div class="section" id="s5">
+<h2>五、使用最佳实践</h2>
+
+<h3>触发策略</h3>
+<table>
+<tr><th>方式</th><th>示例</th><th>效果</th></tr>
+<tr><td>直接触发</td><td>"情绪很乱，帮我分析一下"</td><td>精确命中</td></tr>
+<tr><td>间接</td><td>"我最近总觉得不对劲"</td><td>语义匹配</td></tr>
+<tr><td>混合</td><td>"作为技术经理，团队士气低落"</td><td>触发领导力+场景上下文</td></tr>
+</table>
+
+<h3>推荐组合</h3>
+<table>
+<tr><th>场景</th><th>组合</th></tr>
+<tr><td>团队士气低谷</td><td>ei-resonant-leadership + ei-workplace-positive-influence</td></tr>
+<tr><td>个人职业发展</td><td>ei-multiple-intelligences + ei-self-awareness-coach + ei-cert-meta-skill</td></tr>
+<tr><td>冲突调解</td><td>ei-emotional-reasoning + ei-workplace-positive-influence</td></tr>
+</table>
+
+<h3>教练工作流中的 AI 定位</h3>
+<pre>✅ 正确：客户 → 教练（倾听+判断）→ AI（技能包提供框架）→ 教练（整合判断）→ 客户
+❌ 错误：客户 → AI（直接回答）→ 客户</pre>
+</div>
+
+<div class="section" id="s6">
+<h2>六、自定义技能包开发</h2>
+<pre># 创建新技能包
+mkdir -p ~/.claude/skills/my-ei-custom-skill/
+
+# 从现有技能包复制（推荐）
+cp -r ~/.claude/skills/ei-self-awareness-coach ~/.claude/skills/my-adapted-coach
+
+# 修改 SKILL.md：名称/描述/触发词/工作流/工具库
+
+# 打包分享
+tar -czf my-custom-skill.tar.gz -C ~/.claude/skills/my-custom-skill/ .</pre>
+</div>
+
+<div class="section" id="s7">
+<h2>七、常见问题</h2>
+<table>
+<tr><th>问题</th><th>解决方案</th></tr>
+<tr><td>技能包没有被激活</td><td>检查安装路径；使用标准触发词；更新 AI Agent 版本</td></tr>
+<tr><td>AI 输出与预期不符</td><td>提供更多上下文；明确指定想用的技能包；检查 SKILL.md 格式</td></tr>
+<tr><td>安装权限错误</td><td>sudo chown -R $(whoami) ~/.claude/</td></tr>
+</table>
+
+<h3>完整技能包索引</h3>
+<table>
+<tr><th>#</th><th>技能包名</th><th>类型</th><th>难度</th></tr>
+<tr><td>1</td><td>ei-self-awareness-coach</td><td>认证</td><td>⭐</td></tr>
+<tr><td>2</td><td>ei-resonant-leadership</td><td>认证</td><td>⭐⭐⭐</td></tr>
+<tr><td>3</td><td>ei-emotional-reasoning</td><td>认证</td><td>⭐⭐</td></tr>
+<tr><td>4</td><td>ei-stress-resilience</td><td>认证</td><td>⭐⭐</td></tr>
+<tr><td>5</td><td>ei-workplace-positive-influence</td><td>认证</td><td>⭐⭐⭐</td></tr>
+<tr><td>6</td><td>ei-multiple-intelligences</td><td>认证</td><td>⭐</td></tr>
+<tr><td>7</td><td>ei-cert-meta-skill</td><td>认证</td><td>⭐</td></tr>
+<tr><td>8</td><td>ei-goleman-eq4</td><td>蒸馏</td><td>⭐⭐</td></tr>
+<tr><td>9</td><td>ei-goleman-6-leadership</td><td>蒸馏</td><td>⭐⭐</td></tr>
+<tr><td>10</td><td>ei-msceit</td><td>蒸馏</td><td>⭐⭐</td></tr>
+<tr><td>11</td><td>ei-eq-i</td><td>蒸馏</td><td>⭐⭐</td></tr>
+<tr><td>12</td><td>ei-genos-six-dimensions</td><td>蒸馏</td><td>⭐⭐</td></tr>
+<tr><td>13</td><td>ei-multiple-intelligences</td><td>蒸馏</td><td>⭐</td></tr>
+</table>
+
+<p>反馈：邮件 554176937@qq.com / 微信 kenyanghui</p>
+</div>
+
+<div class="footer">
+AI 技能包说明 v1.0 &middot; 2026.06 &middot; Genos EI 2026 第三届中国论坛 AI+EI 教练工作坊
+</div>
+</main>
+</body>
+</html>
